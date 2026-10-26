@@ -1,0 +1,15 @@
+{
+  "phase": "A",
+  "seed": 20261026,
+  "train_root": "train",
+  "audit_evidence": "runs/stage_a_audit_v3",
+  "split_lock": "splits/LOCK.json",
+  "training_enabled": false,
+  "model_inference_enabled": false,
+  "model_inventory": [],
+  "total_inference_parameters": 0,
+  "gpu_budget": null,
+  "paid_compute_authorized": false,
+  "public_private_business_data_access": false,
+  "allowed_public_source": "public_test/rulebook.md for documentary comparison only"
+}

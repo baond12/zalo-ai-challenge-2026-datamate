@@ -1,0 +1,541 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "path": "Description.txt",
+      "sha256": "a70b2d5d0c5a4ba607e09a1b1bc43ba9cb1a3e51cec819bd51ed14d5826ebf1e",
+      "extract": "docs/source_extracts/Description.txt",
+      "extract_unit": "line"
+    },
+    {
+      "path": "Evaluation.docx",
+      "sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "extract": "docs/source_extracts/Evaluation.txt",
+      "extract_unit": "paragraph"
+    },
+    {
+      "path": "Data.docx",
+      "sha256": "7a0fe3862074fb864061a1d3c5e1d971219d2fdde10f0e9a10b5c7427a678117",
+      "extract": "docs/source_extracts/Data.txt",
+      "extract_unit": "paragraph"
+    },
+    {
+      "path": "Rule.txt",
+      "sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "extract": "docs/source_extracts/Rule.txt",
+      "extract_unit": "line"
+    },
+    {
+      "path": "Submission Guidance.txt",
+      "sha256": "af2ce4369a00c6e5b0067467b20ebc0dfc27773fec8428b842624c34704b6b40",
+      "extract": "docs/source_extracts/Submission_Guidance.txt",
+      "extract_unit": "line"
+    },
+    {
+      "path": "train/rulebook.md",
+      "sha256": "740267bccba29df70f745bc39968bbec5b3e62dada2c858c45314f3ec723d113",
+      "extract": "docs/source_extracts/rulebook_train.txt",
+      "extract_unit": "line"
+    },
+    {
+      "path": "public_test/rulebook.md",
+      "sha256": "959ebb63b709fad68f7e8a339cde955c96b6e9af2e48141db3ad5a2429510e10",
+      "extract": "docs/source_extracts/rulebook_public.txt",
+      "extract_unit": "line"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "INPUT-01",
+      "requirement": "Raw CSV/XLSX/SQLite + README, Vietnamese question, as_of_date, split rulebook/calendar",
+      "source": "Description.txt",
+      "section": "Input",
+      "source_sha256": "a70b2d5d0c5a4ba607e09a1b1bc43ba9cb1a3e51cec819bd51ed14d5826ebf1e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/contracts.py; src/datamate/ingest.py",
+      "verification": [
+        "RuntimeContextTests",
+        "ReadersTests"
+      ],
+      "implementation_status": "implemented_input_scaffold; no semantics",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "INPUT-02",
+      "requirement": "Private includes unseen business types",
+      "source": "Data.docx",
+      "section": "Business types",
+      "source_sha256": "7a0fe3862074fb864061a1d3c5e1d971219d2fdde10f0e9a10b5c7427a678117",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "splits/business_v1.json; docs/VALIDATION_PROTOCOL.md",
+      "verification": [
+        "SplitTests"
+      ],
+      "implementation_status": "protocol_and_split_implemented; model_generalization_unmeasured",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "INPUT-03",
+      "requirement": "Use the active split rulebook; it can differ from train",
+      "source": "Data.docx",
+      "section": "Business rules",
+      "source_sha256": "7a0fe3862074fb864061a1d3c5e1d971219d2fdde10f0e9a10b5c7427a678117",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/contracts.py",
+      "verification": [
+        "test_context_reads_runtime_rulebook_not_answers",
+        "test_missing_rulebook_fails_instead_of_train_fallback"
+      ],
+      "implementation_status": "loading_tested; semantic_application_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-01",
+      "requirement": "PA=(correct-wrong)/N; missing or abstain gives zero",
+      "source": "Evaluation.docx",
+      "section": "Score",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": "+1,-1,0,+1 => PA=0.25",
+      "target_module": "src/datamate/evaluation.py",
+      "verification": [
+        "test_pa_denominator_includes_missing",
+        "test_unanswerable_and_abstain"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-02",
+      "requirement": "Answer type must equal reference; no partial credit",
+      "source": "Evaluation.docx",
+      "section": "Per-question scoring",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/evaluation.py",
+      "verification": [
+        "test_wrong_type_has_no_partial_credit"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-03",
+      "requirement": "Number exact; floating point serialization noise only",
+      "source": "Evaluation.docx",
+      "section": "number",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/evaluation.py",
+      "verification": [
+        "test_number_exact_and_float_noise",
+        "test_large_number_has_no_relative_tolerance"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-04",
+      "requirement": "Percent exact after rounding to 2 decimals, correct sign",
+      "source": "Evaluation.docx",
+      "section": "percent",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/evaluation.py",
+      "verification": [
+        "test_percent_rounding_and_sign"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-05",
+      "requirement": "NFC/lowercase/punctuation/whitespace normalization preserves accents, accepts aliases/code",
+      "source": "Evaluation.docx",
+      "section": "string",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/evaluation.py",
+      "verification": [
+        "test_normalize_nfc_case_punctuation_whitespace",
+        "test_scalar_alias",
+        "test_diacritics_preserved"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-06",
+      "requirement": "Date ISO day/month and boolean exact",
+      "source": "Evaluation.docx",
+      "section": "date/boolean",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/evaluation.py; src/datamate/io.py",
+      "verification": [
+        "test_date_exact_month_and_day",
+        "test_boolean"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-07",
+      "requirement": "List ordered, positionwise string/number matches",
+      "source": "Evaluation.docx",
+      "section": "list",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/evaluation.py",
+      "verification": [
+        "test_ordered_list_and_item_aliases",
+        "test_mixed_numeric_list"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-08",
+      "requirement": "Table normalized column names, fallback position; rows a set; cells string/number",
+      "source": "Evaluation.docx",
+      "section": "table",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/evaluation.py",
+      "verification": [
+        "test_table_rows_unordered_columns_reordered_and_aliases",
+        "test_table_column_position_fallback",
+        "test_table_bipartite_not_greedy"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-09",
+      "requirement": "Unanswerable is correct only if reference is unanswerable",
+      "source": "Evaluation.docx",
+      "section": "unanswerable",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/evaluation.py",
+      "verification": [
+        "test_unanswerable_and_abstain"
+      ],
+      "implementation_status": "implemented_local_approximation",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-10",
+      "requirement": "Ranking requested/default criterion, descending; tie code ascending; return fewer than k if needed",
+      "source": "Evaluation.docx",
+      "section": "Ranking questions",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/semantics/ranking.py (planned)",
+      "verification": [
+        "planned: top_k_boundary, tie_code_ascending, short_top_k"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "EVAL-11",
+      "requirement": "Final ranking tie-break by re-run inference time, then earlier submission",
+      "source": "Evaluation.docx",
+      "section": "Score",
+      "source_sha256": "f3b9ab7093a831f1665d4a14b6d9dc8145147f66d2e9cc0a9c97d9d3a15e735e",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "docs/RELEASE_CHECKLIST.md (planned)",
+      "verification": [
+        "planned: full cold-start benchmark"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "MODEL-01",
+      "requirement": "Weights publicly released before 2026-10-01, suitable license, declare all models",
+      "source": "Rule.txt",
+      "section": "Technical requirements 2",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "configs/model_inventory.json (planned)",
+      "verification": [
+        "planned: license/date/revision evidence"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "MODEL-02",
+      "requirement": "Total parameters of ALL inference models <=15B; count full MoE; quantization does not change count",
+      "source": "Rule.txt",
+      "section": "Technical requirements 2",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "scripts/check_model_inventory.py (planned)",
+      "verification": [
+        "planned: inventory parameter sum"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "RUNTIME-01",
+      "requirement": "Fully offline inference, no APIs/download/network",
+      "source": "Rule.txt",
+      "section": "Technical requirements 3",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "Dockerfile (planned)",
+      "verification": [
+        "planned: --network none cold start"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "RUNTIME-02",
+      "requirement": "No manual answers or logic keyed on question/business IDs",
+      "source": "Rule.txt",
+      "section": "Technical requirements 4",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "all inference modules (planned)",
+      "verification": [
+        "planned: ID-renaming invariance and code review"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "RUNTIME-03",
+      "requirement": "Input mount read-only; generated code may run, temporary writes elsewhere",
+      "source": "Rule.txt",
+      "section": "Technical requirements 5",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/ingest.py",
+      "verification": [
+        "test_sqlite_is_readonly",
+        "planned: read-only container mount"
+      ],
+      "implementation_status": "readers_tested; container_not_verified",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "DATA-01",
+      "requirement": "Provided train, self-synthetic, public datasets/models allowed; test training or collecting test answers forbidden",
+      "source": "Rule.txt",
+      "section": "Technical requirements 6",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "docs/VALIDATION_PROTOCOL.md",
+      "verification": [
+        "SplitTests",
+        "planned: training lineage enforcement"
+      ],
+      "implementation_status": "protocol_only; no_training_started",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "COMPUTE-01",
+      "requirement": "Whole private <=6h including loading on 2xRTX5090 32GB and 512GB RAM",
+      "source": "Rule.txt",
+      "section": "Technical requirements 7",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "scripts/benchmark.py (planned)",
+      "verification": [
+        "planned: reference-hardware full run"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "COMPUTE-02",
+      "requirement": "CUDA>=12.8 and matching PyTorch/vLLM; follow organizer Docker base image guideline",
+      "source": "Rule.txt",
+      "section": "Technical requirements 7",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "Dockerfile (planned)",
+      "verification": [
+        "planned: guideline and Blackwell smoke test"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "REPRO-01",
+      "requirement": "BTC Docker private re-run final; absolute uploaded/re-run PA difference <=0.03",
+      "source": "Rule.txt",
+      "section": "Technical requirements 8",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "scripts/replay.py (planned)",
+      "verification": [
+        "planned: repeated cold-start replay"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "REPRO-02",
+      "requirement": "If timeout/termination, only already-written answers count; remainder abstain",
+      "source": "Rule.txt",
+      "section": "Technical requirements 8",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/serialization.py (planned)",
+      "verification": [
+        "planned: interruption and flush test"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "PACKAGE-01",
+      "requirement": "predict.sh reads /data and writes /result/submission.jsonl; include source, weights and README",
+      "source": "Data.docx",
+      "section": "Docker image",
+      "source_sha256": "7a0fe3862074fb864061a1d3c5e1d971219d2fdde10f0e9a10b5c7427a678117",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "predict.sh; Dockerfile (planned)",
+      "verification": [
+        "planned: packaging contract"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "PACKAGE-02",
+      "requirement": "Per-question logs include id, final answer and elapsed time",
+      "source": "Data.docx",
+      "section": "Docker image",
+      "source_sha256": "7a0fe3862074fb864061a1d3c5e1d971219d2fdde10f0e9a10b5c7427a678117",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "src/datamate/logging.py (planned)",
+      "verification": [
+        "planned: required log keys"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "SUBMIT-01",
+      "requirement": "Public 2026-10-26..11-16; <=5 submissions/day reset end of day",
+      "source": "Submission Guidance.txt",
+      "section": "I. Public Test Round",
+      "source_sha256": "af2ce4369a00c6e5b0067467b20ebc0dfc27773fec8428b842624c34704b6b40",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "docs/competition/01_COMPETITION_BRIEF.md",
+      "verification": [
+        "document review"
+      ],
+      "implementation_status": "documented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "SUBMIT-02",
+      "requirement": "Docker due 2026-11-16 23:59 GMT+7; <=2 submissions, last evaluated; public Drive link+checksum",
+      "source": "Submission Guidance.txt",
+      "section": "I. Public Test Round",
+      "source_sha256": "af2ce4369a00c6e5b0067467b20ebc0dfc27773fec8428b842624c34704b6b40",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "releases/ (planned)",
+      "verification": [
+        "planned: release checksum and delivery"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "SUBMIT-03",
+      "requirement": "Private released 2026-11-20 09:00; outputs due 11-23 23:59 GMT+7; use frozen solution",
+      "source": "Submission Guidance.txt",
+      "section": "II. Private Test Round",
+      "source_sha256": "af2ce4369a00c6e5b0067467b20ebc0dfc27773fec8428b842624c34704b6b40",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "docs/VALIDATION_PROTOCOL.md",
+      "verification": [
+        "planned: frozen release integrity"
+      ],
+      "implementation_status": "documented_not_implemented",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    },
+    {
+      "id": "ELIGIBILITY-01",
+      "requirement": "General regulations apply; not supplied in this workspace",
+      "source": "Rule.txt",
+      "section": "Technical requirements 1",
+      "source_sha256": "5366aa01407c13cc1ef8083858cf85ab6d942d3d0920b14c2204b68f1e3a33bf",
+      "scope": "competition/global",
+      "condition": "applies unless explicitly limited by source",
+      "example": null,
+      "target_module": "docs/OPEN_QUESTIONS.md",
+      "verification": [
+        "NOT VERIFIED: obtain general regulations"
+      ],
+      "implementation_status": "not_verified",
+      "certainty": "verified_from_supplied_document; current portal not checked"
+    }
+  ]
+}

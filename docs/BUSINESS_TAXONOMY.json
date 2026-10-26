@@ -1,0 +1,697 @@
+{
+  "usage": "split/evaluation metadata only; never import into predictor",
+  "businesses": [
+    {
+      "business_id": "biz_101",
+      "sector_annotation": "grocery",
+      "sector_evidence": "README multi-category grocery product conversion list",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_101/README.md",
+      "readme_sha256": "c71cf95a70eb10d08546bbf7755d55509d6410e009119579c4528720dadb125a",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 40,
+      "answer_type_counts": {
+        "number": 34,
+        "date": 4,
+        "string": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "48976e4bc11a9a90942413f235c98b103daa3374a3d8da0c2f32ebdee0e2324a"
+      ]
+    },
+    {
+      "business_id": "biz_102",
+      "sector_annotation": "grocery",
+      "sector_evidence": "DanhSachQuyDoi.xlsx: Coca Cola/Pepsi/Sting",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_102/README.md",
+      "readme_sha256": "6d857ce98b60e60a31147247c7339a5d9ac935987da3042faa14fb4022e04551",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 119,
+      "answer_type_counts": {
+        "number": 80,
+        "percent": 20,
+        "list": 13,
+        "date": 5,
+        "string": 1
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "6becd6cc0c3a1f6953675730d11e8725eea1910b4122c6492551a8ca1cd60c9f"
+      ]
+    },
+    {
+      "business_id": "biz_103",
+      "sector_annotation": "grocery",
+      "sector_evidence": "DanhSachQuyDoi.xlsx: Coca Cola/Pepsi/Sting",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_103/README.md",
+      "readme_sha256": "2dcc4d7968fd2d7b74bf4ee2aae5f2bfca9dbdac69346148325e2ae8d82b3622",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 119,
+      "answer_type_counts": {
+        "number": 59,
+        "list": 7,
+        "date": 5,
+        "percent": 31,
+        "unanswerable": 12,
+        "string": 2,
+        "boolean": 3
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "6becd6cc0c3a1f6953675730d11e8725eea1910b4122c6492551a8ca1cd60c9f"
+      ]
+    },
+    {
+      "business_id": "biz_104",
+      "sector_annotation": "cafe",
+      "sector_evidence": "DanhSachQuyDoi.xlsx: croissant/tiramisu",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_104/README.md",
+      "readme_sha256": "70955b88b93c4d4d4b5de1806ed212a9599b9cf9fb959afdc3a042c301af3ab2",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 119,
+      "answer_type_counts": {
+        "number": 83,
+        "percent": 22,
+        "date": 5,
+        "list": 6,
+        "string": 3
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "6becd6cc0c3a1f6953675730d11e8725eea1910b4122c6492551a8ca1cd60c9f"
+      ]
+    },
+    {
+      "business_id": "biz_105",
+      "sector_annotation": "cafe",
+      "sector_evidence": "SoBanHang_1.xlsx: Đá xay cookie, cà phê đen, nước ép",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_105/README.md",
+      "readme_sha256": "a73db6b16c8768c2fca49d10e6e8dcb6cc1054881c63c8afcbef487ae025a326",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 119,
+      "answer_type_counts": {
+        "percent": 25,
+        "number": 67,
+        "date": 3,
+        "string": 5,
+        "list": 12,
+        "unanswerable": 5,
+        "boolean": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "25c922af0250f20eda6e661659bdd313c8b57131c464a6c8e5eb4331201b4a12",
+        "06bf0ef7166398b00919d3de9cd7d9777752ed74665adc0f0fce329f72160a9b"
+      ]
+    },
+    {
+      "business_id": "biz_106",
+      "sector_annotation": "cafe",
+      "sector_evidence": "BaoCaoTonKho.xlsx: cà phê đen/sữa size M,L",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_106/README.md",
+      "readme_sha256": "f9a2ed4a39f784cc16180f013a2f56ae44b7aab33e5fbaa4899af8c54bbb3515",
+      "readme_completeness": "informal_conventions_only",
+      "question_count": 119,
+      "answer_type_counts": {
+        "number": 72,
+        "list": 11,
+        "percent": 19,
+        "unanswerable": 7,
+        "table": 5,
+        "string": 3,
+        "date": 1,
+        "boolean": 1
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "323db9ab640eee55a13a961b12d895422e3df4fe4e78ab9649e44da3ff3c5ebd",
+        "0fb00ab6c9b46999fafe3c087df7e0e76a10ff73ad8ef8668326cb3499ab8cea",
+        "30ce15721544549bc99ba3706e55b15da792c432c0ad06c9026e076d948b704e",
+        "150201692289fc8b5d54848c0dee716fd81ff480e6b067c1fd5ab2f9ab7bde9c"
+      ]
+    },
+    {
+      "business_id": "biz_107",
+      "sector_annotation": "grocery",
+      "sector_evidence": "README multi-category grocery product conversion list",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_107/README.md",
+      "readme_sha256": "8f1bb9e115bffdad77e112e42642ec86ab806af7f13bcfdb24dfcfa5e8c964df",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 40,
+      "answer_type_counts": {
+        "number": 35,
+        "string": 1,
+        "date": 4
+      },
+      "primary_input_shape": "no_order_id_line_log",
+      "fact_header_signatures": [
+        "78b01836adb229531feaaf8bcad935e3144a1f8d2fcd8bee488ab2f22692e503"
+      ]
+    },
+    {
+      "business_id": "biz_108",
+      "sector_annotation": "grocery",
+      "sector_evidence": "README multi-category grocery product conversion list",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_108/README.md",
+      "readme_sha256": "47a853ffb79a0449190a5e331b209977a3a4b323943521c0d28037d01397e9c9",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 119,
+      "answer_type_counts": {
+        "number": 72,
+        "list": 4,
+        "date": 6,
+        "string": 4,
+        "percent": 33
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "b2ff35161509c49c58aee3a3caf3d445938dddf379c15d81a46c8cc0026c304a",
+        "baff56264442b67c5bb9b7f528ba1dd68ca30811b980d02700859da929636a2d",
+        "30ce15721544549bc99ba3706e55b15da792c432c0ad06c9026e076d948b704e"
+      ]
+    },
+    {
+      "business_id": "biz_109",
+      "sector_annotation": "grocery",
+      "sector_evidence": "DuLieuBanHang.xlsx/DanhSachSanPham: Coca Cola/Pepsi/Sting",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_109/README.md",
+      "readme_sha256": "77fad305fc6460c804107b5d928570d1c3abf4d1cd3c0e5a27a3053fb5f3c0d3",
+      "readme_completeness": "informal_conventions_only",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 75,
+        "percent": 18,
+        "date": 3,
+        "list": 13,
+        "string": 3,
+        "table": 2,
+        "unanswerable": 2,
+        "boolean": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "323db9ab640eee55a13a961b12d895422e3df4fe4e78ab9649e44da3ff3c5ebd",
+        "45c9fa7d8e47247c8232cd4332a0bacc5efa5d89bdd931b4dc6d9cb45616507e",
+        "30ce15721544549bc99ba3706e55b15da792c432c0ad06c9026e076d948b704e",
+        "150201692289fc8b5d54848c0dee716fd81ff480e6b067c1fd5ab2f9ab7bde9c"
+      ]
+    },
+    {
+      "business_id": "biz_110",
+      "sector_annotation": "unknown",
+      "sector_evidence": "README insufficient to establish industry",
+      "sector_status": "unknown, do not guess",
+      "readme_path": "train/data/biz_110/README.md",
+      "readme_sha256": "85a5aecce97f14d3841cb259d375962131b0b04d1e6b009c343c39c3dcde265f",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 40,
+      "answer_type_counts": {
+        "number": 35,
+        "date": 5
+      },
+      "primary_input_shape": "order_only",
+      "fact_header_signatures": [
+        "956f166ca8d3ee5463c7b728ad1c42c1922fc5f7e0e67b102043fc45573f78de"
+      ]
+    },
+    {
+      "business_id": "biz_111",
+      "sector_annotation": "cafe",
+      "sector_evidence": "README croissant/tiramisu conversions plus cafe product schema",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_111/README.md",
+      "readme_sha256": "f8915c1d420a59ecad992ce62a0afe4ba1d017baf9ccf336d554ea5e9ce101a8",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 72,
+        "date": 6,
+        "list": 9,
+        "percent": 29,
+        "table": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "b9908b8ac3c906c66572179291dd82d526de1c7381c9e822a6f9ed49faf97eb5",
+        "2435bf032306ba4fbc2acb5b722576f19ecdf273640d61c37fb5c611be3c387f",
+        "31501430955b96950def28bef53307f6c0a2b5983f9cbb4b530fe2bd259a8428"
+      ]
+    },
+    {
+      "business_id": "biz_112",
+      "sector_annotation": "cafe",
+      "sector_evidence": "README croissant/tiramisu conversions plus cafe product schema",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_112/README.md",
+      "readme_sha256": "358a56a6030c5ec3ae1507c1f771d66d61c08c3521fcbbe32df58f343d9d5878",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 73,
+        "percent": 25,
+        "list": 5,
+        "unanswerable": 12,
+        "date": 1,
+        "boolean": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "c34bab238e6ebd6b335945c2496d2fb49002ebd870dc39095b2552f03255899f"
+      ]
+    },
+    {
+      "business_id": "biz_113",
+      "sector_annotation": "building_materials",
+      "sector_evidence": "README product conversions/delivery conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_113/README.md",
+      "readme_sha256": "b4049fceb2bc428c311fceb768e68fd448739cb58136f682f591b6f7ca1e894c",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 40,
+      "answer_type_counts": {
+        "number": 35,
+        "date": 2,
+        "string": 3
+      },
+      "primary_input_shape": "no_order_id_line_log",
+      "fact_header_signatures": [
+        "89bea72200765e409fa6ac0142866419a733661a83aa3e36cb4541832312fbb0"
+      ]
+    },
+    {
+      "business_id": "biz_114",
+      "sector_annotation": "building_materials",
+      "sector_evidence": "README product conversions/delivery conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_114/README.md",
+      "readme_sha256": "f4b00c37c2c8e21cef94b2bbe6d2dc97752c6a8035b784cf9f5b507c7d01bc03",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 40,
+      "answer_type_counts": {
+        "string": 3,
+        "date": 6,
+        "number": 31
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "ba6edc8e8e1d2ef4d6f94af3da692806e1ceb695c435735301914733a3288ff6"
+      ]
+    },
+    {
+      "business_id": "biz_115",
+      "sector_annotation": "building_materials",
+      "sector_evidence": "README product conversions/delivery conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_115/README.md",
+      "readme_sha256": "b30a5c7e5fa7c1d95cbd228a4ee95c9109c7a2e51f98b3011e37edd57edb9bb8",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 82,
+        "percent": 23,
+        "list": 3,
+        "date": 9,
+        "string": 1
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "cae583ee22dfc39d002350fe2ab0b6775f7fb0cfbb5b44664d00747158f65fbf",
+        "eeb71a8d75acbffc40a63b3e1c93ad8fb6f7ac3997586a6714145f1b7260116a",
+        "65ec28eb1504bbae4f95a88d860b68755eb04b621280da09975980736d304318"
+      ]
+    },
+    {
+      "business_id": "biz_116",
+      "sector_annotation": "building_materials",
+      "sector_evidence": "README product conversions/delivery conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_116/README.md",
+      "readme_sha256": "e0faa6edace43bad6e8db0a90dfe716eb09cdd38abb89ecdce3a926850cc3f1c",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 80,
+        "list": 10,
+        "date": 6,
+        "percent": 22
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "cae583ee22dfc39d002350fe2ab0b6775f7fb0cfbb5b44664d00747158f65fbf",
+        "eeb71a8d75acbffc40a63b3e1c93ad8fb6f7ac3997586a6714145f1b7260116a",
+        "65ec28eb1504bbae4f95a88d860b68755eb04b621280da09975980736d304318"
+      ]
+    },
+    {
+      "business_id": "biz_117",
+      "sector_annotation": "building_materials",
+      "sector_evidence": "README product conversions/delivery conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_117/README.md",
+      "readme_sha256": "0e237a73fe29dcd5a8e4aab110e8d9b6abf2fd5be9555e1f25a2a242ee463e26",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "percent": 24,
+        "number": 67,
+        "date": 6,
+        "list": 11,
+        "string": 5,
+        "unanswerable": 3,
+        "boolean": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "d9b5786afde4609b912401077f2645c5b96e0f6d9991d523d838ae70ed9e09bb",
+        "263f3f370b57bb99e636738b5d9a06da1a30169b22706ecfb4a68cef1d835f8c",
+        "796ea0363558ba4a672831645b5cc54e645699141e72f064bd69f6435252bd74",
+        "34185934b5fa56a3ba9e2d46892a5ea7a2ca8ffe981d43014b6f3cdd657c9d68"
+      ]
+    },
+    {
+      "business_id": "biz_118",
+      "sector_annotation": "building_materials",
+      "sector_evidence": "README product conversions/delivery conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_118/README.md",
+      "readme_sha256": "823953d5c57f774e437c05b2a1f9115007c82fdf5de875dcef8f44e0532de371",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 62,
+        "percent": 32,
+        "unanswerable": 6,
+        "string": 7,
+        "date": 6,
+        "list": 5
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "cae583ee22dfc39d002350fe2ab0b6775f7fb0cfbb5b44664d00747158f65fbf",
+        "eeb71a8d75acbffc40a63b3e1c93ad8fb6f7ac3997586a6714145f1b7260116a",
+        "65ec28eb1504bbae4f95a88d860b68755eb04b621280da09975980736d304318"
+      ]
+    },
+    {
+      "business_id": "biz_119",
+      "sector_annotation": "pharmacy",
+      "sector_evidence": "README Thuốc/hoạt chất conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_119/README.md",
+      "readme_sha256": "67ff934147166289e20602783fc5dfa2368fc4593f272d5154c20ae5a1af30f2",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 81,
+        "percent": 24,
+        "string": 3,
+        "date": 5,
+        "list": 5
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "7c80c5a7cbaf42f19c0031d8fdcc84315972b0ee79f8e7dc24e34189c51f4b02",
+        "d9b830f4f7f2ec21b61b66d82c8b7f4be75f2eeffdc1f0fbc7a4a5e69c1fe925",
+        "2ff10ec41854f1ea6ac0eaa3d989f835a62ea85bb37ade813b257a99bb445bec",
+        "4a7173737a3580b5540d8ba0092012ba58adab1e841b42bb815acb00a787e3e7",
+        "d8907e79e8b2996cbbf76d0552e3c0dbaaf525b9114035e18b477bbea6e13ba9"
+      ]
+    },
+    {
+      "business_id": "biz_120",
+      "sector_annotation": "pharmacy",
+      "sector_evidence": "README Thuốc/hoạt chất conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_120/README.md",
+      "readme_sha256": "4e6629c7ebc7470383ffeccdbffb5454ff5e14759cdb887c98d5e9fa64bd6cab",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 82,
+        "percent": 25,
+        "date": 3,
+        "list": 6,
+        "string": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "30e31bc0830cd7dc13ddec8d1a62769da81077bc4e1e112a9f31c28dedf73cd4",
+        "d9b830f4f7f2ec21b61b66d82c8b7f4be75f2eeffdc1f0fbc7a4a5e69c1fe925",
+        "d5e19df48eebf89a32f4e43262377cc521fbc088e606f39f760b22ac37e57384",
+        "4a7173737a3580b5540d8ba0092012ba58adab1e841b42bb815acb00a787e3e7",
+        "d8907e79e8b2996cbbf76d0552e3c0dbaaf525b9114035e18b477bbea6e13ba9"
+      ]
+    },
+    {
+      "business_id": "biz_121",
+      "sector_annotation": "pharmacy",
+      "sector_evidence": "README Thuốc/hoạt chất conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_121/README.md",
+      "readme_sha256": "f1f925a1e0ae764824cab5aa55e1a4c91cafb65814af8e92ae7742974bf670d3",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "percent": 31,
+        "unanswerable": 7,
+        "number": 57,
+        "string": 4,
+        "list": 11,
+        "date": 5,
+        "boolean": 3
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "6eec3d709b80502e3cf57fab80ebe1b6014ca0b39970c33aa43cb728ed293479",
+        "6becd6cc0c3a1f6953675730d11e8725eea1910b4122c6492551a8ca1cd60c9f",
+        "effb1833d0279af1086455472484b22ed8df5ec3e19ae3e712070651977c1628"
+      ]
+    },
+    {
+      "business_id": "biz_122",
+      "sector_annotation": "pharmacy",
+      "sector_evidence": "README Thuốc/hoạt chất conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_122/README.md",
+      "readme_sha256": "2ea579b13f08f31fcf21f6dca27ca35c4671bab764f4e435c593b3375e2abe51",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "percent": 38,
+        "number": 59,
+        "string": 2,
+        "list": 8,
+        "date": 5,
+        "boolean": 2,
+        "unanswerable": 4
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "6eec3d709b80502e3cf57fab80ebe1b6014ca0b39970c33aa43cb728ed293479",
+        "6becd6cc0c3a1f6953675730d11e8725eea1910b4122c6492551a8ca1cd60c9f",
+        "effb1833d0279af1086455472484b22ed8df5ec3e19ae3e712070651977c1628"
+      ]
+    },
+    {
+      "business_id": "biz_123",
+      "sector_annotation": "pharmacy",
+      "sector_evidence": "README Thuốc/hoạt chất conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_123/README.md",
+      "readme_sha256": "75ca6deca11dcb39d204080a4b262cbdbfd0e229415dd1cccab9110160231240",
+      "readme_completeness": "informal_conventions_only",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 68,
+        "date": 4,
+        "table": 3,
+        "string": 11,
+        "list": 13,
+        "percent": 16,
+        "unanswerable": 2,
+        "boolean": 1
+      },
+      "primary_input_shape": "sqlite_relational",
+      "fact_header_signatures": [
+        "6b82f2e868fda1a877b671253fa0ba2b1a98e004db1af063a16777e2be542977",
+        "c9569c97eed654d547f64a992f07a560b34f80857bdd1e09d60b06457c0cb8c9",
+        "a5074d247a926d53cf628c80af26e317576833bf6835d6d412a038100e8b95d4",
+        "6e0be047ec953c9627d7a75b2560fd7960f9eb9e0622cb4703900f2684b8a9a2",
+        "b6840213f6cacdeb6244f27bd5692200301fb627690897dfcaa17a55eded0541",
+        "027092cf5fed650cb9a4d97ae24d94c57b7a67b80ed8720fd3f7c0a07150c8dc",
+        "763e83568271e55ccf4ef65d488781ad22f78d328df1f69f7e6ca99026382532"
+      ]
+    },
+    {
+      "business_id": "biz_124",
+      "sector_annotation": "pharmacy",
+      "sector_evidence": "README Thuốc/hoạt chất conventions",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_124/README.md",
+      "readme_sha256": "a84ebff9b52edcc0c5e68793e8e15cdf8852d63d6b116617b082febc4846aa54",
+      "readme_completeness": "informal_conventions_only",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 59,
+        "list": 11,
+        "percent": 25,
+        "string": 9,
+        "date": 6,
+        "boolean": 3,
+        "table": 3,
+        "unanswerable": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "178c0bdb26291903bf837de5d81ea5a3ec65263ff73dc380835ce7c506038035",
+        "74321ff22bdb17627daa30f7634043620b541d8e9b86bc7f41d95bee9839efb1",
+        "497705bd015e3540551dfdf80dff222f76d1152de9703795a262b75b9356a973",
+        "c733252ee8c00bfca1641a2773c4420d1d9e9f050a15fde76dfa3d34b5345f9a",
+        "25134e3f137a696a0354fd6a96ac0472ead0063ba397cd108745b8c0f3b1b6dc",
+        "49e78656ff48431f45870bf3866808ec9cd736f0bd71c98e4f299f93f2bb1886"
+      ]
+    },
+    {
+      "business_id": "biz_125",
+      "sector_annotation": "restaurant",
+      "sector_evidence": "README service-fee convention and food/beverage products",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_125/README.md",
+      "readme_sha256": "cf97c5b9193c16d138c1ed72b1c1933503e3a1c4fd5b289260fb721af0d729ad",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 40,
+      "answer_type_counts": {
+        "string": 2,
+        "date": 3,
+        "number": 35
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "3a5e5f2ee831e360f16881cb71402a6336079384774839177877274b54da7126"
+      ]
+    },
+    {
+      "business_id": "biz_126",
+      "sector_annotation": "restaurant",
+      "sector_evidence": "README service-fee convention and food/beverage products",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_126/README.md",
+      "readme_sha256": "f4891e2a70845c86afcdb27c8f115b6f66f69b1dbd193d965778959e91a1a441",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 40,
+      "answer_type_counts": {
+        "number": 30,
+        "date": 6,
+        "string": 4
+      },
+      "primary_input_shape": "no_order_id_line_log",
+      "fact_header_signatures": [
+        "faf0e9a3d49a117fdd5e8e45739774697bca274e8881fb6a60c3632783cd93d8"
+      ]
+    },
+    {
+      "business_id": "biz_127",
+      "sector_annotation": "restaurant",
+      "sector_evidence": "README service-fee convention and food/beverage products",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_127/README.md",
+      "readme_sha256": "5870360d102d5a33b113a6a42432aad9ceac93d0c46834e380065bf4c091246b",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 73,
+        "percent": 23,
+        "list": 14,
+        "date": 4,
+        "table": 2,
+        "string": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "b9f47773717ca0b34c263d53508494244c4707ef8dc42432dc66b33d09fe1635",
+        "00e5897519120b205cda828ef3e032bf73000ee14bdbdbf99795e4a882bca5f7",
+        "6c4cd8d621000d3e0e5fbcfe243461c338972a850e8576a8a2cbd671617547dd"
+      ]
+    },
+    {
+      "business_id": "biz_128",
+      "sector_annotation": "restaurant",
+      "sector_evidence": "README service-fee convention and food/beverage products",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_128/README.md",
+      "readme_sha256": "4a3bf5e4ad896fda5a8a3949c0ffb0cdc77c235579beb41dc4475a3372c97066",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 87,
+        "percent": 22,
+        "date": 4,
+        "string": 3,
+        "list": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "7c80c5a7cbaf42f19c0031d8fdcc84315972b0ee79f8e7dc24e34189c51f4b02",
+        "34165d8fe4985d41348a2a6c392d61c9562a872bae93716acd16773fd6c1a7cb",
+        "2ff10ec41854f1ea6ac0eaa3d989f835a62ea85bb37ade813b257a99bb445bec",
+        "30ce15721544549bc99ba3706e55b15da792c432c0ad06c9026e076d948b704e"
+      ]
+    },
+    {
+      "business_id": "biz_129",
+      "sector_annotation": "restaurant",
+      "sector_evidence": "README service-fee convention and food/beverage products",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_129/README.md",
+      "readme_sha256": "7fcf56e75836f707a6041995158a4c309caa828f704cbc46c23685e873b7a348",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 75,
+        "percent": 22,
+        "date": 9,
+        "list": 8,
+        "table": 2,
+        "string": 2
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "7bf37cd3a889f3f43432ec9da931657ea4d7babd6dacf39676e1e22bb0d0832e",
+        "c067a7b51cc6751922b74d2a29d1b0a1712744a7779f015717d1108698ff80eb",
+        "d65b9e18d1453c1d25ba31df3a3b962d818897e29b927348e9a559d6d0fe4255"
+      ]
+    },
+    {
+      "business_id": "biz_130",
+      "sector_annotation": "restaurant",
+      "sector_evidence": "README service-fee convention and food/beverage products",
+      "sector_status": "analyst metadata annotation; not official label",
+      "readme_path": "train/data/biz_130/README.md",
+      "readme_sha256": "0793980b1f0ed2d6b7810ed340071d0b511b65c63610f23d7f8c3b1d0cb7cb42",
+      "readme_completeness": "field_dictionary_present",
+      "question_count": 118,
+      "answer_type_counts": {
+        "number": 64,
+        "unanswerable": 8,
+        "date": 8,
+        "list": 6,
+        "percent": 29,
+        "boolean": 2,
+        "string": 1
+      },
+      "primary_input_shape": "multitable_or_order_lines",
+      "fact_header_signatures": [
+        "c34bab238e6ebd6b335945c2496d2fb49002ebd870dc39095b2552f03255899f"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+{
+  "version": "business_v1",
+  "seed": 20261026,
+  "selection_uses_answer_values": false,
+  "selection_basis": "raw train schema/README, question counts; no model scores; aggregate types reported after grouping",
+  "holdout_businesses": [
+    "biz_102",
+    "biz_103",
+    "biz_104",
+    "biz_121",
+    "biz_122",
+    "biz_129"
+  ],
+  "development_businesses": [
+    "biz_101",
+    "biz_105",
+    "biz_106",
+    "biz_107",
+    "biz_108",
+    "biz_109",
+    "biz_110",
+    "biz_111",
+    "biz_112",
+    "biz_113",
+    "biz_114",
+    "biz_115",
+    "biz_116",
+    "biz_117",
+    "biz_118",
+    "biz_119",
+    "biz_120",
+    "biz_123",
+    "biz_124",
+    "biz_125",
+    "biz_126",
+    "biz_127",
+    "biz_128",
+    "biz_130"
+  ],
+  "leakage_groups": [
+    [
+      "biz_101"
+    ],
+    [
+      "biz_102",
+      "biz_103",
+      "biz_104",
+      "biz_121",
+      "biz_122"
+    ],
+    [
+      "biz_105"
+    ],
+    [
+      "biz_106",
+      "biz_109"
+    ],
+    [
+      "biz_107"
+    ],
+    [
+      "biz_108"
+    ],
+    [
+      "biz_110"
+    ],
+    [
+      "biz_111"
+    ],
+    [
+      "biz_112",
+      "biz_130"
+    ],
+    [
+      "biz_113"
+    ],
+    [
+      "biz_114"
+    ],
+    [
+      "biz_115",
+      "biz_116",
+      "biz_118"
+    ],
+    [
+      "biz_117"
+    ],
+    [
+      "biz_119",
+      "biz_120",
+      "biz_128"
+    ],
+    [
+      "biz_123"
+    ],
+    [
+      "biz_124"
+    ],
+    [
+      "biz_125"
+    ],
+    [
+      "biz_126"
+    ],
+    [
+      "biz_127"
+    ],
+    [
+      "biz_129"
+    ]
+  ],
+  "grouping_evidence": [
+    {
+      "businesses": [
+        "biz_102",
+        "biz_103",
+        "biz_104",
+        "biz_121",
+        "biz_122"
+      ],
+      "normalized_columns": [
+        "ma don hang",
+        "ngay dat hang",
+        "trang thai don hang",
+        "ten khach hang",
+        "ten san pham",
+        "so luong san pham",
+        "gia san pham",
+        "tong tien",
+        "don vi tinh"
+      ],
+      "reason": "exact normalized sale-fact header schema"
+    },
+    {
+      "businesses": [
+        "biz_119",
+        "biz_128"
+      ],
+      "normalized_columns": [
+        "ma hoa don",
+        "ma hang",
+        "ten hang",
+        "so luong",
+        "don gia",
+        "giam gia",
+        "thanh tien",
+        "so luong quy doi",
+        "stt"
+      ],
+      "reason": "exact normalized sale-fact header schema"
+    },
+    {
+      "businesses": [
+        "biz_119",
+        "biz_120"
+      ],
+      "normalized_columns": [
+        "ma hoa don",
+        "stt",
+        "lo",
+        "so luong dvt co ban",
+        "so luong tra dvt co ban"
+      ],
+      "reason": "exact normalized sale-fact header schema"
+    },
+    {
+      "businesses": [
+        "biz_106",
+        "biz_109"
+      ],
+      "normalized_columns": [
+        "ma hoa don",
+        "stt",
+        "ma hang",
+        "ten hang",
+        "don vi tinh",
+        "so luong",
+        "don gia",
+        "giam gia",
+        "thanh tien",
+        "so luong quy doi",
+        "gia von"
+      ],
+      "reason": "exact normalized sale-fact header schema"
+    },
+    {
+      "businesses": [
+        "biz_112",
+        "biz_130"
+      ],
+      "normalized_columns": [
+        "ngay",
+        "ma don hang",
+        "ten hang hoa",
+        "don vi tinh",
+        "so luong",
+        "don gia",
+        "thanh tien",
+        "trang thai",
+        "so luong quy doi"
+      ],
+      "reason": "exact normalized sale-fact header schema"
+    },
+    {
+      "businesses": [
+        "biz_115",
+        "biz_116",
+        "biz_118"
+      ],
+      "normalized_columns": [
+        "ngay",
+        "ma don hang",
+        "ten hang hoa",
+        "don vi tinh",
+        "so luong",
+        "don gia",
+        "thanh tien",
+        "trang thai",
+        "so luong quy doi",
+        "khach hang"
+      ],
+      "reason": "exact normalized sale-fact header schema"
+    }
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "validation_businesses": [
+        "biz_111",
+        "biz_119",
+        "biz_120",
+        "biz_127",
+        "biz_128"
+      ],
+      "training_businesses": [
+        "biz_101",
+        "biz_105",
+        "biz_106",
+        "biz_107",
+        "biz_108",
+        "biz_109",
+        "biz_110",
+        "biz_112",
+        "biz_113",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_117",
+        "biz_118",
+        "biz_123",
+        "biz_124",
+        "biz_125",
+        "biz_126",
+        "biz_130"
+      ]
+    },
+    {
+      "fold": 1,
+      "validation_businesses": [
+        "biz_110",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_118",
+        "biz_124",
+        "biz_125"
+      ],
+      "training_businesses": [
+        "biz_101",
+        "biz_105",
+        "biz_106",
+        "biz_107",
+        "biz_108",
+        "biz_109",
+        "biz_111",
+        "biz_112",
+        "biz_113",
+        "biz_117",
+        "biz_119",
+        "biz_120",
+        "biz_123",
+        "biz_126",
+        "biz_127",
+        "biz_128",
+        "biz_130"
+      ]
+    },
+    {
+      "fold": 2,
+      "validation_businesses": [
+        "biz_101",
+        "biz_106",
+        "biz_108",
+        "biz_109",
+        "biz_113",
+        "biz_123"
+      ],
+      "training_businesses": [
+        "biz_105",
+        "biz_107",
+        "biz_110",
+        "biz_111",
+        "biz_112",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_117",
+        "biz_118",
+        "biz_119",
+        "biz_120",
+        "biz_124",
+        "biz_125",
+        "biz_126",
+        "biz_127",
+        "biz_128",
+        "biz_130"
+      ]
+    },
+    {
+      "fold": 3,
+      "validation_businesses": [
+        "biz_105",
+        "biz_107",
+        "biz_112",
+        "biz_117",
+        "biz_126",
+        "biz_130"
+      ],
+      "training_businesses": [
+        "biz_101",
+        "biz_106",
+        "biz_108",
+        "biz_109",
+        "biz_110",
+        "biz_111",
+        "biz_113",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_118",
+        "biz_119",
+        "biz_120",
+        "biz_123",
+        "biz_124",
+        "biz_125",
+        "biz_127",
+        "biz_128"
+      ]
+    }
+  ],
+  "leave_one_sector_out": [
+    {
+      "sector": "building_materials",
+      "validation_businesses": [
+        "biz_113",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_117",
+        "biz_118"
+      ],
+      "training_businesses": [
+        "biz_101",
+        "biz_105",
+        "biz_106",
+        "biz_107",
+        "biz_108",
+        "biz_109",
+        "biz_110",
+        "biz_111",
+        "biz_112",
+        "biz_119",
+        "biz_120",
+        "biz_123",
+        "biz_124",
+        "biz_125",
+        "biz_126",
+        "biz_127",
+        "biz_128",
+        "biz_130"
+      ],
+      "schema_linked_excluded_businesses": [],
+      "status": "protocol only; no model evaluated"
+    },
+    {
+      "sector": "cafe",
+      "validation_businesses": [
+        "biz_105",
+        "biz_106",
+        "biz_111",
+        "biz_112"
+      ],
+      "training_businesses": [
+        "biz_101",
+        "biz_107",
+        "biz_108",
+        "biz_110",
+        "biz_113",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_117",
+        "biz_118",
+        "biz_119",
+        "biz_120",
+        "biz_123",
+        "biz_124",
+        "biz_125",
+        "biz_126",
+        "biz_127",
+        "biz_128"
+      ],
+      "schema_linked_excluded_businesses": [
+        "biz_109",
+        "biz_130"
+      ],
+      "status": "protocol only; no model evaluated"
+    },
+    {
+      "sector": "grocery",
+      "validation_businesses": [
+        "biz_109"
+      ],
+      "training_businesses": [
+        "biz_101",
+        "biz_105",
+        "biz_107",
+        "biz_108",
+        "biz_110",
+        "biz_111",
+        "biz_112",
+        "biz_113",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_117",
+        "biz_118",
+        "biz_119",
+        "biz_120",
+        "biz_123",
+        "biz_124",
+        "biz_125",
+        "biz_126",
+        "biz_127",
+        "biz_128",
+        "biz_130"
+      ],
+      "schema_linked_excluded_businesses": [
+        "biz_106"
+      ],
+      "status": "protocol only; no model evaluated"
+    },
+    {
+      "sector": "pharmacy",
+      "validation_businesses": [
+        "biz_101",
+        "biz_107",
+        "biz_108",
+        "biz_119",
+        "biz_120",
+        "biz_123",
+        "biz_124"
+      ],
+      "training_businesses": [
+        "biz_105",
+        "biz_106",
+        "biz_109",
+        "biz_110",
+        "biz_111",
+        "biz_112",
+        "biz_113",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_117",
+        "biz_118",
+        "biz_125",
+        "biz_126",
+        "biz_127",
+        "biz_130"
+      ],
+      "schema_linked_excluded_businesses": [
+        "biz_128"
+      ],
+      "status": "protocol only; no model evaluated"
+    },
+    {
+      "sector": "restaurant",
+      "validation_businesses": [
+        "biz_125",
+        "biz_126",
+        "biz_127",
+        "biz_128",
+        "biz_130"
+      ],
+      "training_businesses": [
+        "biz_101",
+        "biz_105",
+        "biz_106",
+        "biz_107",
+        "biz_108",
+        "biz_109",
+        "biz_110",
+        "biz_111",
+        "biz_113",
+        "biz_114",
+        "biz_115",
+        "biz_116",
+        "biz_117",
+        "biz_118",
+        "biz_123",
+        "biz_124"
+      ],
+      "schema_linked_excluded_businesses": [
+        "biz_112",
+        "biz_119",
+        "biz_120"
+      ],
+      "status": "protocol only; no model evaluated"
+    }
+  ],
+  "holdout_limitations": [
+    "not pristine blind: raw inputs and aggregate answer types audited before freeze",
+    "building_materials absent in holdout; use grouped CV and sector stress test",
+    "unknown industry excluded from claims of unseen-industry validation",
+    "holdout common-schema family intentionally unavailable in development"
+  ],
+  "summary": {
+    "development": {
+      "businesses": 24,
+      "questions": 2289,
+      "answer_types": {
+        "number": 1471,
+        "date": 111,
+        "string": 74,
+        "percent": 414,
+        "list": 140,
+        "unanswerable": 47,
+        "boolean": 15,
+        "table": 17
+      },
+      "sectors": {
+        "pharmacy": 7,
+        "cafe": 4,
+        "grocery": 1,
+        "unknown": 1,
+        "building_materials": 6,
+        "restaurant": 5
+      }
+    },
+    "holdout": {
+      "businesses": 6,
+      "questions": 711,
+      "answer_types": {
+        "number": 413,
+        "percent": 164,
+        "list": 53,
+        "date": 34,
+        "string": 14,
+        "unanswerable": 23,
+        "boolean": 8,
+        "table": 2
+      },
+      "sectors": {
+        "grocery": 2,
+        "cafe": 1,
+        "pharmacy": 2,
+        "restaurant": 1
+      }
+    },
+    "folds": [
+      {
+        "businesses": 5,
+        "questions": 590,
+        "answer_types": {
+          "number": 395,
+          "percent": 123,
+          "string": 10,
+          "date": 22,
+          "list": 36,
+          "table": 4
+        },
+        "sectors": {
+          "pharmacy": 2,
+          "restaurant": 2,
+          "cafe": 1
+        }
+      },
+      {
+        "businesses": 7,
+        "questions": 592,
+        "answer_types": {
+          "number": 384,
+          "percent": 102,
+          "list": 29,
+          "date": 41,
+          "string": 22,
+          "unanswerable": 8,
+          "boolean": 3,
+          "table": 3
+        },
+        "sectors": {
+          "building_materials": 4,
+          "pharmacy": 1,
+          "unknown": 1,
+          "restaurant": 1
+        }
+      },
+      {
+        "businesses": 6,
+        "questions": 554,
+        "answer_types": {
+          "number": 356,
+          "list": 41,
+          "percent": 86,
+          "unanswerable": 11,
+          "table": 10,
+          "string": 26,
+          "date": 20,
+          "boolean": 4
+        },
+        "sectors": {
+          "cafe": 1,
+          "grocery": 1,
+          "pharmacy": 3,
+          "building_materials": 1
+        }
+      },
+      {
+        "businesses": 6,
+        "questions": 553,
+        "answer_types": {
+          "number": 336,
+          "percent": 103,
+          "list": 34,
+          "unanswerable": 28,
+          "date": 28,
+          "boolean": 8,
+          "string": 16
+        },
+        "sectors": {
+          "cafe": 2,
+          "restaurant": 2,
+          "building_materials": 1,
+          "pharmacy": 1
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "audit_summary_sha256": "b70062978ee2ccc162e4ad5960495359249d29be47a358defa4c9c3810293474",
+    "questions_sha256": "b258ebd978a6d51b3b0b431b26926f958e56522beeb7da2984fea8333e21cec1",
+    "answers_sha256": "0b5fe9d13edf5fae306bda9cafaf699c06b639846c8e1d9e41c39a86d1160b3d"
+  }
+}

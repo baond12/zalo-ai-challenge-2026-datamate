@@ -1,0 +1,52 @@
+0001: Business types
+0002: The data covers a wide range of Vietnamese small businesses: grocery stores, coffee and bubble-tea shops, restaurants, pharmacies, building-material stores, motorbike repair shops, mother-and-baby stores, and more. The private test includes business types that do not appear in the training or public test data.
+0003: Each business covers 12–30 months of activity with seasonality (Tết, Mid-Autumn, public holidays, paydays, weekends) and ranges from a few hundred to about 300,000 rows.
+0004: Package structure
+0005: <split>/
+0006: ├── data/<business_id>/
+0007: │   ├── *.csv | *.xlsx | *.sqlite     # one or more data files
+0008: │   └── README.md                    # business description and notes
+0009: ├── rulebook.md                      # default rules and vocabulary
+0010: ├── calendar.csv                     # solar–lunar calendar (Tết)
+0011: ├── questions.jsonl                  # one question per line
+0012: └── answers.jsonl                    # training only
+0013: Sample record in questions.jsonl:
+0014: {"id": "q_01234", "business_id": "biz_017", "question": "thang nay hang nao ban cham nhat, ton nhieu ma ban ko dc", "as_of_date": "2026-08-27"}
+0015: Training businesses also come with answers.jsonl, which contains the reference answer for every training question, linked by "id". Each line follows the submission format, plus an "alias" field listing other accepted forms of a name answer (alternative spellings found in the data and the item code). Unanswerable questions have "answer": null. Submissions do not need to include the "alias" field.
+0016: Sample record in answers.jsonl (the reference answer of the example question in the Description section):
+0017: {"id": "q_06de33fa21cc", "type": "string", "answer": "Xi măng Hà Tiên PCB40 bao 50kg", "alias": ["SP0001"]}
+0018: The quality of README.md varies: some businesses come with a full data dictionary, others with a few informal notes, some with almost nothing.
+0019: Splits
+0020: Split
+0021: Businesses
+0022: Questions
+0023: Reference answers
+0024: Training
+0025: 30
+0026: ~3,000
+0027: Yes
+0028: Public test
+0029: 10–20
+0030: ~1,000
+0031: Hidden; scored on the public leaderboard
+0032: Private test
+0033: 10–20
+0034: ~500
+0035: Hidden; released at the private test phase; includes new business types
+0036: Business rules (default interpretations)
+0037: Each split ships its own rulebook (rulebook.md), which fixes the default meaning of common terms whenever the question does not say otherwise. The rulebook may differ between splits so your agent must read and apply the rulebook of the split it is answering, not a copy of the training rulebook. Typical rules: revenue = sum of line amounts after line-level discounts (order-level vouchers are not deducted), excluding VAT and delivery fees, excluding cancelled orders and orders with any returned item; “bán chạy” = by quantity; a week runs Monday–Sunday; “tháng này” = the month containing the as-of date, up to and including that date; default cost = weighted-average purchase cost by lot; the Tết window = 23 tháng Chạp to mùng 10 (lunar calendar).
+0038: Submission format
+0039: Submission file. In both rounds you upload a submission.jsonl file, one JSON object per line:
+0040: {"id": "q_01234", "type": "string", "answer": "Sting dâu 330ml"}
+0041: {"id": "q_01235", "type": "number", "answer": 48250000}
+0042: {"id": "q_01236", "type": "percent", "answer": -12.45}
+0043: {"id": "q_01237", "type": "date", "answer": "2026-08-15"}
+0044: {"id": "q_01238", "type": "boolean", "answer": true}
+0045: {"id": "q_01239", "type": "list", "answer": ["Cà phê sữa", "Bạc xỉu", "Trà đào"]}
+0046: {"id": "q_01240", "type": "table", "answer": {"columns": ["khach_hang", "so_tien_no"], "rows": [["Chị Lan", 3200000], ["Anh Tú", 1500000]]}}
+0047: {"id": "q_01241", "type": "unanswerable", "reason": "Dữ liệu không có giá vốn nên không tính được lợi nhuận"}
+0048: {"id": "q_01242", "type": "abstain"}
+0049: Questions missing from the file are scored as abstain. The reason field is optional. The number of submissions per day follows the general regulations.
+0050: Docker image. The image (see Competition rounds in the Rule section) must contain the source code (training and inference), the model weights and a predict.sh that reads the test set from /data and writes /result/submission.jsonl, together with a README. It should also write a per-question log to /result/logs/, in any format, containing at least the question id, the final answer and the elapsed time — plus anything else that shows how the answer was reached (e.g. generated code, execution output). The organizers use these logs to resolve differences between your uploaded result and their re-run (Rule 8).
+0051: Data Train: Download
+0052: Public Test: Download

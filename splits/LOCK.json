@@ -1,0 +1,7 @@
+{
+  "manifest": "splits/business_v2.json",
+  "sha256": "4bb7ead8406674bb2320f3f9631fa35d0a87ab1930e20856920bec1554a1c5be",
+  "seed": 20261026,
+  "holdout_score_openings": 0,
+  "policy": "append exposure log; do not edit frozen manifest"
+}

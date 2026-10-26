@@ -1,0 +1,7091 @@
+{
+  "scope": "input metadata from train; no runtime answer lookup",
+  "businesses": [
+    {
+      "business_id": "biz_101",
+      "source": "train/data/biz_101/README.md",
+      "sha256": "c71cf95a70eb10d08546bbf7755d55509d6410e009119579c4528720dadb125a",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_101"
+        },
+        {
+          "line": 3,
+          "text": "Một file phẳng, mỗi dòng một bản ghi (một dòng hàng trong đơn)."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `ban_hang.csv` (csv)"
+        },
+        {
+          "line": 8,
+          "text": "## Cột trong `ban_hang.csv`"
+        },
+        {
+          "line": 9,
+          "text": "- **Giá bán**: đơn giá"
+        },
+        {
+          "line": 10,
+          "text": "- **Kết quả**: trạng thái đơn"
+        },
+        {
+          "line": 11,
+          "text": "- **Nội dung**: tên hàng"
+        },
+        {
+          "line": 12,
+          "text": "- **Ngày tháng**: ngày bán"
+        },
+        {
+          "line": 13,
+          "text": "- **Đơn vị (tính)**: đơn vị tính"
+        },
+        {
+          "line": 14,
+          "text": "- **so_luong**: số lượng"
+        },
+        {
+          "line": 15,
+          "text": "- **Thanh tien**: thành tiền sau giảm"
+        },
+        {
+          "line": 16,
+          "text": "- **Quy ra ĐV lẻ**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 17,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 18,
+          "text": "- **Đối tác**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 20,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 21,
+          "text": "- Dữ liệu có đến hết 24/08/2026."
+        },
+        {
+          "line": 22,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 23,
+          "text": "  - Coca Cola 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 24,
+          "text": "  - Coca Cola 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 25,
+          "text": "  - Pepsi 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 26,
+          "text": "  - Pepsi 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 27,
+          "text": "  - Sting dâu 330ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 28,
+          "text": "  - Sting dâu 330ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 29,
+          "text": "  - Red Bull 250ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 30,
+          "text": "  - Red Bull 250ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 31,
+          "text": "  - Trà xanh 0 độ 455ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 32,
+          "text": "  - Trà xanh 0 độ 455ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 33,
+          "text": "  - Nước suối Aquafina 500ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 34,
+          "text": "  - Nước suối Aquafina 500ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 35,
+          "text": "  - Nước suối Lavie 1.5L: 1 lốc = 6 chai"
+        },
+        {
+          "line": 36,
+          "text": "  - Nước suối Lavie 1.5L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 37,
+          "text": "  - Bia Tiger 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 38,
+          "text": "  - Bia Tiger 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 39,
+          "text": "  - Bia Sài Gòn Special 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 40,
+          "text": "  - Bia Sài Gòn Special 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 41,
+          "text": "  - Bia Heineken 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 42,
+          "text": "  - Bia Heineken 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 43,
+          "text": "  - Sữa tươi Vinamilk 180ml: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 44,
+          "text": "  - Sữa tươi Vinamilk 180ml: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 45,
+          "text": "  - Sữa TH true MILK 180ml: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 46,
+          "text": "  - Sữa TH true MILK 180ml: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 47,
+          "text": "  - Sữa đặc Ông Thọ 380g: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 48,
+          "text": "  - Sữa chua Vinamilk có đường: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 49,
+          "text": "  - Sữa chua Vinamilk có đường: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 50,
+          "text": "  - Yakult 65ml: 1 lốc = 5 chai"
+        },
+        {
+          "line": 51,
+          "text": "  - Yakult 65ml: 1 thùng = 50 chai"
+        },
+        {
+          "line": 52,
+          "text": "  - Mì Hảo Hảo tôm chua cay: 1 thùng = 30 gói"
+        },
+        {
+          "line": 53,
+          "text": "  - Mì Omachi sườn hầm: 1 thùng = 30 gói"
+        },
+        {
+          "line": 54,
+          "text": "  - Mì 3 Miền tôm hùm: 1 thùng = 30 gói"
+        },
+        {
+          "line": 55,
+          "text": "  - Phở Vifon bò: 1 thùng = 30 gói"
+        },
+        {
+          "line": 56,
+          "text": "  - Gạo ST25: 1 bao = 5 kg"
+        },
+        {
+          "line": 57,
+          "text": "  - Gạo ST25: 1 bao 25kg = 25 kg"
+        },
+        {
+          "line": 58,
+          "text": "  - Gạo thơm Jasmine: 1 bao = 5 kg"
+        },
+        {
+          "line": 59,
+          "text": "  - Gạo thơm Jasmine: 1 bao 25kg = 25 kg"
+        },
+        {
+          "line": 60,
+          "text": "  - Đường Biên Hòa 1kg: 1 thùng = 12 gói"
+        },
+        {
+          "line": 61,
+          "text": "  - Muối I-ốt 500g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 62,
+          "text": "  - Bột ngọt Ajinomoto 400g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 63,
+          "text": "  - Hạt nêm Knorr 400g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 64,
+          "text": "  - Nước mắm Nam Ngư 750ml: 1 thùng = 12 chai"
+        },
+        {
+          "line": 65,
+          "text": "  - Nước tương Maggi 700ml: 1 thùng = 12 chai"
+        },
+        {
+          "line": 66,
+          "text": "  - Dầu ăn Tường An 1L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 67,
+          "text": "  - Dầu ăn Simply 2L: 1 thùng = 6 chai"
+        },
+        {
+          "line": 68,
+          "text": "  - Tương ớt Chinsu 250g: 1 thùng = 24 chai"
+        },
+        {
+          "line": 69,
+          "text": "  - Trứng gà so: 1 vỉ = 10 quả"
+        },
+        {
+          "line": 70,
+          "text": "  - Trứng gà so: 1 hộp 30 = 30 quả"
+        },
+        {
+          "line": 71,
+          "text": "  - Xúc xích Vissan 5 cây: 1 thùng = 20 gói"
+        },
+        {
+          "line": 72,
+          "text": "  - Cá hộp 3 Cô Gái 155g: 1 lốc = 10 hộp"
+        },
+        {
+          "line": 73,
+          "text": "  - Đậu phộng rang muối 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 74,
+          "text": "  - Snack Oishi tôm cay 40g: 1 thùng = 50 gói"
+        },
+        {
+          "line": 75,
+          "text": "  - Snack Lay's vị tự nhiên 56g: 1 thùng = 32 gói"
+        },
+        {
+          "line": 76,
+          "text": "  - Bánh Oreo 133g: 1 lốc = 12 gói"
+        },
+        {
+          "line": 77,
+          "text": "  - Bánh Chocopie 12 cái: 1 thùng = 8 hộp"
+        },
+        {
+          "line": 78,
+          "text": "  - Bánh quy Cosy 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 79,
+          "text": "  - Kẹo Alpenliebe 100g: 1 thùng = 40 gói"
+        },
+        {
+          "line": 80,
+          "text": "  - Kẹo cao su Doublemint: 1 lốc = 20 vỉ"
+        },
+        {
+          "line": 81,
+          "text": "  - Hạt hướng dương 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 82,
+          "text": "  - Bột giặt OMO 3kg: 1 thùng = 4 gói"
+        },
+        {
+          "line": 83,
+          "text": "  - Nước giặt Ariel 3.2L: 1 thùng = 4 chai"
+        },
+        {
+          "line": 84,
+          "text": "  - Nước rửa chén Sunlight 750g: 1 thùng = 12 chai"
+        },
+        {
+          "line": 85,
+          "text": "  - Nước lau sàn Sunlight 1L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 86,
+          "text": "  - Kem đánh răng P/S 180g: 1 thùng = 36 hộp"
+        },
+        {
+          "line": 87,
+          "text": "  - Bàn chải Colgate: 1 lốc = 12 cái"
+        },
+        {
+          "line": 88,
+          "text": "  - Dầu gội Clear 630g: 1 thùng = 6 chai"
+        },
+        {
+          "line": 89,
+          "text": "  - Sữa tắm Lifebuoy 850g: 1 thùng = 6 chai"
+        },
+        {
+          "line": 90,
+          "text": "  - Xà bông Lifebuoy 90g: 1 lốc = 6 cục"
+        },
+        {
+          "line": 91,
+          "text": "  - Xà bông Lifebuoy 90g: 1 thùng = 72 cục"
+        },
+        {
+          "line": 92,
+          "text": "  - Giấy vệ sinh Pulppy 10 cuộn: 1 thùng = 6 lốc"
+        },
+        {
+          "line": 93,
+          "text": "  - Khăn giấy Tempo 10 gói: 1 thùng = 12 lốc"
+        },
+        {
+          "line": 94,
+          "text": "  - Băng vệ sinh Diana 8 miếng: 1 thùng = 48 gói"
+        },
+        {
+          "line": 95,
+          "text": "  - Tã Bobby M 32 miếng: 1 thùng = 4 gói"
+        },
+        {
+          "line": 96,
+          "text": "  - Thuốc lá Vinataba: 1 cây = 10 gói"
+        },
+        {
+          "line": 97,
+          "text": "  - Thuốc lá Jet: 1 cây = 10 gói"
+        },
+        {
+          "line": 98,
+          "text": "  - Pin Panasonic AA: 1 hộp = 12 vỉ"
+        },
+        {
+          "line": 99,
+          "text": "  - Nhang Quảng Trí bó: 1 thùng = 20 bó"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_102",
+      "source": "train/data/biz_102/README.md",
+      "sha256": "6d857ce98b60e60a31147247c7339a5d9ac935987da3042faa14fb4022e04551",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_102"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…). File đơn hàng mỗi dòng một sản phẩm, thông tin đơn lặp lại ở mọi dòng của đơn; file này không có mã sản phẩm, nối với các danh sách sản phẩm qua tên sản phẩm. Ngày dạng dd/mm/yyyy."
+        },
+        {
+          "line": 5,
+          "text": "File `DonHang_ChiTiet.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `DonHang_ChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DanhSachQuyDoi.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "## Cột trong `DonHang_ChiTiet.xlsx`"
+        },
+        {
+          "line": 12,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 13,
+          "text": "- **Ngày đặt hàng**: ngày bán"
+        },
+        {
+          "line": 14,
+          "text": "- **Trạng thái đơn hàng**: trạng thái đơn"
+        },
+        {
+          "line": 15,
+          "text": "- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 16,
+          "text": "- **Tên sản phẩm**: tên hàng"
+        },
+        {
+          "line": 17,
+          "text": "- **Số lượng sản phẩm**: số lượng"
+        },
+        {
+          "line": 18,
+          "text": "- **Giá sản phẩm**: đơn giá"
+        },
+        {
+          "line": 19,
+          "text": "- **Tổng tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 20,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 22,
+          "text": "## Cột trong `DanhSachQuyDoi.xlsx`"
+        },
+        {
+          "line": 23,
+          "text": "- **Tên sản phẩm**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)"
+        },
+        {
+          "line": 24,
+          "text": "- **Đơn vị quy đổi**: đơn vị lớn (thùng, hộp, tấn...)"
+        },
+        {
+          "line": 25,
+          "text": "- **Tỉ lệ quy đổi**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn"
+        },
+        {
+          "line": 26,
+          "text": "- **Đơn vị cơ bản**: đơn vị cơ bản"
+        },
+        {
+          "line": 28,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 29,
+          "text": "- Dữ liệu có đến hết 16/06/2026."
+        },
+        {
+          "line": 30,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachQuyDoi.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_103",
+      "source": "train/data/biz_103/README.md",
+      "sha256": "2dcc4d7968fd2d7b74bf4ee2aae5f2bfca9dbdac69346148325e2ae8d82b3622",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_103"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng. File đơn hàng mỗi dòng một sản phẩm."
+        },
+        {
+          "line": 5,
+          "text": "File `DonHang_ChiTiet.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `DonHang_ChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DanhSachQuyDoi.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "## Cột trong `DonHang_ChiTiet.xlsx`"
+        },
+        {
+          "line": 12,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 13,
+          "text": "- **Ngày đặt hàng**: ngày bán"
+        },
+        {
+          "line": 14,
+          "text": "- **Trạng thái đơn hàng**: trạng thái đơn"
+        },
+        {
+          "line": 15,
+          "text": "- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 16,
+          "text": "- **Tên sản phẩm**: tên hàng"
+        },
+        {
+          "line": 17,
+          "text": "- **Số lượng sản phẩm**: số lượng"
+        },
+        {
+          "line": 18,
+          "text": "- **Giá sản phẩm**: đơn giá"
+        },
+        {
+          "line": 19,
+          "text": "- **Tổng tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 20,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 22,
+          "text": "## Cột trong `DanhSachQuyDoi.xlsx`"
+        },
+        {
+          "line": 23,
+          "text": "- **Tên sản phẩm**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)"
+        },
+        {
+          "line": 24,
+          "text": "- **Đơn vị quy đổi**: đơn vị lớn (thùng, hộp, tấn...)"
+        },
+        {
+          "line": 25,
+          "text": "- **Tỉ lệ quy đổi**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn"
+        },
+        {
+          "line": 26,
+          "text": "- **Đơn vị cơ bản**: đơn vị cơ bản"
+        },
+        {
+          "line": 28,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 29,
+          "text": "- Dữ liệu có đến hết 09/07/2026."
+        },
+        {
+          "line": 30,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachQuyDoi.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_104",
+      "source": "train/data/biz_104/README.md",
+      "sha256": "70955b88b93c4d4d4b5de1806ed212a9599b9cf9fb959afdc3a042c301af3ab2",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_104"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…). File đơn hàng mỗi dòng một sản phẩm, thông tin đơn lặp lại ở mọi dòng của đơn; file này không có mã sản phẩm, nối với các danh sách sản phẩm qua tên sản phẩm. Ngày dạng dd/mm/yyyy."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `DonHang_ChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 7,
+          "text": "- `DanhSachQuyDoi.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "## Cột trong `DonHang_ChiTiet.xlsx`"
+        },
+        {
+          "line": 10,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 11,
+          "text": "- **Ngày đặt hàng**: ngày bán"
+        },
+        {
+          "line": 12,
+          "text": "- **Trạng thái đơn hàng**: trạng thái đơn"
+        },
+        {
+          "line": 13,
+          "text": "- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 14,
+          "text": "- **Tên sản phẩm**: tên hàng"
+        },
+        {
+          "line": 15,
+          "text": "- **Số lượng sản phẩm**: số lượng"
+        },
+        {
+          "line": 16,
+          "text": "- **Giá sản phẩm**: đơn giá"
+        },
+        {
+          "line": 17,
+          "text": "- **Tổng tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 18,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 20,
+          "text": "## Cột trong `DanhSachQuyDoi.xlsx`"
+        },
+        {
+          "line": 21,
+          "text": "- **Tên sản phẩm**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)"
+        },
+        {
+          "line": 22,
+          "text": "- **Đơn vị quy đổi**: đơn vị lớn (thùng, hộp, tấn...)"
+        },
+        {
+          "line": 23,
+          "text": "- **Tỉ lệ quy đổi**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn"
+        },
+        {
+          "line": 24,
+          "text": "- **Đơn vị cơ bản**: đơn vị cơ bản"
+        },
+        {
+          "line": 26,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 27,
+          "text": "- Dữ liệu có đến hết 02/06/2026."
+        },
+        {
+          "line": 28,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachQuyDoi.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_105",
+      "source": "train/data/biz_105/README.md",
+      "sha256": "a73db6b16c8768c2fca49d10e6e8dcb6cc1054881c63c8afcbef487ae025a326",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_105"
+        },
+        {
+          "line": 3,
+          "text": "Sổ bán hàng ghi tay chuyển sang Excel, mỗi tháng một sheet."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `SoBanHang_1.xlsx` (xlsx)"
+        },
+        {
+          "line": 7,
+          "text": "- `SoBanHang_2026.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "- `DanhMuc.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `TonKho.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `SoNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `BangGia.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "## Cột trong `SoBanHang_1.xlsx`"
+        },
+        {
+          "line": 14,
+          "text": "- **Hàng**: tên hàng"
+        },
+        {
+          "line": 15,
+          "text": "- **so_luong**: số lượng"
+        },
+        {
+          "line": 16,
+          "text": "- **Unit**: đơn vị tính"
+        },
+        {
+          "line": 17,
+          "text": "- **Trị giá**: thành tiền sau giảm"
+        },
+        {
+          "line": 18,
+          "text": "- **Status**: trạng thái đơn"
+        },
+        {
+          "line": 19,
+          "text": "- **Giá lẻ**: đơn giá"
+        },
+        {
+          "line": 20,
+          "text": "- **Giờ**: giờ đặt đơn (dòng trả hàng: lúc trả)"
+        },
+        {
+          "line": 21,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 22,
+          "text": "- **Ngày giao dịch**: ngày bán"
+        },
+        {
+          "line": 23,
+          "text": "- **Khách**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 25,
+          "text": "## Cột trong `SoBanHang_2026.xlsx`"
+        },
+        {
+          "line": 26,
+          "text": "- **Hàng**: tên hàng"
+        },
+        {
+          "line": 27,
+          "text": "- **so_luong**: số lượng"
+        },
+        {
+          "line": 28,
+          "text": "- **Unit**: đơn vị tính"
+        },
+        {
+          "line": 29,
+          "text": "- **Trị giá**: thành tiền sau giảm"
+        },
+        {
+          "line": 30,
+          "text": "- **Status**: trạng thái đơn"
+        },
+        {
+          "line": 31,
+          "text": "- **Giá lẻ**: đơn giá"
+        },
+        {
+          "line": 32,
+          "text": "- **Giờ**: giờ đặt đơn (dòng trả hàng: lúc trả)"
+        },
+        {
+          "line": 33,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 34,
+          "text": "- **Ngày giao dịch**: ngày bán"
+        },
+        {
+          "line": 35,
+          "text": "- **Khách**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 37,
+          "text": "## Cột trong `DanhMuc.xlsx`"
+        },
+        {
+          "line": 38,
+          "text": "- **Tên món**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)"
+        },
+        {
+          "line": 39,
+          "text": "- **Đơn vị gốc**: đơn vị cơ bản"
+        },
+        {
+          "line": 40,
+          "text": "- **ĐV nhập**: đơn vị lớn (thùng, hộp, tấn...)"
+        },
+        {
+          "line": 41,
+          "text": "- **Hệ số**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn"
+        },
+        {
+          "line": 43,
+          "text": "## Cột trong `TonKho.xlsx`"
+        },
+        {
+          "line": 44,
+          "text": "- **Hàng hóa**: tên hàng"
+        },
+        {
+          "line": 45,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 46,
+          "text": "- **Tồn cuối**: tồn kho (đơn vị cơ bản)"
+        },
+        {
+          "line": 48,
+          "text": "## Cột trong `SoNhapHang.xlsx`"
+        },
+        {
+          "line": 49,
+          "text": "- **Số phiếu**: mã phiếu nhập"
+        },
+        {
+          "line": 50,
+          "text": "- **Ngày nhập**: ngày nhập"
+        },
+        {
+          "line": 51,
+          "text": "- **Ghi chu**: ghi chú"
+        },
+        {
+          "line": 52,
+          "text": "- **Thành tiền**: tiền nhập của cả dòng"
+        },
+        {
+          "line": 53,
+          "text": "- **Nhà cung cấp**: nhà cung cấp"
+        },
+        {
+          "line": 54,
+          "text": "- **Tên mặt hàng**: tên hàng"
+        },
+        {
+          "line": 55,
+          "text": "- **Giá nhập**: giá nhập một đơn vị (theo đơn vị nhập của dòng)"
+        },
+        {
+          "line": 56,
+          "text": "- **ĐVT**: đơn vị nhập"
+        },
+        {
+          "line": 57,
+          "text": "- **SL nhập**: số lượng nhập"
+        },
+        {
+          "line": 59,
+          "text": "## Cột trong `BangGia.xlsx`"
+        },
+        {
+          "line": 60,
+          "text": "- **Ngày áp dụng**: ngày bắt đầu áp dụng giá"
+        },
+        {
+          "line": 61,
+          "text": "- **ten_hang**: tên hàng"
+        },
+        {
+          "line": 62,
+          "text": "- **Giá mới**: giá bán áp dụng từ ngày đó (đơn vị cơ bản)"
+        },
+        {
+          "line": 63,
+          "text": "- **Giá cũ**: giá trước lần đổi (trống ở dòng đầu mỗi mặt hàng)"
+        },
+        {
+          "line": 65,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 66,
+          "text": "- Dữ liệu có đến hết 24/06/2026."
+        },
+        {
+          "line": 67,
+          "text": "- **Trả hàng**: hàng trả ghi số lượng âm, cùng mã đơn với đơn đã bán: đơn có dòng số lượng âm là đơn có trả hàng."
+        },
+        {
+          "line": 68,
+          "text": "- **Tồn kho**: **Tồn cuối** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 69,
+          "text": "- **Nhập hàng**: **Giá nhập** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng."
+        },
+        {
+          "line": 70,
+          "text": "- **Giá bán**: **Giá mới** (theo đơn vị cơ bản) áp dụng từ **Ngày áp dụng** đến trước lần đổi giá sau của cùng mặt hàng; dòng đầu mỗi mặt hàng là giá lúc bắt đầu dữ liệu (**Giá cũ** trống)."
+        },
+        {
+          "line": 71,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhMuc.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_106",
+      "source": "train/data/biz_106/README.md",
+      "sha256": "f9a2ed4a39f784cc16180f013a2f56ae44b7aab33e5fbaa4899af8c54bbb3515",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_106"
+        },
+        {
+          "line": 3,
+          "text": "File máy POS xuất ra."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `DanhSachHoaDon.xlsx` (xlsx)"
+        },
+        {
+          "line": 7,
+          "text": "- `DanhSachHoaDonChiTiet_1.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "- `DanhSachHoaDonChiTiet_2.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DanhSachSanPham.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `DanhSachKhachHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `BaoCaoTonKho.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "- `DanhSachNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "- `DanhSachChiTietNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 14,
+          "text": "- `SoQuy.xlsx` (xlsx)"
+        },
+        {
+          "line": 15,
+          "text": "- `DanhSachDonViTinh.xlsx` (xlsx)"
+        },
+        {
+          "line": 17,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 18,
+          "text": "- Dữ liệu có đến hết 14/09/2026."
+        },
+        {
+          "line": 19,
+          "text": "- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Giá trị** là số tiền trả lần đó; **Tổng sau giảm giá** là số khách phải trả cho cả đơn."
+        },
+        {
+          "line": 20,
+          "text": "- **Giá vốn**: **Giá vốn** là giá vốn một đơn vị bán."
+        },
+        {
+          "line": 21,
+          "text": "- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 22,
+          "text": "- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập."
+        },
+        {
+          "line": 23,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachDonViTinh.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_107",
+      "source": "train/data/biz_107/README.md",
+      "sha256": "8f1bb9e115bffdad77e112e42642ec86ab806af7f13bcfdb24dfcfa5e8c964df",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_107"
+        },
+        {
+          "line": 3,
+          "text": "Sổ bán hàng chủ tiệm tự ghi trên Excel, một sheet: mỗi dòng một mặt hàng khách mua, không ghi mã đơn, không ghi tên khách."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `SoBanHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "## Cột trong `SoBanHang.xlsx`"
+        },
+        {
+          "line": 9,
+          "text": "- **Trạng thái xử lý**: trạng thái đơn"
+        },
+        {
+          "line": 10,
+          "text": "- **Tổng tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 11,
+          "text": "- **ngay_ban**: ngày bán"
+        },
+        {
+          "line": 12,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 13,
+          "text": "- **Nội dung**: tên hàng"
+        },
+        {
+          "line": 14,
+          "text": "- **don_gia**: đơn giá"
+        },
+        {
+          "line": 15,
+          "text": "- **Đơn vị (tính)**: đơn vị tính"
+        },
+        {
+          "line": 16,
+          "text": "- **Số lượng lẻ**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 18,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 19,
+          "text": "- Dữ liệu có đến hết 22/07/2026."
+        },
+        {
+          "line": 20,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 21,
+          "text": "  - Coca Cola 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 22,
+          "text": "  - Coca Cola 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 23,
+          "text": "  - Pepsi 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 24,
+          "text": "  - Pepsi 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 25,
+          "text": "  - Sting dâu 330ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 26,
+          "text": "  - Sting dâu 330ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 27,
+          "text": "  - Red Bull 250ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 28,
+          "text": "  - Red Bull 250ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 29,
+          "text": "  - Trà xanh 0 độ 455ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 30,
+          "text": "  - Trà xanh 0 độ 455ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 31,
+          "text": "  - Nước suối Aquafina 500ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 32,
+          "text": "  - Nước suối Aquafina 500ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 33,
+          "text": "  - Nước suối Lavie 1.5L: 1 lốc = 6 chai"
+        },
+        {
+          "line": 34,
+          "text": "  - Nước suối Lavie 1.5L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 35,
+          "text": "  - Bia Tiger 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 36,
+          "text": "  - Bia Tiger 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 37,
+          "text": "  - Bia Sài Gòn Special 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 38,
+          "text": "  - Bia Sài Gòn Special 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 39,
+          "text": "  - Bia Heineken 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 40,
+          "text": "  - Bia Heineken 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 41,
+          "text": "  - Sữa tươi Vinamilk 180ml: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 42,
+          "text": "  - Sữa tươi Vinamilk 180ml: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 43,
+          "text": "  - Sữa TH true MILK 180ml: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 44,
+          "text": "  - Sữa TH true MILK 180ml: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 45,
+          "text": "  - Sữa đặc Ông Thọ 380g: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 46,
+          "text": "  - Sữa chua Vinamilk có đường: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 47,
+          "text": "  - Sữa chua Vinamilk có đường: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 48,
+          "text": "  - Yakult 65ml: 1 lốc = 5 chai"
+        },
+        {
+          "line": 49,
+          "text": "  - Yakult 65ml: 1 thùng = 50 chai"
+        },
+        {
+          "line": 50,
+          "text": "  - Mì Hảo Hảo tôm chua cay: 1 thùng = 30 gói"
+        },
+        {
+          "line": 51,
+          "text": "  - Mì Omachi sườn hầm: 1 thùng = 30 gói"
+        },
+        {
+          "line": 52,
+          "text": "  - Mì 3 Miền tôm hùm: 1 thùng = 30 gói"
+        },
+        {
+          "line": 53,
+          "text": "  - Phở Vifon bò: 1 thùng = 30 gói"
+        },
+        {
+          "line": 54,
+          "text": "  - Gạo ST25: 1 bao = 5 kg"
+        },
+        {
+          "line": 55,
+          "text": "  - Gạo ST25: 1 bao 25kg = 25 kg"
+        },
+        {
+          "line": 56,
+          "text": "  - Gạo thơm Jasmine: 1 bao = 5 kg"
+        },
+        {
+          "line": 57,
+          "text": "  - Gạo thơm Jasmine: 1 bao 25kg = 25 kg"
+        },
+        {
+          "line": 58,
+          "text": "  - Đường Biên Hòa 1kg: 1 thùng = 12 gói"
+        },
+        {
+          "line": 59,
+          "text": "  - Muối I-ốt 500g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 60,
+          "text": "  - Bột ngọt Ajinomoto 400g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 61,
+          "text": "  - Hạt nêm Knorr 400g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 62,
+          "text": "  - Nước mắm Nam Ngư 750ml: 1 thùng = 12 chai"
+        },
+        {
+          "line": 63,
+          "text": "  - Nước tương Maggi 700ml: 1 thùng = 12 chai"
+        },
+        {
+          "line": 64,
+          "text": "  - Dầu ăn Tường An 1L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 65,
+          "text": "  - Dầu ăn Simply 2L: 1 thùng = 6 chai"
+        },
+        {
+          "line": 66,
+          "text": "  - Tương ớt Chinsu 250g: 1 thùng = 24 chai"
+        },
+        {
+          "line": 67,
+          "text": "  - Trứng gà so: 1 vỉ = 10 quả"
+        },
+        {
+          "line": 68,
+          "text": "  - Trứng gà so: 1 hộp 30 = 30 quả"
+        },
+        {
+          "line": 69,
+          "text": "  - Xúc xích Vissan 5 cây: 1 thùng = 20 gói"
+        },
+        {
+          "line": 70,
+          "text": "  - Cá hộp 3 Cô Gái 155g: 1 lốc = 10 hộp"
+        },
+        {
+          "line": 71,
+          "text": "  - Đậu phộng rang muối 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 72,
+          "text": "  - Snack Oishi tôm cay 40g: 1 thùng = 50 gói"
+        },
+        {
+          "line": 73,
+          "text": "  - Snack Lay's vị tự nhiên 56g: 1 thùng = 32 gói"
+        },
+        {
+          "line": 74,
+          "text": "  - Bánh Oreo 133g: 1 lốc = 12 gói"
+        },
+        {
+          "line": 75,
+          "text": "  - Bánh Chocopie 12 cái: 1 thùng = 8 hộp"
+        },
+        {
+          "line": 76,
+          "text": "  - Bánh quy Cosy 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 77,
+          "text": "  - Kẹo Alpenliebe 100g: 1 thùng = 40 gói"
+        },
+        {
+          "line": 78,
+          "text": "  - Kẹo cao su Doublemint: 1 lốc = 20 vỉ"
+        },
+        {
+          "line": 79,
+          "text": "  - Hạt hướng dương 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 80,
+          "text": "  - Bột giặt OMO 3kg: 1 thùng = 4 gói"
+        },
+        {
+          "line": 81,
+          "text": "  - Nước giặt Ariel 3.2L: 1 thùng = 4 chai"
+        },
+        {
+          "line": 82,
+          "text": "  - Nước rửa chén Sunlight 750g: 1 thùng = 12 chai"
+        },
+        {
+          "line": 83,
+          "text": "  - Nước lau sàn Sunlight 1L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 84,
+          "text": "  - Kem đánh răng P/S 180g: 1 thùng = 36 hộp"
+        },
+        {
+          "line": 85,
+          "text": "  - Bàn chải Colgate: 1 lốc = 12 cái"
+        },
+        {
+          "line": 86,
+          "text": "  - Dầu gội Clear 630g: 1 thùng = 6 chai"
+        },
+        {
+          "line": 87,
+          "text": "  - Sữa tắm Lifebuoy 850g: 1 thùng = 6 chai"
+        },
+        {
+          "line": 88,
+          "text": "  - Xà bông Lifebuoy 90g: 1 lốc = 6 cục"
+        },
+        {
+          "line": 89,
+          "text": "  - Xà bông Lifebuoy 90g: 1 thùng = 72 cục"
+        },
+        {
+          "line": 90,
+          "text": "  - Giấy vệ sinh Pulppy 10 cuộn: 1 thùng = 6 lốc"
+        },
+        {
+          "line": 91,
+          "text": "  - Khăn giấy Tempo 10 gói: 1 thùng = 12 lốc"
+        },
+        {
+          "line": 92,
+          "text": "  - Băng vệ sinh Diana 8 miếng: 1 thùng = 48 gói"
+        },
+        {
+          "line": 93,
+          "text": "  - Tã Bobby M 32 miếng: 1 thùng = 4 gói"
+        },
+        {
+          "line": 94,
+          "text": "  - Thuốc lá Vinataba: 1 cây = 10 gói"
+        },
+        {
+          "line": 95,
+          "text": "  - Thuốc lá Jet: 1 cây = 10 gói"
+        },
+        {
+          "line": 96,
+          "text": "  - Pin Panasonic AA: 1 hộp = 12 vỉ"
+        },
+        {
+          "line": 97,
+          "text": "  - Nhang Quảng Trí bó: 1 thùng = 20 bó"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_108",
+      "source": "train/data/biz_108/README.md",
+      "sha256": "47a853ffb79a0449190a5e331b209977a3a4b323943521c0d28037d01397e9c9",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_108"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…), nối với nhau qua mã. Ngày dạng dd/mm/yyyy."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `DanhSachHoaDon.xlsx` (xlsx)"
+        },
+        {
+          "line": 7,
+          "text": "- `DanhSachHoaDonChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "- `DanhSachSanPham.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DanhSachKhachHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `BaoCaoTonKho.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `DanhSachNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "- `DanhSachChiTietNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 14,
+          "text": "## Cột trong `DanhSachHoaDon.xlsx`"
+        },
+        {
+          "line": 15,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 16,
+          "text": "- **Thời gian**: ngày bán"
+        },
+        {
+          "line": 17,
+          "text": "- **Mã KH**: mã khách (trống nếu khách lẻ)"
+        },
+        {
+          "line": 18,
+          "text": "- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 19,
+          "text": "- **Tổng tiền hàng**: tổng tiền hàng của đơn (cộng thành tiền các dòng), trước giảm giá của đơn"
+        },
+        {
+          "line": 20,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 21,
+          "text": "- **Khách đã trả**: đã thanh toán"
+        },
+        {
+          "line": 22,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 23,
+          "text": "- **Thời gian tạo**: thời điểm đặt đơn (ngày giờ)"
+        },
+        {
+          "line": 24,
+          "text": "- **Tổng sau giảm giá**: tổng tiền đơn"
+        },
+        {
+          "line": 25,
+          "text": "- **Còn nợ**: còn nợ"
+        },
+        {
+          "line": 26,
+          "text": "- **Kênh bán**: kênh bán"
+        },
+        {
+          "line": 27,
+          "text": "- **Người bán**: mã nhân viên bán"
+        },
+        {
+          "line": 28,
+          "text": "- **Trạng thái HĐĐT**: cột trống, không có dữ liệu"
+        },
+        {
+          "line": 30,
+          "text": "## Cột trong `DanhSachHoaDonChiTiet.xlsx`"
+        },
+        {
+          "line": 31,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 32,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 33,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 34,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 35,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 36,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 37,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 38,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 39,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 40,
+          "text": "- **STT**: số thứ tự dòng trong đơn"
+        },
+        {
+          "line": 42,
+          "text": "## Cột trong `DanhSachSanPham.xlsx`"
+        },
+        {
+          "line": 43,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 44,
+          "text": "- **Tên hàng**: tên"
+        },
+        {
+          "line": 45,
+          "text": "- **Nhóm hàng(3 Cấp)**: nhóm hàng"
+        },
+        {
+          "line": 46,
+          "text": "- **Giá bán**: giá bán hiện tại"
+        },
+        {
+          "line": 47,
+          "text": "- **ĐVT**: đơn vị cơ bản"
+        },
+        {
+          "line": 49,
+          "text": "## Cột trong `DanhSachKhachHang.xlsx`"
+        },
+        {
+          "line": 50,
+          "text": "- **Mã khách hàng**: mã khách"
+        },
+        {
+          "line": 51,
+          "text": "- **Tên khách hàng**: tên"
+        },
+        {
+          "line": 52,
+          "text": "- **Điện thoại**: số điện thoại"
+        },
+        {
+          "line": 53,
+          "text": "- **Nhóm khách hàng**: nhóm khách"
+        },
+        {
+          "line": 54,
+          "text": "- **Địa chỉ**: địa chỉ"
+        },
+        {
+          "line": 55,
+          "text": "- **Giới tính**: cột trống, không có dữ liệu"
+        },
+        {
+          "line": 56,
+          "text": "- **Ngày tạo**: ngày tạo khách trên phần mềm"
+        },
+        {
+          "line": 58,
+          "text": "## Cột trong `BaoCaoTonKho.xlsx`"
+        },
+        {
+          "line": 59,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 60,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 61,
+          "text": "- **ĐVT**: đơn vị cơ bản"
+        },
+        {
+          "line": 62,
+          "text": "- **Tồn cuối kỳ**: tồn kho (đơn vị cơ bản)"
+        },
+        {
+          "line": 64,
+          "text": "## Cột trong `DanhSachNhapHang.xlsx`"
+        },
+        {
+          "line": 65,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 66,
+          "text": "- **Thời gian**: ngày nhập"
+        },
+        {
+          "line": 67,
+          "text": "- **Mã NCC**: mã nhà cung cấp"
+        },
+        {
+          "line": 68,
+          "text": "- **Cần trả NCC**: tổng tiền phiếu nhập"
+        },
+        {
+          "line": 69,
+          "text": "- **Trạng thái**: trạng thái phiếu nhập"
+        },
+        {
+          "line": 70,
+          "text": "- **Ghi chú**: ghi chú"
+        },
+        {
+          "line": 72,
+          "text": "## Cột trong `DanhSachChiTietNhapHang.xlsx`"
+        },
+        {
+          "line": 73,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 74,
+          "text": "- **STT**: số thứ tự dòng trong phiếu nhập"
+        },
+        {
+          "line": 75,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 76,
+          "text": "- **ĐVT**: đơn vị tính"
+        },
+        {
+          "line": 77,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 78,
+          "text": "- **Đơn giá**: giá nhập một đơn vị (theo đơn vị nhập của dòng)"
+        },
+        {
+          "line": 80,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 81,
+          "text": "- Dữ liệu có đến hết 29/05/2026."
+        },
+        {
+          "line": 82,
+          "text": "- **Còn nợ**: **Còn nợ** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu."
+        },
+        {
+          "line": 83,
+          "text": "- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 84,
+          "text": "- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập."
+        },
+        {
+          "line": 85,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 86,
+          "text": "  - Coca Cola 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 87,
+          "text": "  - Coca Cola 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 88,
+          "text": "  - Pepsi 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 89,
+          "text": "  - Pepsi 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 90,
+          "text": "  - Sting dâu 330ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 91,
+          "text": "  - Sting dâu 330ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 92,
+          "text": "  - Red Bull 250ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 93,
+          "text": "  - Red Bull 250ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 94,
+          "text": "  - Trà xanh 0 độ 455ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 95,
+          "text": "  - Trà xanh 0 độ 455ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 96,
+          "text": "  - Nước suối Aquafina 500ml: 1 lốc = 6 chai"
+        },
+        {
+          "line": 97,
+          "text": "  - Nước suối Aquafina 500ml: 1 thùng = 24 chai"
+        },
+        {
+          "line": 98,
+          "text": "  - Nước suối Lavie 1.5L: 1 lốc = 6 chai"
+        },
+        {
+          "line": 99,
+          "text": "  - Nước suối Lavie 1.5L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 100,
+          "text": "  - Bia Tiger 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 101,
+          "text": "  - Bia Tiger 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 102,
+          "text": "  - Bia Sài Gòn Special 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 103,
+          "text": "  - Bia Sài Gòn Special 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 104,
+          "text": "  - Bia Heineken 330ml: 1 lốc = 6 lon"
+        },
+        {
+          "line": 105,
+          "text": "  - Bia Heineken 330ml: 1 thùng = 24 lon"
+        },
+        {
+          "line": 106,
+          "text": "  - Sữa tươi Vinamilk 180ml: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 107,
+          "text": "  - Sữa tươi Vinamilk 180ml: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 108,
+          "text": "  - Sữa TH true MILK 180ml: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 109,
+          "text": "  - Sữa TH true MILK 180ml: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 110,
+          "text": "  - Sữa đặc Ông Thọ 380g: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 111,
+          "text": "  - Sữa chua Vinamilk có đường: 1 lốc = 4 hộp"
+        },
+        {
+          "line": 112,
+          "text": "  - Sữa chua Vinamilk có đường: 1 thùng = 48 hộp"
+        },
+        {
+          "line": 113,
+          "text": "  - Yakult 65ml: 1 lốc = 5 chai"
+        },
+        {
+          "line": 114,
+          "text": "  - Yakult 65ml: 1 thùng = 50 chai"
+        },
+        {
+          "line": 115,
+          "text": "  - Mì Hảo Hảo tôm chua cay: 1 thùng = 30 gói"
+        },
+        {
+          "line": 116,
+          "text": "  - Mì Omachi sườn hầm: 1 thùng = 30 gói"
+        },
+        {
+          "line": 117,
+          "text": "  - Mì 3 Miền tôm hùm: 1 thùng = 30 gói"
+        },
+        {
+          "line": 118,
+          "text": "  - Phở Vifon bò: 1 thùng = 30 gói"
+        },
+        {
+          "line": 119,
+          "text": "  - Gạo ST25: 1 bao = 5 kg"
+        },
+        {
+          "line": 120,
+          "text": "  - Gạo ST25: 1 bao 25kg = 25 kg"
+        },
+        {
+          "line": 121,
+          "text": "  - Gạo thơm Jasmine: 1 bao = 5 kg"
+        },
+        {
+          "line": 122,
+          "text": "  - Gạo thơm Jasmine: 1 bao 25kg = 25 kg"
+        },
+        {
+          "line": 123,
+          "text": "  - Đường Biên Hòa 1kg: 1 thùng = 12 gói"
+        },
+        {
+          "line": 124,
+          "text": "  - Muối I-ốt 500g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 125,
+          "text": "  - Bột ngọt Ajinomoto 400g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 126,
+          "text": "  - Hạt nêm Knorr 400g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 127,
+          "text": "  - Nước mắm Nam Ngư 750ml: 1 thùng = 12 chai"
+        },
+        {
+          "line": 128,
+          "text": "  - Nước tương Maggi 700ml: 1 thùng = 12 chai"
+        },
+        {
+          "line": 129,
+          "text": "  - Dầu ăn Tường An 1L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 130,
+          "text": "  - Dầu ăn Simply 2L: 1 thùng = 6 chai"
+        },
+        {
+          "line": 131,
+          "text": "  - Tương ớt Chinsu 250g: 1 thùng = 24 chai"
+        },
+        {
+          "line": 132,
+          "text": "  - Trứng gà so: 1 vỉ = 10 quả"
+        },
+        {
+          "line": 133,
+          "text": "  - Trứng gà so: 1 hộp 30 = 30 quả"
+        },
+        {
+          "line": 134,
+          "text": "  - Xúc xích Vissan 5 cây: 1 thùng = 20 gói"
+        },
+        {
+          "line": 135,
+          "text": "  - Cá hộp 3 Cô Gái 155g: 1 lốc = 10 hộp"
+        },
+        {
+          "line": 136,
+          "text": "  - Đậu phộng rang muối 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 137,
+          "text": "  - Snack Oishi tôm cay 40g: 1 thùng = 50 gói"
+        },
+        {
+          "line": 138,
+          "text": "  - Snack Lay's vị tự nhiên 56g: 1 thùng = 32 gói"
+        },
+        {
+          "line": 139,
+          "text": "  - Bánh Oreo 133g: 1 lốc = 12 gói"
+        },
+        {
+          "line": 140,
+          "text": "  - Bánh Chocopie 12 cái: 1 thùng = 8 hộp"
+        },
+        {
+          "line": 141,
+          "text": "  - Bánh quy Cosy 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 142,
+          "text": "  - Kẹo Alpenliebe 100g: 1 thùng = 40 gói"
+        },
+        {
+          "line": 143,
+          "text": "  - Kẹo cao su Doublemint: 1 lốc = 20 vỉ"
+        },
+        {
+          "line": 144,
+          "text": "  - Hạt hướng dương 200g: 1 thùng = 20 gói"
+        },
+        {
+          "line": 145,
+          "text": "  - Bột giặt OMO 3kg: 1 thùng = 4 gói"
+        },
+        {
+          "line": 146,
+          "text": "  - Nước giặt Ariel 3.2L: 1 thùng = 4 chai"
+        },
+        {
+          "line": 147,
+          "text": "  - Nước rửa chén Sunlight 750g: 1 thùng = 12 chai"
+        },
+        {
+          "line": 148,
+          "text": "  - Nước lau sàn Sunlight 1L: 1 thùng = 12 chai"
+        },
+        {
+          "line": 149,
+          "text": "  - Kem đánh răng P/S 180g: 1 thùng = 36 hộp"
+        },
+        {
+          "line": 150,
+          "text": "  - Bàn chải Colgate: 1 lốc = 12 cái"
+        },
+        {
+          "line": 151,
+          "text": "  - Dầu gội Clear 630g: 1 thùng = 6 chai"
+        },
+        {
+          "line": 152,
+          "text": "  - Sữa tắm Lifebuoy 850g: 1 thùng = 6 chai"
+        },
+        {
+          "line": 153,
+          "text": "  - Xà bông Lifebuoy 90g: 1 lốc = 6 cục"
+        },
+        {
+          "line": 154,
+          "text": "  - Xà bông Lifebuoy 90g: 1 thùng = 72 cục"
+        },
+        {
+          "line": 155,
+          "text": "  - Giấy vệ sinh Pulppy 10 cuộn: 1 thùng = 6 lốc"
+        },
+        {
+          "line": 156,
+          "text": "  - Khăn giấy Tempo 10 gói: 1 thùng = 12 lốc"
+        },
+        {
+          "line": 157,
+          "text": "  - Băng vệ sinh Diana 8 miếng: 1 thùng = 48 gói"
+        },
+        {
+          "line": 158,
+          "text": "  - Tã Bobby M 32 miếng: 1 thùng = 4 gói"
+        },
+        {
+          "line": 159,
+          "text": "  - Thuốc lá Vinataba: 1 cây = 10 gói"
+        },
+        {
+          "line": 160,
+          "text": "  - Thuốc lá Jet: 1 cây = 10 gói"
+        },
+        {
+          "line": 161,
+          "text": "  - Pin Panasonic AA: 1 hộp = 12 vỉ"
+        },
+        {
+          "line": 162,
+          "text": "  - Nhang Quảng Trí bó: 1 thùng = 20 bó"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_109",
+      "source": "train/data/biz_109/README.md",
+      "sha256": "77fad305fc6460c804107b5d928570d1c3abf4d1cd3c0e5a27a3053fb5f3c0d3",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_109"
+        },
+        {
+          "line": 3,
+          "text": "File máy POS xuất ra."
+        },
+        {
+          "line": 5,
+          "text": "Các danh sách `DanhSachHoaDon`, `DanhSachSanPham`, `DanhSachKhachHang`, `BaoCaoTonKho`, `DanhSachNhapHang`, `DanhSachChiTietNhapHang`, `SoQuy`, `DanhSachDonViTinh` nằm chung file `DuLieuBanHang.xlsx`, mỗi danh sách một sheet."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `DuLieuBanHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DanhSachHoaDonChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 12,
+          "text": "- Dữ liệu có đến hết 05/08/2026."
+        },
+        {
+          "line": 13,
+          "text": "- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Giá trị** là số tiền trả lần đó; **Tổng sau giảm giá** là số khách phải trả cho cả đơn."
+        },
+        {
+          "line": 14,
+          "text": "- **Giá vốn**: **Giá vốn** là giá vốn một đơn vị bán."
+        },
+        {
+          "line": 15,
+          "text": "- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 16,
+          "text": "- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập."
+        },
+        {
+          "line": 17,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DuLieuBanHang.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_110",
+      "source": "train/data/biz_110/README.md",
+      "sha256": "85a5aecce97f14d3841cb259d375962131b0b04d1e6b009c343c39c3dcde265f",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_110"
+        },
+        {
+          "line": 3,
+          "text": "Danh sách hoá đơn, một file CSV: mỗi dòng một đơn hàng (hoá đơn), không có chi tiết mặt hàng trong đơn."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `danh_sach_hoa_don.csv` (csv)"
+        },
+        {
+          "line": 8,
+          "text": "## Cột trong `danh_sach_hoa_don.csv`"
+        },
+        {
+          "line": 9,
+          "text": "- **Tien hang**: tiền hàng của đơn: cộng thành tiền các mặt hàng, trước giảm giá của đơn, chưa gồm phí giao"
+        },
+        {
+          "line": 10,
+          "text": "- **TongTien**: số khách phải trả cho cả đơn (đã tính giảm giá của đơn và phí giao)"
+        },
+        {
+          "line": 11,
+          "text": "- **Mã bill**: mã đơn"
+        },
+        {
+          "line": 12,
+          "text": "- **Bên mua**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 13,
+          "text": "- **Ngày giao dịch**: ngày bán"
+        },
+        {
+          "line": 14,
+          "text": "- **Status**: trạng thái đơn"
+        },
+        {
+          "line": 15,
+          "text": "- **Da tra**: đã thanh toán"
+        },
+        {
+          "line": 16,
+          "text": "- **Chưa trả**: số khách còn nợ của đơn (đơn huỷ: 0)"
+        },
+        {
+          "line": 18,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 19,
+          "text": "- Dữ liệu có đến hết 03/07/2026."
+        },
+        {
+          "line": 20,
+          "text": "- **Còn nợ**: **Chưa trả** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_111",
+      "source": "train/data/biz_111/README.md",
+      "sha256": "f8915c1d420a59ecad992ce62a0afe4ba1d017baf9ccf336d554ea5e9ce101a8",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_111"
+        },
+        {
+          "line": 3,
+          "text": "Dữ liệu bán hàng của tiệm, gồm vài file nối với nhau qua mã."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `don_hang.csv` (csv)"
+        },
+        {
+          "line": 7,
+          "text": "- `chi_tiet_don.csv` (csv)"
+        },
+        {
+          "line": 8,
+          "text": "- `san_pham.csv` (csv)"
+        },
+        {
+          "line": 9,
+          "text": "- `khach_hang.csv` (csv)"
+        },
+        {
+          "line": 10,
+          "text": "- `thanh_toan.csv` (csv)"
+        },
+        {
+          "line": 12,
+          "text": "## Cột trong `don_hang.csv`"
+        },
+        {
+          "line": 13,
+          "text": "- **Số KH**: mã khách (trống nếu khách lẻ)"
+        },
+        {
+          "line": 14,
+          "text": "- **Xử lý**: trạng thái đơn"
+        },
+        {
+          "line": 15,
+          "text": "- **NgayBan**: ngày bán"
+        },
+        {
+          "line": 16,
+          "text": "- **Bán qua**: kênh bán"
+        },
+        {
+          "line": 17,
+          "text": "- **Còn lại**: còn nợ"
+        },
+        {
+          "line": 18,
+          "text": "- **Khách trả**: đã thanh toán"
+        },
+        {
+          "line": 19,
+          "text": "- **Tổng bill**: tổng tiền đơn"
+        },
+        {
+          "line": 20,
+          "text": "- **Phương thức TT**: hình thức thanh toán của đơn: cash tiền mặt, transfer chuyển khoản, ewallet ví điện tử, cod giao hàng thu tiền, debt ghi nợ"
+        },
+        {
+          "line": 21,
+          "text": "- **Mã chứng từ**: mã đơn"
+        },
+        {
+          "line": 23,
+          "text": "## Cột trong `chi_tiet_don.csv`"
+        },
+        {
+          "line": 24,
+          "text": "- **SL quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 25,
+          "text": "- **Thứ tự**: số thứ tự dòng trong đơn"
+        },
+        {
+          "line": 26,
+          "text": "- **Giá đơn vị**: đơn giá"
+        },
+        {
+          "line": 27,
+          "text": "- **SL**: số lượng"
+        },
+        {
+          "line": 28,
+          "text": "- **T.Tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 29,
+          "text": "- **ID SP**: mã hàng"
+        },
+        {
+          "line": 30,
+          "text": "- **Ma don**: mã đơn"
+        },
+        {
+          "line": 31,
+          "text": "- **Đơn vị (tính)**: đơn vị tính"
+        },
+        {
+          "line": 33,
+          "text": "## Cột trong `san_pham.csv`"
+        },
+        {
+          "line": 34,
+          "text": "- **SKU**: mã hàng"
+        },
+        {
+          "line": 35,
+          "text": "- **Giá**: giá bán hiện tại"
+        },
+        {
+          "line": 36,
+          "text": "- **Đơn vị**: đơn vị cơ bản"
+        },
+        {
+          "line": 37,
+          "text": "- **Nhom hang**: nhóm hàng"
+        },
+        {
+          "line": 38,
+          "text": "- **Sản phẩm**: tên"
+        },
+        {
+          "line": 40,
+          "text": "## Cột trong `khach_hang.csv`"
+        },
+        {
+          "line": 41,
+          "text": "- **ma_kh**: mã khách"
+        },
+        {
+          "line": 42,
+          "text": "- **Nhóm**: nhóm khách"
+        },
+        {
+          "line": 43,
+          "text": "- **Phone**: số điện thoại"
+        },
+        {
+          "line": 44,
+          "text": "- **Addr**: địa chỉ"
+        },
+        {
+          "line": 45,
+          "text": "- **Khách lẻ/sỉ**: tên"
+        },
+        {
+          "line": 47,
+          "text": "## Cột trong `thanh_toan.csv`"
+        },
+        {
+          "line": 48,
+          "text": "- **Thời gian thu**: thời điểm thu"
+        },
+        {
+          "line": 49,
+          "text": "- **Phương thức**: hình thức thanh toán"
+        },
+        {
+          "line": 50,
+          "text": "- **Tiền**: số tiền"
+        },
+        {
+          "line": 51,
+          "text": "- **Mã phiếu thu**: mã phiếu thu"
+        },
+        {
+          "line": 52,
+          "text": "- **Số HĐ**: mã đơn"
+        },
+        {
+          "line": 54,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 55,
+          "text": "- Dữ liệu có đến hết 19/08/2026."
+        },
+        {
+          "line": 56,
+          "text": "- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Tiền** là số tiền trả lần đó; **Tổng bill** là số khách phải trả cho cả đơn."
+        },
+        {
+          "line": 57,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 58,
+          "text": "  - Bánh croissant: 1 hộp = 6 cái"
+        },
+        {
+          "line": 59,
+          "text": "  - Bánh tiramisu: 1 hộp = 6 cái"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_112",
+      "source": "train/data/biz_112/README.md",
+      "sha256": "358a56a6030c5ec3ae1507c1f771d66d61c08c3521fcbbe32df58f343d9d5878",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_112"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng. Sổ chi tiết bán hàng: mỗi dòng một dòng hàng, thông tin đơn lặp lại ở mọi dòng."
+        },
+        {
+          "line": 5,
+          "text": "File `So_chi_tiet_ban_hang_1.xlsx`, `So_chi_tiet_ban_hang_2026.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `So_chi_tiet_ban_hang_1.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `So_chi_tiet_ban_hang_2026.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `Danh sách hàng hóa.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "## Cột trong `So_chi_tiet_ban_hang_1.xlsx`"
+        },
+        {
+          "line": 13,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 14,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 15,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 16,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 17,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 18,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 19,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 20,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 21,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 23,
+          "text": "## Cột trong `So_chi_tiet_ban_hang_2026.xlsx`"
+        },
+        {
+          "line": 24,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 25,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 26,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 27,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 28,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 29,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 30,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 31,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 32,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 34,
+          "text": "## Cột trong `Danh sách hàng hóa.xlsx`"
+        },
+        {
+          "line": 35,
+          "text": "- **Mã hàng hóa**: mã hàng"
+        },
+        {
+          "line": 36,
+          "text": "- **Tên hàng hóa**: tên"
+        },
+        {
+          "line": 37,
+          "text": "- **Nhóm hàng hóa**: nhóm hàng"
+        },
+        {
+          "line": 38,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 39,
+          "text": "- **Giá bán**: giá bán hiện tại"
+        },
+        {
+          "line": 40,
+          "text": "- **Giá vốn**: giá vốn"
+        },
+        {
+          "line": 42,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 43,
+          "text": "- Dữ liệu có đến hết 31/07/2026."
+        },
+        {
+          "line": 44,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 45,
+          "text": "  - Bánh croissant: 1 hộp = 6 cái"
+        },
+        {
+          "line": 46,
+          "text": "  - Bánh tiramisu: 1 hộp = 6 cái"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_113",
+      "source": "train/data/biz_113/README.md",
+      "sha256": "b4049fceb2bc428c311fceb768e68fd448739cb58136f682f591b6f7ca1e894c",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_113"
+        },
+        {
+          "line": 3,
+          "text": "Sổ bán hàng chủ tiệm tự ghi trên Excel, một sheet: mỗi dòng một mặt hàng khách mua, không ghi mã đơn, không ghi tên khách."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `SoBanHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "## Cột trong `SoBanHang.xlsx`"
+        },
+        {
+          "line": 9,
+          "text": "- **DonVi**: đơn vị tính"
+        },
+        {
+          "line": 10,
+          "text": "- **Ngày mua**: ngày bán"
+        },
+        {
+          "line": 11,
+          "text": "- **Số lượng lẻ**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 12,
+          "text": "- **thanh_tien**: thành tiền sau giảm"
+        },
+        {
+          "line": 13,
+          "text": "- **Đơn giá bán**: đơn giá"
+        },
+        {
+          "line": 14,
+          "text": "- **SL bán**: số lượng"
+        },
+        {
+          "line": 15,
+          "text": "- **Ghi chú TT**: trạng thái đơn"
+        },
+        {
+          "line": 16,
+          "text": "- **Mặt hàng**: tên hàng"
+        },
+        {
+          "line": 18,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 19,
+          "text": "- Dữ liệu có đến hết 09/08/2026."
+        },
+        {
+          "line": 20,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 21,
+          "text": "  - Xi măng Hà Tiên PCB40 bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 22,
+          "text": "  - Xi măng INSEE Power-S bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 23,
+          "text": "  - Cát xây tô: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 24,
+          "text": "  - Cát bê tông: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 25,
+          "text": "  - Cát san lấp: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 26,
+          "text": "  - Đá 1x2: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 27,
+          "text": "  - Đá 4x6: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 28,
+          "text": "  - Đá mi bụi: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 29,
+          "text": "  - Gạch ống 8x8x18 Tuynel: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 30,
+          "text": "  - Gạch thẻ đặc 4x8x18: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 31,
+          "text": "  - Băng keo điện Nano 20 yard: 1 cây = 10 cuộn"
+        },
+        {
+          "line": 32,
+          "text": "  - Lưới B40 mạ kẽm khổ 1.5m: 1 cuộn 10m = 10 m"
+        },
+        {
+          "line": 33,
+          "text": "  - Ngói Đồng Nai 22 viên/m2: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 34,
+          "text": "  - Bạt xanh cam khổ 4m: 1 cuộn 4x50m = 200 m2"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_114",
+      "source": "train/data/biz_114/README.md",
+      "sha256": "f4b00c37c2c8e21cef94b2bbe6d2dc97752c6a8035b784cf9f5b507c7d01bc03",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_114"
+        },
+        {
+          "line": 3,
+          "text": "Một file phẳng, mỗi dòng một bản ghi (một dòng hàng trong đơn)."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `ban_hang.csv` (csv)"
+        },
+        {
+          "line": 8,
+          "text": "## Cột trong `ban_hang.csv`"
+        },
+        {
+          "line": 9,
+          "text": "- **Giá bán lẻ**: đơn giá"
+        },
+        {
+          "line": 10,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 11,
+          "text": "- **Mã GD**: mã đơn"
+        },
+        {
+          "line": 12,
+          "text": "- **Quy ra ĐV lẻ**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 13,
+          "text": "- **Sluong**: số lượng"
+        },
+        {
+          "line": 14,
+          "text": "- **Sản phẩm**: tên hàng"
+        },
+        {
+          "line": 15,
+          "text": "- **Tổng**: thành tiền sau giảm"
+        },
+        {
+          "line": 16,
+          "text": "- **Tên khách**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 17,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 18,
+          "text": "- **trang_thai**: trạng thái đơn"
+        },
+        {
+          "line": 20,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 21,
+          "text": "- Dữ liệu có đến hết 21/06/2026."
+        },
+        {
+          "line": 22,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 23,
+          "text": "  - Xi măng Hà Tiên PCB40 bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 24,
+          "text": "  - Xi măng INSEE Power-S bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 25,
+          "text": "  - Cát xây tô: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 26,
+          "text": "  - Cát bê tông: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 27,
+          "text": "  - Cát san lấp: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 28,
+          "text": "  - Đá 1x2: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 29,
+          "text": "  - Đá 4x6: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 30,
+          "text": "  - Đá mi bụi: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 31,
+          "text": "  - Gạch ống 8x8x18 Tuynel: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 32,
+          "text": "  - Gạch thẻ đặc 4x8x18: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 33,
+          "text": "  - Băng keo điện Nano 20 yard: 1 cây = 10 cuộn"
+        },
+        {
+          "line": 34,
+          "text": "  - Lưới B40 mạ kẽm khổ 1.5m: 1 cuộn 10m = 10 m"
+        },
+        {
+          "line": 35,
+          "text": "  - Ngói Đồng Nai 22 viên/m2: 1 thiên = 1000 viên"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_115",
+      "source": "train/data/biz_115/README.md",
+      "sha256": "b30a5c7e5fa7c1d95cbd228a4ee95c9109c7a2e51f98b3011e37edd57edb9bb8",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_115"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng, mỗi báo cáo, danh sách một file. Sổ chi tiết bán hàng: mỗi dòng một dòng hàng, thông tin đơn lặp lại ở mọi dòng của đơn; sổ không có mã hàng, nối với danh sách hàng hóa qua tên hàng hóa. Ngày dạng dd/mm/yyyy."
+        },
+        {
+          "line": 5,
+          "text": "File `So_chi_tiet_ban_hang.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `So_chi_tiet_ban_hang.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `Danh sách hàng hóa.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `Bảng kê phiếu giao hàng.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `Chi tiết công nợ theo hạn.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "## Cột trong `So_chi_tiet_ban_hang.xlsx`"
+        },
+        {
+          "line": 14,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 15,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 16,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 17,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 18,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 19,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 20,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 21,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 22,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 23,
+          "text": "- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 25,
+          "text": "## Cột trong `Danh sách hàng hóa.xlsx`"
+        },
+        {
+          "line": 26,
+          "text": "- **Mã hàng hóa**: mã hàng"
+        },
+        {
+          "line": 27,
+          "text": "- **Tên hàng hóa**: tên"
+        },
+        {
+          "line": 28,
+          "text": "- **Nhóm hàng hóa**: nhóm hàng"
+        },
+        {
+          "line": 29,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 30,
+          "text": "- **Giá vốn**: giá vốn"
+        },
+        {
+          "line": 32,
+          "text": "## Cột trong `Bảng kê phiếu giao hàng.xlsx`"
+        },
+        {
+          "line": 33,
+          "text": "- **Ngày giao hàng**: ngày giao"
+        },
+        {
+          "line": 34,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 35,
+          "text": "- **Lần giao**: đợt giao (1, 2, 3)"
+        },
+        {
+          "line": 36,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 37,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 38,
+          "text": "- **Số lượng giao**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 39,
+          "text": "- **Biển số xe**: biển số xe"
+        },
+        {
+          "line": 40,
+          "text": "- **Người giao hàng**: tài xế"
+        },
+        {
+          "line": 42,
+          "text": "## Cột trong `Chi tiết công nợ theo hạn.xlsx`"
+        },
+        {
+          "line": 43,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 44,
+          "text": "- **Số ngày được nợ**: số ngày được nợ"
+        },
+        {
+          "line": 45,
+          "text": "- **Hạn thanh toán**: hạn thanh toán"
+        },
+        {
+          "line": 47,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 48,
+          "text": "- Dữ liệu có đến hết 16/05/2026."
+        },
+        {
+          "line": 49,
+          "text": "- **Hạn thanh toán**: chỉ đơn bán nợ có hạn. **Hạn thanh toán** là ngày khách phải trả hết đơn; **Số ngày được nợ** là số ngày được nợ, tính từ ngày đặt."
+        },
+        {
+          "line": 50,
+          "text": "- **Giao hàng**: đơn không huỷ có ít nhất một mặt hàng nhóm cát đá, gạch, sắt thép, xi măng thì được giao tận nơi mọi mặt hàng của đơn, 1–3 đợt (**Lần giao**); đơn khác khách tự chở, không có trong sổ giao; đơn đặt mấy ngày cuối dữ liệu có thể chưa giao. **Số lượng giao** tính theo đơn vị cơ bản."
+        },
+        {
+          "line": 51,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 52,
+          "text": "  - Xi măng Hà Tiên PCB40 bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 53,
+          "text": "  - Xi măng INSEE Power-S bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 54,
+          "text": "  - Cát xây tô: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 55,
+          "text": "  - Cát bê tông: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 56,
+          "text": "  - Cát san lấp: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 57,
+          "text": "  - Đá 1x2: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 58,
+          "text": "  - Đá 4x6: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 59,
+          "text": "  - Đá mi bụi: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 60,
+          "text": "  - Gạch ống 8x8x18 Tuynel: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 61,
+          "text": "  - Gạch thẻ đặc 4x8x18: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 62,
+          "text": "  - Băng keo điện Nano 20 yard: 1 cây = 10 cuộn"
+        },
+        {
+          "line": 63,
+          "text": "  - Lưới B40 mạ kẽm khổ 1.5m: 1 cuộn 10m = 10 m"
+        },
+        {
+          "line": 64,
+          "text": "  - Ngói Đồng Nai 22 viên/m2: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 65,
+          "text": "  - Bạt xanh cam khổ 4m: 1 cuộn 4x50m = 200 m2"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_116",
+      "source": "train/data/biz_116/README.md",
+      "sha256": "e0faa6edace43bad6e8db0a90dfe716eb09cdd38abb89ecdce3a926850cc3f1c",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_116"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng, mỗi báo cáo, danh sách một file hoặc một sheet. Sổ chi tiết bán hàng: mỗi dòng một dòng hàng, thông tin đơn lặp lại ở mọi dòng của đơn; sổ không có mã hàng, nối với danh sách hàng hóa qua tên hàng hóa. Ngày dạng dd/mm/yyyy."
+        },
+        {
+          "line": 5,
+          "text": "Các danh sách `So_chi_tiet_ban_hang`, `Danh sách hàng hóa`, `Bảng kê phiếu giao hàng`, `Chi tiết công nợ theo hạn` nằm chung file `Bao_cao_ban_hang.xlsx`, mỗi danh sách một sheet."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `Bao_cao_ban_hang.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "## Cột trong `Bao_cao_ban_hang.xlsx`, sheet `So_chi_tiet_ban_hang`"
+        },
+        {
+          "line": 11,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 12,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 13,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 14,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 15,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 16,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 17,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 18,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 19,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 20,
+          "text": "- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 22,
+          "text": "## Cột trong `Bao_cao_ban_hang.xlsx`, sheet `Danh sách hàng hóa`"
+        },
+        {
+          "line": 23,
+          "text": "- **Mã hàng hóa**: mã hàng"
+        },
+        {
+          "line": 24,
+          "text": "- **Tên hàng hóa**: tên"
+        },
+        {
+          "line": 25,
+          "text": "- **Nhóm hàng hóa**: nhóm hàng"
+        },
+        {
+          "line": 26,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 27,
+          "text": "- **Giá vốn**: giá vốn"
+        },
+        {
+          "line": 29,
+          "text": "## Cột trong `Bao_cao_ban_hang.xlsx`, sheet `Bảng kê phiếu giao hàng`"
+        },
+        {
+          "line": 30,
+          "text": "- **Ngày giao hàng**: ngày giao"
+        },
+        {
+          "line": 31,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 32,
+          "text": "- **Lần giao**: đợt giao (1, 2, 3)"
+        },
+        {
+          "line": 33,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 34,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 35,
+          "text": "- **Số lượng giao**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 36,
+          "text": "- **Biển số xe**: biển số xe"
+        },
+        {
+          "line": 37,
+          "text": "- **Người giao hàng**: tài xế"
+        },
+        {
+          "line": 39,
+          "text": "## Cột trong `Bao_cao_ban_hang.xlsx`, sheet `Chi tiết công nợ theo hạn`"
+        },
+        {
+          "line": 40,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 41,
+          "text": "- **Số ngày được nợ**: số ngày được nợ"
+        },
+        {
+          "line": 42,
+          "text": "- **Hạn thanh toán**: hạn thanh toán"
+        },
+        {
+          "line": 44,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 45,
+          "text": "- Dữ liệu có đến hết 03/09/2026."
+        },
+        {
+          "line": 46,
+          "text": "- **Hạn thanh toán**: chỉ đơn bán nợ có hạn. **Hạn thanh toán** là ngày khách phải trả hết đơn; **Số ngày được nợ** là số ngày được nợ, tính từ ngày đặt."
+        },
+        {
+          "line": 47,
+          "text": "- **Giao hàng**: đơn không huỷ có ít nhất một mặt hàng nhóm cát đá, gạch, sắt thép, xi măng thì được giao tận nơi mọi mặt hàng của đơn, 1–3 đợt (**Lần giao**); đơn khác khách tự chở, không có trong sổ giao; đơn đặt mấy ngày cuối dữ liệu có thể chưa giao. **Số lượng giao** tính theo đơn vị cơ bản."
+        },
+        {
+          "line": 48,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 49,
+          "text": "  - Xi măng Hà Tiên PCB40 bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 50,
+          "text": "  - Xi măng INSEE Power-S bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 51,
+          "text": "  - Cát xây tô: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 52,
+          "text": "  - Cát bê tông: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 53,
+          "text": "  - Cát san lấp: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 54,
+          "text": "  - Đá 1x2: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 55,
+          "text": "  - Đá 4x6: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 56,
+          "text": "  - Đá mi bụi: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 57,
+          "text": "  - Gạch ống 8x8x18 Tuynel: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 58,
+          "text": "  - Gạch thẻ đặc 4x8x18: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 59,
+          "text": "  - Băng keo điện Nano 20 yard: 1 cây = 10 cuộn"
+        },
+        {
+          "line": 60,
+          "text": "  - Lưới B40 mạ kẽm khổ 1.5m: 1 cuộn 10m = 10 m"
+        },
+        {
+          "line": 61,
+          "text": "  - Ngói Đồng Nai 22 viên/m2: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 62,
+          "text": "  - Bạt xanh cam khổ 4m: 1 cuộn 4x50m = 200 m2"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_117",
+      "source": "train/data/biz_117/README.md",
+      "sha256": "0e237a73fe29dcd5a8e4aab110e8d9b6abf2fd5be9555e1f25a2a242ee463e26",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_117"
+        },
+        {
+          "line": 3,
+          "text": "Sổ bán hàng ghi tay chuyển sang Excel, mỗi tháng một sheet."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `SoBanHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 7,
+          "text": "- `DanhMuc.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "- `TonKho.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `SoGiaoHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `SoHanNo.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `SoNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "- `BangGia.xlsx` (xlsx)"
+        },
+        {
+          "line": 14,
+          "text": "## Cột trong `SoBanHang.xlsx`"
+        },
+        {
+          "line": 15,
+          "text": "- **Giờ**: giờ đặt đơn (dòng trả hàng: lúc trả)"
+        },
+        {
+          "line": 16,
+          "text": "- **Mã phiếu**: mã đơn"
+        },
+        {
+          "line": 17,
+          "text": "- **TenKH**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 18,
+          "text": "- **Ngày lập**: ngày bán"
+        },
+        {
+          "line": 19,
+          "text": "- **Tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 20,
+          "text": "- **Ghi chú TT**: trạng thái đơn"
+        },
+        {
+          "line": 21,
+          "text": "- **Giá**: đơn giá"
+        },
+        {
+          "line": 22,
+          "text": "- **DonVi**: đơn vị tính"
+        },
+        {
+          "line": 23,
+          "text": "- **Số lượng hàng**: số lượng"
+        },
+        {
+          "line": 24,
+          "text": "- **Tên SP**: tên hàng"
+        },
+        {
+          "line": 26,
+          "text": "## Cột trong `DanhMuc.xlsx`"
+        },
+        {
+          "line": 27,
+          "text": "- **Hàng**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)"
+        },
+        {
+          "line": 28,
+          "text": "- **ĐV lớn**: đơn vị lớn (thùng, hộp, tấn...)"
+        },
+        {
+          "line": 29,
+          "text": "- **ĐV nhỏ**: đơn vị cơ bản"
+        },
+        {
+          "line": 30,
+          "text": "- **Hệ số QĐ**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn"
+        },
+        {
+          "line": 32,
+          "text": "## Cột trong `TonKho.xlsx`"
+        },
+        {
+          "line": 33,
+          "text": "- **Tồn thực**: tồn kho (đơn vị cơ bản)"
+        },
+        {
+          "line": 34,
+          "text": "- **Đơn vị**: đơn vị cơ bản"
+        },
+        {
+          "line": 35,
+          "text": "- **Product**: tên hàng"
+        },
+        {
+          "line": 37,
+          "text": "## Cột trong `SoGiaoHang.xlsx`"
+        },
+        {
+          "line": 38,
+          "text": "- **ĐV gốc**: đơn vị cơ bản"
+        },
+        {
+          "line": 39,
+          "text": "- **Biển số xe**: biển số xe"
+        },
+        {
+          "line": 40,
+          "text": "- **Mã bill**: mã đơn"
+        },
+        {
+          "line": 41,
+          "text": "- **Lượt giao**: đợt giao (1, 2, 3)"
+        },
+        {
+          "line": 42,
+          "text": "- **SL thực giao**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 43,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 44,
+          "text": "- **Ngày chở**: ngày giao"
+        },
+        {
+          "line": 45,
+          "text": "- **Người chở**: tài xế"
+        },
+        {
+          "line": 47,
+          "text": "## Cột trong `SoHanNo.xlsx`"
+        },
+        {
+          "line": 48,
+          "text": "- **So hoa don**: mã đơn"
+        },
+        {
+          "line": 49,
+          "text": "- **Hạn nợ (ngày)**: số ngày được nợ"
+        },
+        {
+          "line": 50,
+          "text": "- **Han tra**: hạn thanh toán"
+        },
+        {
+          "line": 52,
+          "text": "## Cột trong `SoNhapHang.xlsx`"
+        },
+        {
+          "line": 53,
+          "text": "- **Số phiếu**: mã phiếu nhập"
+        },
+        {
+          "line": 54,
+          "text": "- **Product**: tên hàng"
+        },
+        {
+          "line": 55,
+          "text": "- **Ngày nhập**: ngày nhập"
+        },
+        {
+          "line": 56,
+          "text": "- **ĐVT**: đơn vị nhập"
+        },
+        {
+          "line": 57,
+          "text": "- **Thành tiền**: tiền nhập của cả dòng"
+        },
+        {
+          "line": 58,
+          "text": "- **Nội dung**: ghi chú"
+        },
+        {
+          "line": 59,
+          "text": "- **Nhà cung cấp**: nhà cung cấp"
+        },
+        {
+          "line": 60,
+          "text": "- **SL nhập**: số lượng nhập"
+        },
+        {
+          "line": 61,
+          "text": "- **Giá nhập**: giá nhập một đơn vị (theo đơn vị nhập của dòng)"
+        },
+        {
+          "line": 63,
+          "text": "## Cột trong `BangGia.xlsx`"
+        },
+        {
+          "line": 64,
+          "text": "- **Ngày áp dụng**: ngày bắt đầu áp dụng giá"
+        },
+        {
+          "line": 65,
+          "text": "- **Giá cũ**: giá trước lần đổi (trống ở dòng đầu mỗi mặt hàng)"
+        },
+        {
+          "line": 66,
+          "text": "- **Giá mới**: giá bán áp dụng từ ngày đó (đơn vị cơ bản)"
+        },
+        {
+          "line": 67,
+          "text": "- **TenHang**: tên hàng"
+        },
+        {
+          "line": 69,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 70,
+          "text": "- Dữ liệu có đến hết 20/05/2026."
+        },
+        {
+          "line": 71,
+          "text": "- **Trả hàng**: hàng trả ghi số lượng âm, cùng mã đơn với đơn đã bán: đơn có dòng số lượng âm là đơn có trả hàng."
+        },
+        {
+          "line": 72,
+          "text": "- **Tồn kho**: **Tồn thực** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 73,
+          "text": "- **Hạn thanh toán**: chỉ đơn bán nợ có hạn. **Han tra** là ngày khách phải trả hết đơn; **Hạn nợ (ngày)** là số ngày được nợ, tính từ ngày đặt."
+        },
+        {
+          "line": 74,
+          "text": "- **Giao hàng**: đơn không huỷ có ít nhất một mặt hàng nhóm cát đá, gạch, sắt thép, xi măng thì được giao tận nơi mọi mặt hàng của đơn, 1–3 đợt (**Lượt giao**); đơn khác khách tự chở, không có trong sổ giao; đơn đặt mấy ngày cuối dữ liệu có thể chưa giao. **SL thực giao** tính theo đơn vị cơ bản."
+        },
+        {
+          "line": 75,
+          "text": "- **Nhập hàng**: **Giá nhập** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng."
+        },
+        {
+          "line": 76,
+          "text": "- **Giá bán**: **Giá mới** (theo đơn vị cơ bản) áp dụng từ **Ngày áp dụng** đến trước lần đổi giá sau của cùng mặt hàng; dòng đầu mỗi mặt hàng là giá lúc bắt đầu dữ liệu (**Giá cũ** trống)."
+        },
+        {
+          "line": 77,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhMuc.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_118",
+      "source": "train/data/biz_118/README.md",
+      "sha256": "823953d5c57f774e437c05b2a1f9115007c82fdf5de875dcef8f44e0532de371",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_118"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng. Sổ chi tiết bán hàng: mỗi dòng một dòng hàng, thông tin đơn lặp lại ở mọi dòng."
+        },
+        {
+          "line": 5,
+          "text": "File `So_chi_tiet_ban_hang.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `So_chi_tiet_ban_hang.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `Danh sách hàng hóa.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `Bảng kê phiếu giao hàng.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `Chi tiết công nợ theo hạn.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "## Cột trong `So_chi_tiet_ban_hang.xlsx`"
+        },
+        {
+          "line": 14,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 15,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 16,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 17,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 18,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 19,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 20,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 21,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 22,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 23,
+          "text": "- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 25,
+          "text": "## Cột trong `Danh sách hàng hóa.xlsx`"
+        },
+        {
+          "line": 26,
+          "text": "- **Mã hàng hóa**: mã hàng"
+        },
+        {
+          "line": 27,
+          "text": "- **Tên hàng hóa**: tên"
+        },
+        {
+          "line": 28,
+          "text": "- **Nhóm hàng hóa**: nhóm hàng"
+        },
+        {
+          "line": 29,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 31,
+          "text": "## Cột trong `Bảng kê phiếu giao hàng.xlsx`"
+        },
+        {
+          "line": 32,
+          "text": "- **Ngày giao hàng**: ngày giao"
+        },
+        {
+          "line": 33,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 34,
+          "text": "- **Lần giao**: đợt giao (1, 2, 3)"
+        },
+        {
+          "line": 35,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 36,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 37,
+          "text": "- **Số lượng giao**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 38,
+          "text": "- **Biển số xe**: biển số xe"
+        },
+        {
+          "line": 39,
+          "text": "- **Người giao hàng**: tài xế"
+        },
+        {
+          "line": 41,
+          "text": "## Cột trong `Chi tiết công nợ theo hạn.xlsx`"
+        },
+        {
+          "line": 42,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 43,
+          "text": "- **Số ngày được nợ**: số ngày được nợ"
+        },
+        {
+          "line": 44,
+          "text": "- **Hạn thanh toán**: hạn thanh toán"
+        },
+        {
+          "line": 46,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 47,
+          "text": "- Dữ liệu có đến hết 10/09/2026."
+        },
+        {
+          "line": 48,
+          "text": "- **Hạn thanh toán**: chỉ đơn bán nợ có hạn. **Hạn thanh toán** là ngày khách phải trả hết đơn; **Số ngày được nợ** là số ngày được nợ, tính từ ngày đặt."
+        },
+        {
+          "line": 49,
+          "text": "- **Giao hàng**: đơn không huỷ có ít nhất một mặt hàng nhóm cát đá, gạch, sắt thép, xi măng thì được giao tận nơi mọi mặt hàng của đơn, 1–3 đợt (**Lần giao**); đơn khác khách tự chở, không có trong sổ giao; đơn đặt mấy ngày cuối dữ liệu có thể chưa giao. **Số lượng giao** tính theo đơn vị cơ bản."
+        },
+        {
+          "line": 50,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 51,
+          "text": "  - Xi măng Hà Tiên PCB40 bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 52,
+          "text": "  - Xi măng INSEE Power-S bao 50kg: 1 tấn = 20 bao"
+        },
+        {
+          "line": 53,
+          "text": "  - Cát xây tô: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 54,
+          "text": "  - Cát bê tông: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 55,
+          "text": "  - Cát san lấp: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 56,
+          "text": "  - Đá 1x2: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 57,
+          "text": "  - Đá 4x6: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 58,
+          "text": "  - Đá mi bụi: 1 xe 4m3 = 4 m3"
+        },
+        {
+          "line": 59,
+          "text": "  - Gạch ống 8x8x18 Tuynel: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 60,
+          "text": "  - Gạch thẻ đặc 4x8x18: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 61,
+          "text": "  - Băng keo điện Nano 20 yard: 1 cây = 10 cuộn"
+        },
+        {
+          "line": 62,
+          "text": "  - Lưới B40 mạ kẽm khổ 1.5m: 1 cuộn 10m = 10 m"
+        },
+        {
+          "line": 63,
+          "text": "  - Ngói Đồng Nai 22 viên/m2: 1 thiên = 1000 viên"
+        },
+        {
+          "line": 64,
+          "text": "  - Bạt xanh cam khổ 4m: 1 cuộn 4x50m = 200 m2"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_119",
+      "source": "train/data/biz_119/README.md",
+      "sha256": "67ff934147166289e20602783fc5dfa2368fc4593f272d5154c20ae5a1af30f2",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_119"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…), nối với nhau qua mã. Ngày dạng dd/mm/yyyy."
+        },
+        {
+          "line": 5,
+          "text": "File `DanhSachHoaDon.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `DanhSachHoaDon.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DanhSachHoaDonChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `DanhSachSanPham.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `DanhSachKhachHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "- `BaoCaoTonKho.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "- `DanhSachNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 14,
+          "text": "- `DanhSachLoHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 15,
+          "text": "- `DanhSachHoaDonChiTietLo.xlsx` (xlsx)"
+        },
+        {
+          "line": 16,
+          "text": "- `DanhSachThuoc.xlsx` (xlsx)"
+        },
+        {
+          "line": 17,
+          "text": "- `DanhSachChiTietNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 19,
+          "text": "## Cột trong `DanhSachHoaDon.xlsx`"
+        },
+        {
+          "line": 20,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 21,
+          "text": "- **Thời gian**: ngày bán"
+        },
+        {
+          "line": 22,
+          "text": "- **Mã KH**: mã khách (trống nếu khách lẻ)"
+        },
+        {
+          "line": 23,
+          "text": "- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 24,
+          "text": "- **Tổng tiền hàng**: tổng tiền hàng của đơn (cộng thành tiền các dòng), trước giảm giá của đơn"
+        },
+        {
+          "line": 25,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 26,
+          "text": "- **Khách đã trả**: đã thanh toán"
+        },
+        {
+          "line": 27,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 28,
+          "text": "- **Thời gian tạo**: thời điểm đặt đơn (ngày giờ)"
+        },
+        {
+          "line": 29,
+          "text": "- **Tổng sau giảm giá**: tổng tiền đơn"
+        },
+        {
+          "line": 30,
+          "text": "- **Còn nợ**: còn nợ"
+        },
+        {
+          "line": 32,
+          "text": "## Cột trong `DanhSachHoaDonChiTiet.xlsx`"
+        },
+        {
+          "line": 33,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 34,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 35,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 36,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 37,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 38,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 39,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 40,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 41,
+          "text": "- **STT**: số thứ tự dòng trong đơn"
+        },
+        {
+          "line": 43,
+          "text": "## Cột trong `DanhSachSanPham.xlsx`"
+        },
+        {
+          "line": 44,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 45,
+          "text": "- **Tên hàng**: tên"
+        },
+        {
+          "line": 46,
+          "text": "- **Nhóm hàng(3 Cấp)**: nhóm hàng"
+        },
+        {
+          "line": 47,
+          "text": "- **Giá bán**: giá bán hiện tại"
+        },
+        {
+          "line": 48,
+          "text": "- **ĐVT**: đơn vị cơ bản"
+        },
+        {
+          "line": 50,
+          "text": "## Cột trong `DanhSachKhachHang.xlsx`"
+        },
+        {
+          "line": 51,
+          "text": "- **Mã khách hàng**: mã khách"
+        },
+        {
+          "line": 52,
+          "text": "- **Tên khách hàng**: tên"
+        },
+        {
+          "line": 53,
+          "text": "- **Điện thoại**: số điện thoại"
+        },
+        {
+          "line": 54,
+          "text": "- **Địa chỉ**: địa chỉ"
+        },
+        {
+          "line": 56,
+          "text": "## Cột trong `BaoCaoTonKho.xlsx`"
+        },
+        {
+          "line": 57,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 58,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 59,
+          "text": "- **ĐVT**: đơn vị cơ bản"
+        },
+        {
+          "line": 60,
+          "text": "- **Tồn cuối kỳ**: tồn kho (đơn vị cơ bản)"
+        },
+        {
+          "line": 62,
+          "text": "## Cột trong `DanhSachNhapHang.xlsx`"
+        },
+        {
+          "line": 63,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 64,
+          "text": "- **Thời gian**: ngày nhập"
+        },
+        {
+          "line": 65,
+          "text": "- **Mã NCC**: mã nhà cung cấp"
+        },
+        {
+          "line": 66,
+          "text": "- **Cần trả NCC**: tổng tiền phiếu nhập"
+        },
+        {
+          "line": 67,
+          "text": "- **Trạng thái**: trạng thái phiếu nhập"
+        },
+        {
+          "line": 68,
+          "text": "- **Ghi chú**: ghi chú"
+        },
+        {
+          "line": 70,
+          "text": "## Cột trong `DanhSachLoHang.xlsx`"
+        },
+        {
+          "line": 71,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 72,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 73,
+          "text": "- **Lô**: số lô"
+        },
+        {
+          "line": 74,
+          "text": "- **Hạn sử dụng**: hạn sử dụng"
+        },
+        {
+          "line": 75,
+          "text": "- **Số lượng (ĐVT cơ bản)**: số lượng nhập (đơn vị cơ bản)"
+        },
+        {
+          "line": 77,
+          "text": "## Cột trong `DanhSachHoaDonChiTietLo.xlsx`"
+        },
+        {
+          "line": 78,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 79,
+          "text": "- **STT**: số thứ tự dòng trong đơn"
+        },
+        {
+          "line": 80,
+          "text": "- **Lô**: số lô"
+        },
+        {
+          "line": 81,
+          "text": "- **Số lượng (ĐVT cơ bản)**: số lượng bán lấy từ lô (đơn vị cơ bản)"
+        },
+        {
+          "line": 82,
+          "text": "- **Số lượng trả (ĐVT cơ bản)**: số lượng khách trả lại (đơn vị cơ bản); lớn hơn 0: đơn đó có trả hàng"
+        },
+        {
+          "line": 84,
+          "text": "## Cột trong `DanhSachThuoc.xlsx`"
+        },
+        {
+          "line": 85,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 86,
+          "text": "- **Hoạt chất**: hoạt chất (trống với thực phẩm chức năng, vật tư)"
+        },
+        {
+          "line": 87,
+          "text": "- **Thuốc kê đơn**: thuốc kê đơn"
+        },
+        {
+          "line": 89,
+          "text": "## Cột trong `DanhSachChiTietNhapHang.xlsx`"
+        },
+        {
+          "line": 90,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 91,
+          "text": "- **STT**: số thứ tự dòng trong phiếu nhập"
+        },
+        {
+          "line": 92,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 93,
+          "text": "- **ĐVT**: đơn vị tính"
+        },
+        {
+          "line": 94,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 95,
+          "text": "- **Đơn giá**: giá nhập một đơn vị (theo đơn vị nhập của dòng)"
+        },
+        {
+          "line": 96,
+          "text": "- **Lô**: số lô"
+        },
+        {
+          "line": 97,
+          "text": "- **Hạn sử dụng**: hạn sử dụng"
+        },
+        {
+          "line": 99,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 100,
+          "text": "- Dữ liệu có đến hết 13/07/2026."
+        },
+        {
+          "line": 101,
+          "text": "- **Còn nợ**: **Còn nợ** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu."
+        },
+        {
+          "line": 102,
+          "text": "- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 103,
+          "text": "- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán."
+        },
+        {
+          "line": 104,
+          "text": "- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập."
+        },
+        {
+          "line": 105,
+          "text": "- **Thuốc**: **Thuốc kê đơn** đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng \" + \"."
+        },
+        {
+          "line": 106,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 107,
+          "text": "  - Panadol Extra hộp 15 vỉ x 12 viên: 1 vỉ = 12 viên"
+        },
+        {
+          "line": 108,
+          "text": "  - Panadol Extra hộp 15 vỉ x 12 viên: 1 hộp = 180 viên"
+        },
+        {
+          "line": 109,
+          "text": "  - Hapacol 250 hộp 24 gói: 1 hộp = 24 gói"
+        },
+        {
+          "line": 110,
+          "text": "  - Panadol 500mg hộp 10 vỉ x 12 viên: 1 vỉ = 12 viên"
+        },
+        {
+          "line": 111,
+          "text": "  - Panadol 500mg hộp 10 vỉ x 12 viên: 1 hộp = 120 viên"
+        },
+        {
+          "line": 112,
+          "text": "  - Tiffy Dey hộp 25 vỉ x 4 viên: 1 vỉ = 4 viên"
+        },
+        {
+          "line": 113,
+          "text": "  - Tiffy Dey hộp 25 vỉ x 4 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 114,
+          "text": "  - Berberin 100mg Mekophar chai 100 viên: 1 chai = 100 viên"
+        },
+        {
+          "line": 115,
+          "text": "  - Oresol 245 DHG hộp 20 gói: 1 hộp = 20 gói"
+        },
+        {
+          "line": 116,
+          "text": "  - Amoxicillin 500mg Domesco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 117,
+          "text": "  - Amoxicillin 500mg Domesco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 118,
+          "text": "  - Salonpas cao dán hộp 24 gói x 10 miếng: 1 hộp = 24 gói"
+        },
+        {
+          "line": 119,
+          "text": "  - Decolgen Forte hộp 30 vỉ x 4 viên: 1 vỉ = 4 viên"
+        },
+        {
+          "line": 120,
+          "text": "  - Decolgen Forte hộp 30 vỉ x 4 viên: 1 hộp = 120 viên"
+        },
+        {
+          "line": 121,
+          "text": "  - Khẩu trang y tế 4 lớp Khánh An hộp 50 cái: 1 hộp = 50 cái"
+        },
+        {
+          "line": 122,
+          "text": "  - Smecta hộp 30 gói: 1 hộp = 30 gói"
+        },
+        {
+          "line": 123,
+          "text": "  - Efferalgan 500mg viên sủi hộp 4 vỉ x 4 viên: 1 vỉ = 4 viên"
+        },
+        {
+          "line": 124,
+          "text": "  - Efferalgan 500mg viên sủi hộp 4 vỉ x 4 viên: 1 hộp = 16 viên"
+        },
+        {
+          "line": 125,
+          "text": "  - Phosphalugel hộp 26 gói: 1 hộp = 26 gói"
+        },
+        {
+          "line": 126,
+          "text": "  - Strepsils Cool hộp 2 vỉ x 12 viên: 1 vỉ = 12 viên"
+        },
+        {
+          "line": 127,
+          "text": "  - Strepsils Cool hộp 2 vỉ x 12 viên: 1 hộp = 24 viên"
+        },
+        {
+          "line": 128,
+          "text": "  - Clorpheniramin 4mg DHG hộp 10 vỉ x 20 viên: 1 hộp = 10 vỉ"
+        },
+        {
+          "line": 129,
+          "text": "  - Yumangel hộp 20 gói: 1 hộp = 20 gói"
+        },
+        {
+          "line": 130,
+          "text": "  - Cefuroxim 500mg Vidipha hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 131,
+          "text": "  - Cefuroxim 500mg Vidipha hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 132,
+          "text": "  - Băng cá nhân Urgo Transparent hộp 100 miếng: 1 hộp = 100 miếng"
+        },
+        {
+          "line": 133,
+          "text": "  - Hapacol 150 hộp 24 gói: 1 hộp = 24 gói"
+        },
+        {
+          "line": 134,
+          "text": "  - Eugica hộp 10 vỉ x 10 viên nang: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 135,
+          "text": "  - Eugica hộp 10 vỉ x 10 viên nang: 1 hộp = 100 viên"
+        },
+        {
+          "line": 136,
+          "text": "  - UPSA-C 1g viên sủi tuýp 10 viên: 1 tuýp = 10 viên"
+        },
+        {
+          "line": 137,
+          "text": "  - Lorastad 10mg Stella hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 138,
+          "text": "  - Lorastad 10mg Stella hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 139,
+          "text": "  - Cetirizin 10mg Domesco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 140,
+          "text": "  - Cetirizin 10mg Domesco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 141,
+          "text": "  - Amlodipin 5mg Domesco hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 142,
+          "text": "  - Amlodipin 5mg Domesco hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 143,
+          "text": "  - Panadol Cảm Cúm hộp 15 vỉ x 12 viên: 1 vỉ = 12 viên"
+        },
+        {
+          "line": 144,
+          "text": "  - Panadol Cảm Cúm hộp 15 vỉ x 12 viên: 1 hộp = 180 viên"
+        },
+        {
+          "line": 145,
+          "text": "  - Alaxan hộp 25 vỉ x 4 viên: 1 vỉ = 4 viên"
+        },
+        {
+          "line": 146,
+          "text": "  - Alaxan hộp 25 vỉ x 4 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 147,
+          "text": "  - Gofen 400 hộp 5 vỉ x 10 viên nang: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 148,
+          "text": "  - Gofen 400 hộp 5 vỉ x 10 viên nang: 1 hộp = 50 viên"
+        },
+        {
+          "line": 149,
+          "text": "  - Acemuc Kids 200mg hộp 30 gói: 1 hộp = 30 gói"
+        },
+        {
+          "line": 150,
+          "text": "  - Gaviscon hộp 24 gói x 10ml: 1 hộp = 24 gói"
+        },
+        {
+          "line": 151,
+          "text": "  - Enterogermina 2 tỷ/5ml hộp 20 ống: 1 hộp = 20 ống"
+        },
+        {
+          "line": 152,
+          "text": "  - Omeprazol 20mg DHG hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 153,
+          "text": "  - Omeprazol 20mg DHG hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 154,
+          "text": "  - Vitamin C 500mg Quapharco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 155,
+          "text": "  - Vitamin C 500mg Quapharco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 156,
+          "text": "  - Efticol 0,9% lốc 10 lọ x 10ml: 1 lốc = 10 lọ"
+        },
+        {
+          "line": 157,
+          "text": "  - Magne-B6 Corbière hộp 5 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 158,
+          "text": "  - Magne-B6 Corbière hộp 5 vỉ x 10 viên: 1 hộp = 50 viên"
+        },
+        {
+          "line": 159,
+          "text": "  - Loperamid 2mg Domesco hộp 5 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 160,
+          "text": "  - Loperamid 2mg Domesco hộp 5 vỉ x 10 viên: 1 hộp = 50 viên"
+        },
+        {
+          "line": 161,
+          "text": "  - Metformin Stella 500mg hộp 6 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 162,
+          "text": "  - Metformin Stella 500mg hộp 6 vỉ x 10 viên: 1 hộp = 60 viên"
+        },
+        {
+          "line": 163,
+          "text": "  - Clarityne 10mg hộp 1 vỉ x 10 viên: 1 hộp = 10 viên"
+        },
+        {
+          "line": 164,
+          "text": "  - Zyrtec 10mg hộp 1 vỉ x 10 viên: 1 hộp = 10 viên"
+        },
+        {
+          "line": 165,
+          "text": "  - Telfast HD 180mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 166,
+          "text": "  - Telfast HD 180mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 167,
+          "text": "  - Hagifen 400mg DHG hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 168,
+          "text": "  - Hagifen 400mg DHG hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 169,
+          "text": "  - Enervon hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 170,
+          "text": "  - Enervon hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 171,
+          "text": "  - Savi Losartan 50mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 172,
+          "text": "  - Savi Losartan 50mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 173,
+          "text": "  - Air-X 80mg viên nhai hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 174,
+          "text": "  - Air-X 80mg viên nhai hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 175,
+          "text": "  - Biosubtyl-II hộp 25 gói: 1 hộp = 25 gói"
+        },
+        {
+          "line": 176,
+          "text": "  - Berocca Performance viên sủi tuýp 10 viên: 1 tuýp = 10 viên"
+        },
+        {
+          "line": 177,
+          "text": "  - Prednisolon 5mg Boston chai 500 viên: 1 chai = 500 viên"
+        },
+        {
+          "line": 178,
+          "text": "  - Bio-acimin Gold men vi sinh hộp 30 gói: 1 hộp = 30 gói"
+        },
+        {
+          "line": 179,
+          "text": "  - Boganic Traphaco hộp 5 vỉ x 20 viên: 1 vỉ = 20 viên"
+        },
+        {
+          "line": 180,
+          "text": "  - Boganic Traphaco hộp 5 vỉ x 20 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 181,
+          "text": "  - Calcium Corbière Extra 10ml hộp 30 ống: 1 hộp = 30 ống"
+        },
+        {
+          "line": 182,
+          "text": "  - Bisolvon 8mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 183,
+          "text": "  - Bisolvon 8mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_120",
+      "source": "train/data/biz_120/README.md",
+      "sha256": "4e6629c7ebc7470383ffeccdbffb5454ff5e14759cdb887c98d5e9fa64bd6cab",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_120"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…), nối với nhau qua mã. Ngày dạng dd/mm/yyyy."
+        },
+        {
+          "line": 5,
+          "text": "File `DanhSachHoaDon.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `DanhSachHoaDon.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DanhSachHoaDonChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `DanhSachSanPham.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `DanhSachKhachHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "- `BaoCaoTonKho.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "- `DanhSachNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 14,
+          "text": "- `DanhSachLoHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 15,
+          "text": "- `DanhSachHoaDonChiTietLo.xlsx` (xlsx)"
+        },
+        {
+          "line": 16,
+          "text": "- `DanhSachThuoc.xlsx` (xlsx)"
+        },
+        {
+          "line": 17,
+          "text": "- `DanhSachChiTietNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 19,
+          "text": "## Cột trong `DanhSachHoaDon.xlsx`"
+        },
+        {
+          "line": 20,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 21,
+          "text": "- **Thời gian**: ngày bán"
+        },
+        {
+          "line": 22,
+          "text": "- **Mã KH**: mã khách (trống nếu khách lẻ)"
+        },
+        {
+          "line": 23,
+          "text": "- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 24,
+          "text": "- **Tổng tiền hàng**: tổng tiền hàng của đơn (cộng thành tiền các dòng), trước giảm giá của đơn"
+        },
+        {
+          "line": 25,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 26,
+          "text": "- **Khách đã trả**: đã thanh toán"
+        },
+        {
+          "line": 27,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 28,
+          "text": "- **Thời gian tạo**: thời điểm đặt đơn (ngày giờ)"
+        },
+        {
+          "line": 29,
+          "text": "- **Còn nợ**: còn nợ"
+        },
+        {
+          "line": 30,
+          "text": "- **Kênh bán**: kênh bán"
+        },
+        {
+          "line": 31,
+          "text": "- **Ghi chú**: cột trống, không có dữ liệu"
+        },
+        {
+          "line": 33,
+          "text": "## Cột trong `DanhSachHoaDonChiTiet.xlsx`"
+        },
+        {
+          "line": 34,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 35,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 36,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 37,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 38,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 39,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 40,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 41,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 43,
+          "text": "## Cột trong `DanhSachSanPham.xlsx`"
+        },
+        {
+          "line": 44,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 45,
+          "text": "- **Tên hàng**: tên"
+        },
+        {
+          "line": 46,
+          "text": "- **Nhóm hàng(3 Cấp)**: nhóm hàng"
+        },
+        {
+          "line": 47,
+          "text": "- **Giá bán**: giá bán hiện tại"
+        },
+        {
+          "line": 48,
+          "text": "- **ĐVT**: đơn vị cơ bản"
+        },
+        {
+          "line": 49,
+          "text": "- **Giá vốn**: giá vốn"
+        },
+        {
+          "line": 50,
+          "text": "- **Thời gian tạo**: ngày tạo mặt hàng trên phần mềm"
+        },
+        {
+          "line": 52,
+          "text": "## Cột trong `DanhSachKhachHang.xlsx`"
+        },
+        {
+          "line": 53,
+          "text": "- **Mã khách hàng**: mã khách"
+        },
+        {
+          "line": 54,
+          "text": "- **Tên khách hàng**: tên"
+        },
+        {
+          "line": 55,
+          "text": "- **Điện thoại**: số điện thoại"
+        },
+        {
+          "line": 56,
+          "text": "- **Địa chỉ**: địa chỉ"
+        },
+        {
+          "line": 58,
+          "text": "## Cột trong `BaoCaoTonKho.xlsx`"
+        },
+        {
+          "line": 59,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 60,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 61,
+          "text": "- **ĐVT**: đơn vị cơ bản"
+        },
+        {
+          "line": 62,
+          "text": "- **Tồn cuối kỳ**: tồn kho (đơn vị cơ bản)"
+        },
+        {
+          "line": 64,
+          "text": "## Cột trong `DanhSachNhapHang.xlsx`"
+        },
+        {
+          "line": 65,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 66,
+          "text": "- **Thời gian**: ngày nhập"
+        },
+        {
+          "line": 67,
+          "text": "- **Mã NCC**: mã nhà cung cấp"
+        },
+        {
+          "line": 68,
+          "text": "- **Cần trả NCC**: tổng tiền phiếu nhập"
+        },
+        {
+          "line": 69,
+          "text": "- **Trạng thái**: trạng thái phiếu nhập"
+        },
+        {
+          "line": 70,
+          "text": "- **Ghi chú**: ghi chú"
+        },
+        {
+          "line": 72,
+          "text": "## Cột trong `DanhSachLoHang.xlsx`"
+        },
+        {
+          "line": 73,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 74,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 75,
+          "text": "- **Lô**: số lô"
+        },
+        {
+          "line": 76,
+          "text": "- **Hạn sử dụng**: hạn sử dụng"
+        },
+        {
+          "line": 77,
+          "text": "- **Số lượng (ĐVT cơ bản)**: số lượng nhập (đơn vị cơ bản)"
+        },
+        {
+          "line": 79,
+          "text": "## Cột trong `DanhSachHoaDonChiTietLo.xlsx`"
+        },
+        {
+          "line": 80,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 81,
+          "text": "- **STT**: số thứ tự dòng trong đơn"
+        },
+        {
+          "line": 82,
+          "text": "- **Lô**: số lô"
+        },
+        {
+          "line": 83,
+          "text": "- **Số lượng (ĐVT cơ bản)**: số lượng bán lấy từ lô (đơn vị cơ bản)"
+        },
+        {
+          "line": 84,
+          "text": "- **Số lượng trả (ĐVT cơ bản)**: số lượng khách trả lại (đơn vị cơ bản); lớn hơn 0: đơn đó có trả hàng"
+        },
+        {
+          "line": 86,
+          "text": "## Cột trong `DanhSachThuoc.xlsx`"
+        },
+        {
+          "line": 87,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 88,
+          "text": "- **Hoạt chất**: hoạt chất (trống với thực phẩm chức năng, vật tư)"
+        },
+        {
+          "line": 89,
+          "text": "- **Thuốc kê đơn**: thuốc kê đơn"
+        },
+        {
+          "line": 91,
+          "text": "## Cột trong `DanhSachChiTietNhapHang.xlsx`"
+        },
+        {
+          "line": 92,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 93,
+          "text": "- **STT**: số thứ tự dòng trong phiếu nhập"
+        },
+        {
+          "line": 94,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 95,
+          "text": "- **ĐVT**: đơn vị tính"
+        },
+        {
+          "line": 96,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 97,
+          "text": "- **Đơn giá**: giá nhập một đơn vị (theo đơn vị nhập của dòng)"
+        },
+        {
+          "line": 98,
+          "text": "- **Lô**: số lô"
+        },
+        {
+          "line": 99,
+          "text": "- **Hạn sử dụng**: hạn sử dụng"
+        },
+        {
+          "line": 101,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 102,
+          "text": "- Dữ liệu có đến hết 12/06/2026."
+        },
+        {
+          "line": 103,
+          "text": "- **Còn nợ**: **Còn nợ** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu."
+        },
+        {
+          "line": 104,
+          "text": "- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 105,
+          "text": "- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán."
+        },
+        {
+          "line": 106,
+          "text": "- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập."
+        },
+        {
+          "line": 107,
+          "text": "- **Thuốc**: **Thuốc kê đơn** đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng \" + \"."
+        },
+        {
+          "line": 108,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 109,
+          "text": "  - Panadol Extra hộp 15 vỉ x 12 viên: 1 vỉ = 12 viên"
+        },
+        {
+          "line": 110,
+          "text": "  - Panadol Extra hộp 15 vỉ x 12 viên: 1 hộp = 180 viên"
+        },
+        {
+          "line": 111,
+          "text": "  - Hapacol 250 hộp 24 gói: 1 hộp = 24 gói"
+        },
+        {
+          "line": 112,
+          "text": "  - Panadol 500mg hộp 10 vỉ x 12 viên: 1 vỉ = 12 viên"
+        },
+        {
+          "line": 113,
+          "text": "  - Panadol 500mg hộp 10 vỉ x 12 viên: 1 hộp = 120 viên"
+        },
+        {
+          "line": 114,
+          "text": "  - Tiffy Dey hộp 25 vỉ x 4 viên: 1 vỉ = 4 viên"
+        },
+        {
+          "line": 115,
+          "text": "  - Tiffy Dey hộp 25 vỉ x 4 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 116,
+          "text": "  - Berberin 100mg Mekophar chai 100 viên: 1 chai = 100 viên"
+        },
+        {
+          "line": 117,
+          "text": "  - Oresol 245 DHG hộp 20 gói: 1 hộp = 20 gói"
+        },
+        {
+          "line": 118,
+          "text": "  - Amoxicillin 500mg Domesco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 119,
+          "text": "  - Amoxicillin 500mg Domesco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 120,
+          "text": "  - Salonpas cao dán hộp 24 gói x 10 miếng: 1 hộp = 24 gói"
+        },
+        {
+          "line": 121,
+          "text": "  - Decolgen Forte hộp 30 vỉ x 4 viên: 1 vỉ = 4 viên"
+        },
+        {
+          "line": 122,
+          "text": "  - Decolgen Forte hộp 30 vỉ x 4 viên: 1 hộp = 120 viên"
+        },
+        {
+          "line": 123,
+          "text": "  - Khẩu trang y tế 4 lớp Khánh An hộp 50 cái: 1 hộp = 50 cái"
+        },
+        {
+          "line": 124,
+          "text": "  - Smecta hộp 30 gói: 1 hộp = 30 gói"
+        },
+        {
+          "line": 125,
+          "text": "  - Efferalgan 500mg viên sủi hộp 4 vỉ x 4 viên: 1 vỉ = 4 viên"
+        },
+        {
+          "line": 126,
+          "text": "  - Efferalgan 500mg viên sủi hộp 4 vỉ x 4 viên: 1 hộp = 16 viên"
+        },
+        {
+          "line": 127,
+          "text": "  - Phosphalugel hộp 26 gói: 1 hộp = 26 gói"
+        },
+        {
+          "line": 128,
+          "text": "  - Strepsils Cool hộp 2 vỉ x 12 viên: 1 vỉ = 12 viên"
+        },
+        {
+          "line": 129,
+          "text": "  - Strepsils Cool hộp 2 vỉ x 12 viên: 1 hộp = 24 viên"
+        },
+        {
+          "line": 130,
+          "text": "  - Clorpheniramin 4mg DHG hộp 10 vỉ x 20 viên: 1 hộp = 10 vỉ"
+        },
+        {
+          "line": 131,
+          "text": "  - Yumangel hộp 20 gói: 1 hộp = 20 gói"
+        },
+        {
+          "line": 132,
+          "text": "  - Cefuroxim 500mg Vidipha hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 133,
+          "text": "  - Cefuroxim 500mg Vidipha hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 134,
+          "text": "  - Băng cá nhân Urgo Transparent hộp 100 miếng: 1 hộp = 100 miếng"
+        },
+        {
+          "line": 135,
+          "text": "  - Hapacol 150 hộp 24 gói: 1 hộp = 24 gói"
+        },
+        {
+          "line": 136,
+          "text": "  - Eugica hộp 10 vỉ x 10 viên nang: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 137,
+          "text": "  - Eugica hộp 10 vỉ x 10 viên nang: 1 hộp = 100 viên"
+        },
+        {
+          "line": 138,
+          "text": "  - UPSA-C 1g viên sủi tuýp 10 viên: 1 tuýp = 10 viên"
+        },
+        {
+          "line": 139,
+          "text": "  - Lorastad 10mg Stella hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 140,
+          "text": "  - Lorastad 10mg Stella hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 141,
+          "text": "  - Cetirizin 10mg Domesco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 142,
+          "text": "  - Cetirizin 10mg Domesco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 143,
+          "text": "  - Amlodipin 5mg Domesco hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 144,
+          "text": "  - Amlodipin 5mg Domesco hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 145,
+          "text": "  - Panadol Cảm Cúm hộp 15 vỉ x 12 viên: 1 vỉ = 12 viên"
+        },
+        {
+          "line": 146,
+          "text": "  - Panadol Cảm Cúm hộp 15 vỉ x 12 viên: 1 hộp = 180 viên"
+        },
+        {
+          "line": 147,
+          "text": "  - Alaxan hộp 25 vỉ x 4 viên: 1 vỉ = 4 viên"
+        },
+        {
+          "line": 148,
+          "text": "  - Alaxan hộp 25 vỉ x 4 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 149,
+          "text": "  - Gofen 400 hộp 5 vỉ x 10 viên nang: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 150,
+          "text": "  - Gofen 400 hộp 5 vỉ x 10 viên nang: 1 hộp = 50 viên"
+        },
+        {
+          "line": 151,
+          "text": "  - Acemuc Kids 200mg hộp 30 gói: 1 hộp = 30 gói"
+        },
+        {
+          "line": 152,
+          "text": "  - Gaviscon hộp 24 gói x 10ml: 1 hộp = 24 gói"
+        },
+        {
+          "line": 153,
+          "text": "  - Enterogermina 2 tỷ/5ml hộp 20 ống: 1 hộp = 20 ống"
+        },
+        {
+          "line": 154,
+          "text": "  - Omeprazol 20mg DHG hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 155,
+          "text": "  - Omeprazol 20mg DHG hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 156,
+          "text": "  - Vitamin C 500mg Quapharco hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 157,
+          "text": "  - Vitamin C 500mg Quapharco hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 158,
+          "text": "  - Efticol 0,9% lốc 10 lọ x 10ml: 1 lốc = 10 lọ"
+        },
+        {
+          "line": 159,
+          "text": "  - Magne-B6 Corbière hộp 5 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 160,
+          "text": "  - Magne-B6 Corbière hộp 5 vỉ x 10 viên: 1 hộp = 50 viên"
+        },
+        {
+          "line": 161,
+          "text": "  - Loperamid 2mg Domesco hộp 5 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 162,
+          "text": "  - Loperamid 2mg Domesco hộp 5 vỉ x 10 viên: 1 hộp = 50 viên"
+        },
+        {
+          "line": 163,
+          "text": "  - Metformin Stella 500mg hộp 6 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 164,
+          "text": "  - Metformin Stella 500mg hộp 6 vỉ x 10 viên: 1 hộp = 60 viên"
+        },
+        {
+          "line": 165,
+          "text": "  - Clarityne 10mg hộp 1 vỉ x 10 viên: 1 hộp = 10 viên"
+        },
+        {
+          "line": 166,
+          "text": "  - Zyrtec 10mg hộp 1 vỉ x 10 viên: 1 hộp = 10 viên"
+        },
+        {
+          "line": 167,
+          "text": "  - Telfast HD 180mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 168,
+          "text": "  - Telfast HD 180mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 169,
+          "text": "  - Hagifen 400mg DHG hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 170,
+          "text": "  - Hagifen 400mg DHG hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 171,
+          "text": "  - Enervon hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 172,
+          "text": "  - Enervon hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 173,
+          "text": "  - Savi Losartan 50mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 174,
+          "text": "  - Savi Losartan 50mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 175,
+          "text": "  - Air-X 80mg viên nhai hộp 10 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 176,
+          "text": "  - Air-X 80mg viên nhai hộp 10 vỉ x 10 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 177,
+          "text": "  - Biosubtyl-II hộp 25 gói: 1 hộp = 25 gói"
+        },
+        {
+          "line": 178,
+          "text": "  - Berocca Performance viên sủi tuýp 10 viên: 1 tuýp = 10 viên"
+        },
+        {
+          "line": 179,
+          "text": "  - Prednisolon 5mg Boston chai 500 viên: 1 chai = 500 viên"
+        },
+        {
+          "line": 180,
+          "text": "  - Bio-acimin Gold men vi sinh hộp 30 gói: 1 hộp = 30 gói"
+        },
+        {
+          "line": 181,
+          "text": "  - Boganic Traphaco hộp 5 vỉ x 20 viên: 1 vỉ = 20 viên"
+        },
+        {
+          "line": 182,
+          "text": "  - Boganic Traphaco hộp 5 vỉ x 20 viên: 1 hộp = 100 viên"
+        },
+        {
+          "line": 183,
+          "text": "  - Calcium Corbière Extra 10ml hộp 30 ống: 1 hộp = 30 ống"
+        },
+        {
+          "line": 184,
+          "text": "  - Bisolvon 8mg hộp 3 vỉ x 10 viên: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 185,
+          "text": "  - Bisolvon 8mg hộp 3 vỉ x 10 viên: 1 hộp = 30 viên"
+        },
+        {
+          "line": 186,
+          "text": "  - Augmentin 625mg hộp 2 vỉ x 7 viên: 1 vỉ = 7 viên"
+        },
+        {
+          "line": 187,
+          "text": "  - Augmentin 625mg hộp 2 vỉ x 7 viên: 1 hộp = 14 viên"
+        },
+        {
+          "line": 188,
+          "text": "  - Enat 400 hộp 3 vỉ x 10 viên nang: 1 vỉ = 10 viên"
+        },
+        {
+          "line": 189,
+          "text": "  - Enat 400 hộp 3 vỉ x 10 viên nang: 1 hộp = 30 viên"
+        },
+        {
+          "line": 190,
+          "text": "  - Kẹo ngậm Bổ phế Nam Hà Candy hộp 10 vỉ x 8 viên: 1 vỉ = 8 viên"
+        },
+        {
+          "line": 191,
+          "text": "  - Kẹo ngậm Bổ phế Nam Hà Candy hộp 10 vỉ x 8 viên: 1 hộp = 80 viên"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_121",
+      "source": "train/data/biz_121/README.md",
+      "sha256": "f1f925a1e0ae764824cab5aa55e1a4c91cafb65814af8e92ae7742974bf670d3",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_121"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng. File đơn hàng mỗi dòng một sản phẩm."
+        },
+        {
+          "line": 5,
+          "text": "Các danh sách `DanhSachQuyDoi`, `DanhSachSanPham`, `DonNhapHang`, `DonNhapHang_ChiTiet`, `DonHang_Lo`, `DanhSachThuoc` nằm chung file `DuLieuXuat.xlsx`, mỗi danh sách một sheet."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `DonHang_ChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DuLieuXuat.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "## Cột trong `DonHang_ChiTiet.xlsx`"
+        },
+        {
+          "line": 12,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 13,
+          "text": "- **Ngày đặt hàng**: ngày bán"
+        },
+        {
+          "line": 14,
+          "text": "- **Trạng thái đơn hàng**: trạng thái đơn"
+        },
+        {
+          "line": 15,
+          "text": "- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 16,
+          "text": "- **Tên sản phẩm**: tên hàng"
+        },
+        {
+          "line": 17,
+          "text": "- **Số lượng sản phẩm**: số lượng"
+        },
+        {
+          "line": 18,
+          "text": "- **Giá sản phẩm**: đơn giá"
+        },
+        {
+          "line": 19,
+          "text": "- **Tổng tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 20,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 22,
+          "text": "## Cột trong `DuLieuXuat.xlsx`, sheet `DanhSachQuyDoi`"
+        },
+        {
+          "line": 23,
+          "text": "- **Tên sản phẩm**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)"
+        },
+        {
+          "line": 24,
+          "text": "- **Đơn vị quy đổi**: đơn vị lớn (thùng, hộp, tấn...)"
+        },
+        {
+          "line": 25,
+          "text": "- **Tỉ lệ quy đổi**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn"
+        },
+        {
+          "line": 26,
+          "text": "- **Đơn vị cơ bản**: đơn vị cơ bản"
+        },
+        {
+          "line": 28,
+          "text": "## Cột trong `DuLieuXuat.xlsx`, sheet `DanhSachSanPham`"
+        },
+        {
+          "line": 29,
+          "text": "- **Mã SKU**: mã hàng"
+        },
+        {
+          "line": 30,
+          "text": "- **Tên sản phẩm**: tên"
+        },
+        {
+          "line": 31,
+          "text": "- **Đơn vị**: đơn vị cơ bản"
+        },
+        {
+          "line": 32,
+          "text": "- **Loại sản phẩm**: nhóm hàng"
+        },
+        {
+          "line": 34,
+          "text": "## Cột trong `DuLieuXuat.xlsx`, sheet `DonNhapHang`"
+        },
+        {
+          "line": 35,
+          "text": "- **Mã đơn nhập**: mã phiếu nhập"
+        },
+        {
+          "line": 36,
+          "text": "- **Ngày nhập**: ngày nhập"
+        },
+        {
+          "line": 37,
+          "text": "- **Mã nhà cung cấp**: mã nhà cung cấp"
+        },
+        {
+          "line": 39,
+          "text": "## Cột trong `DuLieuXuat.xlsx`, sheet `DonNhapHang_ChiTiet`"
+        },
+        {
+          "line": 40,
+          "text": "- **Mã đơn nhập**: mã phiếu nhập"
+        },
+        {
+          "line": 41,
+          "text": "- **Mã SKU**: mã hàng"
+        },
+        {
+          "line": 42,
+          "text": "- **Mã lô**: số lô"
+        },
+        {
+          "line": 43,
+          "text": "- **Hạn sử dụng**: hạn sử dụng"
+        },
+        {
+          "line": 44,
+          "text": "- **Số lượng nhập**: số lượng nhập (đơn vị cơ bản)"
+        },
+        {
+          "line": 46,
+          "text": "## Cột trong `DuLieuXuat.xlsx`, sheet `DonHang_Lo`"
+        },
+        {
+          "line": 47,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 48,
+          "text": "- **Mã lô**: số lô"
+        },
+        {
+          "line": 49,
+          "text": "- **Số lượng**: số lượng bán lấy từ lô (đơn vị cơ bản)"
+        },
+        {
+          "line": 50,
+          "text": "- **Số lượng trả**: số lượng khách trả lại (đơn vị cơ bản); lớn hơn 0: đơn đó có trả hàng"
+        },
+        {
+          "line": 52,
+          "text": "## Cột trong `DuLieuXuat.xlsx`, sheet `DanhSachThuoc`"
+        },
+        {
+          "line": 53,
+          "text": "- **Mã SKU**: mã hàng"
+        },
+        {
+          "line": 54,
+          "text": "- **Hoạt chất**: hoạt chất (trống với thực phẩm chức năng, vật tư)"
+        },
+        {
+          "line": 55,
+          "text": "- **Thuốc kê đơn**: thuốc kê đơn"
+        },
+        {
+          "line": 57,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 58,
+          "text": "- Dữ liệu có đến hết 20/09/2026."
+        },
+        {
+          "line": 59,
+          "text": "- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán."
+        },
+        {
+          "line": 60,
+          "text": "- **Thuốc**: **Thuốc kê đơn** đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng \" + \"."
+        },
+        {
+          "line": 61,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DuLieuXuat.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_122",
+      "source": "train/data/biz_122/README.md",
+      "sha256": "2ea579b13f08f31fcf21f6dca27ca35c4671bab764f4e435c593b3375e2abe51",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_122"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng. File đơn hàng mỗi dòng một sản phẩm."
+        },
+        {
+          "line": 5,
+          "text": "File `DonHang_ChiTiet_1.xlsx`, `DonHang_ChiTiet_2026.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `DonHang_ChiTiet_1.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DonHang_ChiTiet_2026.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `DanhSachQuyDoi.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `DanhSachSanPham.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "- `DonNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "- `DonNhapHang_ChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 14,
+          "text": "- `DonHang_Lo_1.xlsx` (xlsx)"
+        },
+        {
+          "line": 15,
+          "text": "- `DonHang_Lo_2.xlsx` (xlsx)"
+        },
+        {
+          "line": 16,
+          "text": "- `DanhSachThuoc.xlsx` (xlsx)"
+        },
+        {
+          "line": 18,
+          "text": "## Cột trong `DonHang_ChiTiet_1.xlsx`"
+        },
+        {
+          "line": 19,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 20,
+          "text": "- **Ngày đặt hàng**: ngày bán"
+        },
+        {
+          "line": 21,
+          "text": "- **Trạng thái đơn hàng**: trạng thái đơn"
+        },
+        {
+          "line": 22,
+          "text": "- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 23,
+          "text": "- **Tên sản phẩm**: tên hàng"
+        },
+        {
+          "line": 24,
+          "text": "- **Số lượng sản phẩm**: số lượng"
+        },
+        {
+          "line": 25,
+          "text": "- **Giá sản phẩm**: đơn giá"
+        },
+        {
+          "line": 26,
+          "text": "- **Tổng tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 27,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 29,
+          "text": "## Cột trong `DonHang_ChiTiet_2026.xlsx`"
+        },
+        {
+          "line": 30,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 31,
+          "text": "- **Ngày đặt hàng**: ngày bán"
+        },
+        {
+          "line": 32,
+          "text": "- **Trạng thái đơn hàng**: trạng thái đơn"
+        },
+        {
+          "line": 33,
+          "text": "- **Tên khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 34,
+          "text": "- **Tên sản phẩm**: tên hàng"
+        },
+        {
+          "line": 35,
+          "text": "- **Số lượng sản phẩm**: số lượng"
+        },
+        {
+          "line": 36,
+          "text": "- **Giá sản phẩm**: đơn giá"
+        },
+        {
+          "line": 37,
+          "text": "- **Tổng tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 38,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 40,
+          "text": "## Cột trong `DanhSachQuyDoi.xlsx`"
+        },
+        {
+          "line": 41,
+          "text": "- **Tên sản phẩm**: tên hàng (file chỉ có mặt hàng có đơn vị lớn)"
+        },
+        {
+          "line": 42,
+          "text": "- **Đơn vị quy đổi**: đơn vị lớn (thùng, hộp, tấn...)"
+        },
+        {
+          "line": 43,
+          "text": "- **Tỉ lệ quy đổi**: hệ số: số đơn vị cơ bản trong 1 đơn vị lớn"
+        },
+        {
+          "line": 44,
+          "text": "- **Đơn vị cơ bản**: đơn vị cơ bản"
+        },
+        {
+          "line": 46,
+          "text": "## Cột trong `DanhSachSanPham.xlsx`"
+        },
+        {
+          "line": 47,
+          "text": "- **Mã SKU**: mã hàng"
+        },
+        {
+          "line": 48,
+          "text": "- **Tên sản phẩm**: tên"
+        },
+        {
+          "line": 49,
+          "text": "- **Đơn vị**: đơn vị cơ bản"
+        },
+        {
+          "line": 50,
+          "text": "- **Loại sản phẩm**: nhóm hàng"
+        },
+        {
+          "line": 52,
+          "text": "## Cột trong `DonNhapHang.xlsx`"
+        },
+        {
+          "line": 53,
+          "text": "- **Mã đơn nhập**: mã phiếu nhập"
+        },
+        {
+          "line": 54,
+          "text": "- **Ngày nhập**: ngày nhập"
+        },
+        {
+          "line": 55,
+          "text": "- **Mã nhà cung cấp**: mã nhà cung cấp"
+        },
+        {
+          "line": 57,
+          "text": "## Cột trong `DonNhapHang_ChiTiet.xlsx`"
+        },
+        {
+          "line": 58,
+          "text": "- **Mã đơn nhập**: mã phiếu nhập"
+        },
+        {
+          "line": 59,
+          "text": "- **Mã SKU**: mã hàng"
+        },
+        {
+          "line": 60,
+          "text": "- **Mã lô**: số lô"
+        },
+        {
+          "line": 61,
+          "text": "- **Hạn sử dụng**: hạn sử dụng"
+        },
+        {
+          "line": 62,
+          "text": "- **Số lượng nhập**: số lượng nhập (đơn vị cơ bản)"
+        },
+        {
+          "line": 64,
+          "text": "## Cột trong `DonHang_Lo_1.xlsx`"
+        },
+        {
+          "line": 65,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 66,
+          "text": "- **Mã lô**: số lô"
+        },
+        {
+          "line": 67,
+          "text": "- **Số lượng**: số lượng bán lấy từ lô (đơn vị cơ bản)"
+        },
+        {
+          "line": 68,
+          "text": "- **Số lượng trả**: số lượng khách trả lại (đơn vị cơ bản); lớn hơn 0: đơn đó có trả hàng"
+        },
+        {
+          "line": 70,
+          "text": "## Cột trong `DonHang_Lo_2.xlsx`"
+        },
+        {
+          "line": 71,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 72,
+          "text": "- **Mã lô**: số lô"
+        },
+        {
+          "line": 73,
+          "text": "- **Số lượng**: số lượng bán lấy từ lô (đơn vị cơ bản)"
+        },
+        {
+          "line": 74,
+          "text": "- **Số lượng trả**: số lượng khách trả lại (đơn vị cơ bản); lớn hơn 0: đơn đó có trả hàng"
+        },
+        {
+          "line": 76,
+          "text": "## Cột trong `DanhSachThuoc.xlsx`"
+        },
+        {
+          "line": 77,
+          "text": "- **Mã SKU**: mã hàng"
+        },
+        {
+          "line": 78,
+          "text": "- **Hoạt chất**: hoạt chất (trống với thực phẩm chức năng, vật tư)"
+        },
+        {
+          "line": 79,
+          "text": "- **Thuốc kê đơn**: thuốc kê đơn"
+        },
+        {
+          "line": 81,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 82,
+          "text": "- Dữ liệu có đến hết 17/07/2026."
+        },
+        {
+          "line": 83,
+          "text": "- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán."
+        },
+        {
+          "line": 84,
+          "text": "- **Thuốc**: **Thuốc kê đơn** đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng \" + \"."
+        },
+        {
+          "line": 85,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `DanhSachQuyDoi.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_123",
+      "source": "train/data/biz_123/README.md",
+      "sha256": "75ca6deca11dcb39d204080a4b262cbdbfd0e229415dd1cccab9110160231240",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_123"
+        },
+        {
+          "line": 3,
+          "text": "File máy POS xuất ra."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `pos.sqlite` (sqlite)"
+        },
+        {
+          "line": 8,
+          "text": "## Bảng"
+        },
+        {
+          "line": 9,
+          "text": "`chi_nhanh`, `nhan_vien`, `khach_hang`, `nha_cung_cap`, `san_pham`, `don_vi_sp`, `phieu_nhap`, `chi_tiet_nhap`, `don_hang`, `chi_tiet_don`, `thanh_toan`, `tra_hang`, `the_kho`, `lich_su_gia`, `lo_hang`, `chi_tiet_don_lo`, `thong_tin_thuoc`"
+        },
+        {
+          "line": 11,
+          "text": "Mã đơn nối `don_hang` với `chi_tiet_don`. Ngày giờ dạng text."
+        },
+        {
+          "line": 13,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 14,
+          "text": "- Dữ liệu có đến hết 28/06/2026."
+        },
+        {
+          "line": 15,
+          "text": "- **Dòng hàng**: `chi_tiet_don.TriGia` là thành tiền của dòng (đã trừ giảm giá dòng); `chi_tiet_don.SLQuyDoi` là số lượng đã đổi ra đơn vị cơ bản."
+        },
+        {
+          "line": 16,
+          "text": "- **Mã tham chiếu**: `don_hang.MaCaLam` là mã ca bán hàng; `don_hang.MaKhuyenMai` là mã khuyến mãi áp cho đơn (trống: không áp); `the_kho.KieuChungTu`, `the_kho.MaChungTu` là loại và số của chứng từ gốc của dòng thẻ kho (đơn bán, phiếu nhập hoặc phiếu khách trả)."
+        },
+        {
+          "line": 17,
+          "text": "- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, `thanh_toan.SoTienThu` là số tiền trả lần đó; `don_hang.TongThanhToan` là số khách phải trả cho cả đơn."
+        },
+        {
+          "line": 18,
+          "text": "- **Giá vốn**: `chi_tiet_don.GiaVonLucBan` là giá vốn một đơn vị bán."
+        },
+        {
+          "line": 19,
+          "text": "- **Tồn kho**: mỗi dòng `the_kho.TonCuoi` là tồn sau lần nhập/bán/trả đó, theo đơn vị cơ bản; tồn tại một thời điểm là tồn ở dòng cuối của sản phẩm tính đến thời điểm đó."
+        },
+        {
+          "line": 20,
+          "text": "- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán."
+        },
+        {
+          "line": 21,
+          "text": "- **Nhập hàng**: `chi_tiet_nhap.DonGiaNhap` là giá nhập một đơn vị, theo đơn vị nhập của dòng; `phieu_nhap.TongGiaTriNhap` là tổng tiền của cả phiếu nhập."
+        },
+        {
+          "line": 22,
+          "text": "- **Giá bán**: `lich_su_gia.GiaBanLe` (theo đơn vị cơ bản) áp dụng từ `lich_su_gia.NgayApDung` đến trước lần đổi giá sau của cùng mặt hàng; dòng đầu mỗi mặt hàng là giá lúc bắt đầu dữ liệu."
+        },
+        {
+          "line": 23,
+          "text": "- **Thuốc**: `thong_tin_thuoc.BanTheoDon` đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng \" + \"."
+        },
+        {
+          "line": 24,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở bảng `don_vi_sp`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_124",
+      "source": "train/data/biz_124/README.md",
+      "sha256": "a84ebff9b52edcc0c5e68793e8e15cdf8852d63d6b116617b082febc4846aa54",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_124"
+        },
+        {
+          "line": 3,
+          "text": "Chủ tiệm gửi dữ liệu từ ba nguồn: file Excel xuất từ phần mềm bán hàng (tên file bắt đầu BanHang_, mỗi danh sách một file, danh sách dài tách thành nhiều file đánh số _1, _2…), sổ chủ tiệm tự ghi trên Excel (SoTay_), và file tồn kho CSV. Các file nối với nhau qua mã hoá đơn, mã hàng; sổ tay không có mã hàng, nối qua tên hàng. Tên cột mỗi file đặt theo cách của tiệm."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `BanHang_HoaDon.xlsx` (xlsx)"
+        },
+        {
+          "line": 7,
+          "text": "- `BanHang_ChiTietHoaDon.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "- `BanHang_PhieuThu.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `BanHang_HangHoa.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `BanHang_KhachHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `BanHang_DonViQuyDoi.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "- `BanHang_LichSuGia.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "- `BanHang_LoHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 14,
+          "text": "- `BanHang_BanTheoLo.xlsx` (xlsx)"
+        },
+        {
+          "line": 15,
+          "text": "- `BanHang_Thuoc.xlsx` (xlsx)"
+        },
+        {
+          "line": 16,
+          "text": "- `SoTay_NhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 17,
+          "text": "- `SoTay_ChiPhi.xlsx` (xlsx)"
+        },
+        {
+          "line": 18,
+          "text": "- `ton_kho.csv` (csv)"
+        },
+        {
+          "line": 20,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 21,
+          "text": "- Dữ liệu có đến hết 25/05/2026."
+        },
+        {
+          "line": 22,
+          "text": "- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Số tiền thu** là số tiền trả lần đó; **Tong tien** là số khách phải trả cho cả đơn; **Còn nợ** là số tiền của đơn chưa thu, tính đến hết ngày cuối dữ liệu."
+        },
+        {
+          "line": 23,
+          "text": "- **Giá vốn**: **Giá vốn lúc bán** là giá vốn một đơn vị bán."
+        },
+        {
+          "line": 24,
+          "text": "- **Sổ chi phí**: các khoản chi vận hành theo tháng (tiền **So tien**)."
+        },
+        {
+          "line": 25,
+          "text": "- **Tồn kho**: **Ton kho** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 26,
+          "text": "- **Lô, hạn dùng**: mỗi dòng nhập là một lô, số lô không trùng. Một dòng bán có thể lấy từ nhiều lô. Hàng khách trả về lại lô đã bán."
+        },
+        {
+          "line": 27,
+          "text": "- **Nhập hàng**: **Giá nhập** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Thành tiền** là tiền nhập của cả dòng."
+        },
+        {
+          "line": 28,
+          "text": "- **Giá bán**: **Giá mới** (theo đơn vị cơ bản) áp dụng từ **Ngày áp dụng** đến trước lần đổi giá sau của cùng mặt hàng; dòng đầu mỗi mặt hàng là giá lúc bắt đầu dữ liệu (**Giá cũ** trống)."
+        },
+        {
+          "line": 29,
+          "text": "- **Thuốc**: **Kê đơn** đúng (TRUE/1) là thuốc kê đơn. Hoạt chất ghi không kèm hàm lượng (hàm lượng ở tên hàng); nhiều chất nối bằng \" + \"."
+        },
+        {
+          "line": 30,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng, hệ số quy đổi ở `BanHang_DonViQuyDoi.xlsx`."
+        }
+      ]
+    },
+    {
+      "business_id": "biz_125",
+      "source": "train/data/biz_125/README.md",
+      "sha256": "cf97c5b9193c16d138c1ed72b1c1933503e3a1c4fd5b289260fb721af0d729ad",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_125"
+        },
+        {
+          "line": 3,
+          "text": "Một file phẳng, mỗi dòng một bản ghi (một dòng hàng trong đơn)."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `ban_hang.csv` (csv)"
+        },
+        {
+          "line": 8,
+          "text": "## Cột trong `ban_hang.csv`"
+        },
+        {
+          "line": 9,
+          "text": "- **dvt**: đơn vị tính"
+        },
+        {
+          "line": 10,
+          "text": "- **Hàng bán**: tên hàng"
+        },
+        {
+          "line": 11,
+          "text": "- **Khách hàng (tên)**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 12,
+          "text": "- **Số lượng lẻ**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 13,
+          "text": "- **Amount**: thành tiền sau giảm"
+        },
+        {
+          "line": 14,
+          "text": "- **Trạng thái xử lý**: trạng thái đơn"
+        },
+        {
+          "line": 15,
+          "text": "- **SL bán**: số lượng"
+        },
+        {
+          "line": 16,
+          "text": "- **Ngày bán**: ngày bán"
+        },
+        {
+          "line": 17,
+          "text": "- **Số phiếu**: mã đơn"
+        },
+        {
+          "line": 18,
+          "text": "- **Giá 1 đv**: đơn giá"
+        },
+        {
+          "line": 20,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 21,
+          "text": "- Dữ liệu có đến hết 11/05/2026."
+        },
+        {
+          "line": 22,
+          "text": "- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng \"Phí phục vụ\": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền."
+        },
+        {
+          "line": 23,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 24,
+          "text": "  - Bia Tiger lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 25,
+          "text": "  - Bia Sài Gòn Special lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 26,
+          "text": "  - Coca-Cola lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 27,
+          "text": "  - Bia Tiger Bạc lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 28,
+          "text": "  - Nước suối: 1 thùng = 24 chai"
+        },
+        {
+          "line": 29,
+          "text": "  - Bia Heineken lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 30,
+          "text": "  - Bia Sài Gòn Lager chai: 1 két = 20 chai"
+        },
+        {
+          "line": 31,
+          "text": "  - 7Up lon: 1 thùng = 24 lon"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_126",
+      "source": "train/data/biz_126/README.md",
+      "sha256": "f4891e2a70845c86afcdb27c8f115b6f66f69b1dbd193d965778959e91a1a441",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_126"
+        },
+        {
+          "line": 3,
+          "text": "Sổ bán hàng chủ tiệm tự ghi trên Excel, một sheet: mỗi dòng một mặt hàng khách mua, không ghi mã đơn, không ghi tên khách."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `SoBanHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "## Cột trong `SoBanHang.xlsx`"
+        },
+        {
+          "line": 9,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 10,
+          "text": "- **Số lượng bán**: số lượng"
+        },
+        {
+          "line": 11,
+          "text": "- **Thành tiền (đ)**: thành tiền sau giảm"
+        },
+        {
+          "line": 12,
+          "text": "- **Ten hang**: tên hàng"
+        },
+        {
+          "line": 13,
+          "text": "- **SL lẻ**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 14,
+          "text": "- **Trạng thái đơn**: trạng thái đơn"
+        },
+        {
+          "line": 15,
+          "text": "- **Ngày tháng**: ngày bán"
+        },
+        {
+          "line": 16,
+          "text": "- **Price**: đơn giá"
+        },
+        {
+          "line": 18,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 19,
+          "text": "- Dữ liệu có đến hết 06/06/2026."
+        },
+        {
+          "line": 20,
+          "text": "- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng \"Phí phục vụ\": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền."
+        },
+        {
+          "line": 21,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 22,
+          "text": "  - Bia Tiger lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 23,
+          "text": "  - Bia Sài Gòn Special lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 24,
+          "text": "  - Coca-Cola lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 25,
+          "text": "  - Bia Tiger Bạc lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 26,
+          "text": "  - Nước suối: 1 thùng = 24 chai"
+        },
+        {
+          "line": 27,
+          "text": "  - Bia Heineken lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 28,
+          "text": "  - Bia Sài Gòn Lager chai: 1 két = 20 chai"
+        },
+        {
+          "line": 29,
+          "text": "  - 7Up lon: 1 thùng = 24 lon"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_127",
+      "source": "train/data/biz_127/README.md",
+      "sha256": "5870360d102d5a33b113a6a42432aad9ceac93d0c46834e380065bf4c091246b",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_127"
+        },
+        {
+          "line": 3,
+          "text": "Dữ liệu bán hàng của tiệm, gồm vài file nối với nhau qua mã."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `don_hang.csv` (csv)"
+        },
+        {
+          "line": 7,
+          "text": "- `chi_tiet_don.csv` (csv)"
+        },
+        {
+          "line": 8,
+          "text": "- `san_pham.csv` (csv)"
+        },
+        {
+          "line": 9,
+          "text": "- `khach_hang.csv` (csv)"
+        },
+        {
+          "line": 10,
+          "text": "- `thanh_toan.csv` (csv)"
+        },
+        {
+          "line": 12,
+          "text": "## Cột trong `don_hang.csv`"
+        },
+        {
+          "line": 13,
+          "text": "- **Còn nợ**: còn nợ"
+        },
+        {
+          "line": 14,
+          "text": "- **Diễn giải**: cột trống, không có dữ liệu"
+        },
+        {
+          "line": 15,
+          "text": "- **Tổng đơn**: tổng tiền đơn"
+        },
+        {
+          "line": 16,
+          "text": "- **Loại bán**: kênh bán"
+        },
+        {
+          "line": 17,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 18,
+          "text": "- **Mã chứng từ**: mã đơn"
+        },
+        {
+          "line": 19,
+          "text": "- **Customer ID**: mã khách (trống nếu khách lẻ)"
+        },
+        {
+          "line": 20,
+          "text": "- **Khách trả**: đã thanh toán"
+        },
+        {
+          "line": 21,
+          "text": "- **Trả bằng**: hình thức thanh toán của đơn: cash tiền mặt, transfer chuyển khoản, ewallet ví điện tử, cod giao hàng thu tiền, debt ghi nợ"
+        },
+        {
+          "line": 22,
+          "text": "- **Tình trạng**: trạng thái đơn"
+        },
+        {
+          "line": 24,
+          "text": "## Cột trong `chi_tiet_don.csv`"
+        },
+        {
+          "line": 25,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 26,
+          "text": "- **SoLuong**: số lượng"
+        },
+        {
+          "line": 27,
+          "text": "- **No.**: số thứ tự dòng trong đơn"
+        },
+        {
+          "line": 28,
+          "text": "- **DVT**: đơn vị tính"
+        },
+        {
+          "line": 29,
+          "text": "- **Amount**: thành tiền sau giảm"
+        },
+        {
+          "line": 30,
+          "text": "- **Số lượng lẻ**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 31,
+          "text": "- **Mã mặt hàng**: mã hàng"
+        },
+        {
+          "line": 32,
+          "text": "- **Đơn giá (đ)**: đơn giá"
+        },
+        {
+          "line": 34,
+          "text": "## Cột trong `san_pham.csv`"
+        },
+        {
+          "line": 35,
+          "text": "- **Giá niêm yết**: giá bán hiện tại"
+        },
+        {
+          "line": 36,
+          "text": "- **Danh mục**: nhóm hàng"
+        },
+        {
+          "line": 37,
+          "text": "- **Mã sản phẩm bán**: mã hàng"
+        },
+        {
+          "line": 38,
+          "text": "- **Tên SP**: tên"
+        },
+        {
+          "line": 39,
+          "text": "- **Đơn vị cơ bản**: đơn vị cơ bản"
+        },
+        {
+          "line": 41,
+          "text": "## Cột trong `khach_hang.csv`"
+        },
+        {
+          "line": 42,
+          "text": "- **Di động**: số điện thoại"
+        },
+        {
+          "line": 43,
+          "text": "- **Mã KH**: mã khách"
+        },
+        {
+          "line": 44,
+          "text": "- **Khách hàng (tên)**: tên"
+        },
+        {
+          "line": 46,
+          "text": "## Cột trong `thanh_toan.csv`"
+        },
+        {
+          "line": 47,
+          "text": "- **Số CT**: mã đơn"
+        },
+        {
+          "line": 48,
+          "text": "- **Ngày thu**: thời điểm thu"
+        },
+        {
+          "line": 49,
+          "text": "- **Mã GD**: mã phiếu thu"
+        },
+        {
+          "line": 50,
+          "text": "- **Giá trị**: số tiền"
+        },
+        {
+          "line": 51,
+          "text": "- **HTTT**: hình thức thanh toán"
+        },
+        {
+          "line": 53,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 54,
+          "text": "- Dữ liệu có đến hết 28/07/2026."
+        },
+        {
+          "line": 55,
+          "text": "- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Giá trị** là số tiền trả lần đó; **Tổng đơn** là số khách phải trả cho cả đơn."
+        },
+        {
+          "line": 56,
+          "text": "- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng \"Phí phục vụ\": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền."
+        },
+        {
+          "line": 57,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 58,
+          "text": "  - Bia Tiger lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 59,
+          "text": "  - Bia Sài Gòn Special lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 60,
+          "text": "  - Coca-Cola lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 61,
+          "text": "  - Bia Tiger Bạc lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 62,
+          "text": "  - Nước suối: 1 thùng = 24 chai"
+        },
+        {
+          "line": 63,
+          "text": "  - Bia Heineken lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 64,
+          "text": "  - Bia Sài Gòn Lager chai: 1 két = 20 chai"
+        },
+        {
+          "line": 65,
+          "text": "  - 7Up lon: 1 thùng = 24 lon"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_128",
+      "source": "train/data/biz_128/README.md",
+      "sha256": "4a3bf5e4ad896fda5a8a3949c0ffb0cdc77c235579beb41dc4475a3372c97066",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_128"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng, mỗi danh sách một file (danh sách dài tách thành nhiều file, tên thêm đuôi _1, _2… hoặc đuôi năm _2025, _2026…), nối với nhau qua mã. Ngày dạng dd/mm/yyyy."
+        },
+        {
+          "line": 5,
+          "text": "File `DanhSachHoaDon.xlsx` chia mỗi tháng một sheet, tên sheet ghi tháng và năm."
+        },
+        {
+          "line": 7,
+          "text": "## File"
+        },
+        {
+          "line": 8,
+          "text": "- `DanhSachHoaDon.xlsx` (xlsx)"
+        },
+        {
+          "line": 9,
+          "text": "- `DanhSachHoaDonChiTiet.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "- `DanhSachSanPham.xlsx` (xlsx)"
+        },
+        {
+          "line": 11,
+          "text": "- `DanhSachKhachHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 12,
+          "text": "- `BaoCaoTonKho.xlsx` (xlsx)"
+        },
+        {
+          "line": 13,
+          "text": "- `DanhSachNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 14,
+          "text": "- `DanhSachChiTietNhapHang.xlsx` (xlsx)"
+        },
+        {
+          "line": 15,
+          "text": "- `DanhSachHoaDonPhongBan.xlsx` (xlsx)"
+        },
+        {
+          "line": 17,
+          "text": "## Cột trong `DanhSachHoaDon.xlsx`"
+        },
+        {
+          "line": 18,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 19,
+          "text": "- **Thời gian**: ngày bán"
+        },
+        {
+          "line": 20,
+          "text": "- **Mã KH**: mã khách (trống nếu khách lẻ)"
+        },
+        {
+          "line": 21,
+          "text": "- **Khách hàng**: tên khách (Khách lẻ nếu không lưu)"
+        },
+        {
+          "line": 22,
+          "text": "- **Tổng tiền hàng**: tổng tiền hàng của đơn (cộng thành tiền các dòng), trước giảm giá của đơn"
+        },
+        {
+          "line": 23,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 24,
+          "text": "- **Khách đã trả**: đã thanh toán"
+        },
+        {
+          "line": 25,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 26,
+          "text": "- **Thời gian tạo**: thời điểm đặt đơn (ngày giờ)"
+        },
+        {
+          "line": 27,
+          "text": "- **Tổng sau giảm giá**: tổng tiền đơn"
+        },
+        {
+          "line": 28,
+          "text": "- **Còn nợ**: còn nợ"
+        },
+        {
+          "line": 30,
+          "text": "## Cột trong `DanhSachHoaDonChiTiet.xlsx`"
+        },
+        {
+          "line": 31,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 32,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 33,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 34,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 35,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 36,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 37,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 38,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 39,
+          "text": "- **STT**: số thứ tự dòng trong đơn"
+        },
+        {
+          "line": 41,
+          "text": "## Cột trong `DanhSachSanPham.xlsx`"
+        },
+        {
+          "line": 42,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 43,
+          "text": "- **Tên hàng**: tên"
+        },
+        {
+          "line": 44,
+          "text": "- **Nhóm hàng(3 Cấp)**: nhóm hàng"
+        },
+        {
+          "line": 45,
+          "text": "- **Giá bán**: giá bán hiện tại"
+        },
+        {
+          "line": 46,
+          "text": "- **ĐVT**: đơn vị cơ bản"
+        },
+        {
+          "line": 47,
+          "text": "- **Thời gian tạo**: ngày tạo mặt hàng trên phần mềm"
+        },
+        {
+          "line": 49,
+          "text": "## Cột trong `DanhSachKhachHang.xlsx`"
+        },
+        {
+          "line": 50,
+          "text": "- **Mã khách hàng**: mã khách"
+        },
+        {
+          "line": 51,
+          "text": "- **Tên khách hàng**: tên"
+        },
+        {
+          "line": 52,
+          "text": "- **Điện thoại**: số điện thoại"
+        },
+        {
+          "line": 53,
+          "text": "- **Nhóm khách hàng**: nhóm khách"
+        },
+        {
+          "line": 54,
+          "text": "- **Địa chỉ**: địa chỉ"
+        },
+        {
+          "line": 55,
+          "text": "- **Giới tính**: cột trống, không có dữ liệu"
+        },
+        {
+          "line": 57,
+          "text": "## Cột trong `BaoCaoTonKho.xlsx`"
+        },
+        {
+          "line": 58,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 59,
+          "text": "- **Tên hàng**: tên hàng"
+        },
+        {
+          "line": 60,
+          "text": "- **ĐVT**: đơn vị cơ bản"
+        },
+        {
+          "line": 61,
+          "text": "- **Tồn cuối kỳ**: tồn kho (đơn vị cơ bản)"
+        },
+        {
+          "line": 63,
+          "text": "## Cột trong `DanhSachNhapHang.xlsx`"
+        },
+        {
+          "line": 64,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 65,
+          "text": "- **Thời gian**: ngày nhập"
+        },
+        {
+          "line": 66,
+          "text": "- **Mã NCC**: mã nhà cung cấp"
+        },
+        {
+          "line": 67,
+          "text": "- **Cần trả NCC**: tổng tiền phiếu nhập"
+        },
+        {
+          "line": 68,
+          "text": "- **Trạng thái**: trạng thái phiếu nhập"
+        },
+        {
+          "line": 69,
+          "text": "- **Ghi chú**: ghi chú"
+        },
+        {
+          "line": 71,
+          "text": "## Cột trong `DanhSachChiTietNhapHang.xlsx`"
+        },
+        {
+          "line": 72,
+          "text": "- **Mã nhập hàng**: mã phiếu nhập"
+        },
+        {
+          "line": 73,
+          "text": "- **STT**: số thứ tự dòng trong phiếu nhập"
+        },
+        {
+          "line": 74,
+          "text": "- **Mã hàng**: mã hàng"
+        },
+        {
+          "line": 75,
+          "text": "- **ĐVT**: đơn vị tính"
+        },
+        {
+          "line": 76,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 77,
+          "text": "- **Đơn giá**: giá nhập một đơn vị (theo đơn vị nhập của dòng)"
+        },
+        {
+          "line": 79,
+          "text": "## Cột trong `DanhSachHoaDonPhongBan.xlsx`"
+        },
+        {
+          "line": 80,
+          "text": "- **Mã hóa đơn**: mã đơn"
+        },
+        {
+          "line": 81,
+          "text": "- **Phòng/Bàn**: bàn"
+        },
+        {
+          "line": 82,
+          "text": "- **Khu vực**: khu vực của bàn"
+        },
+        {
+          "line": 83,
+          "text": "- **Số khách**: số khách của đơn"
+        },
+        {
+          "line": 85,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 86,
+          "text": "- Dữ liệu có đến hết 07/09/2026."
+        },
+        {
+          "line": 87,
+          "text": "- **Còn nợ**: **Còn nợ** là số khách còn nợ của đơn, tính đến hết ngày cuối dữ liệu."
+        },
+        {
+          "line": 88,
+          "text": "- **Tồn kho**: **Tồn cuối kỳ** là tồn cuối ngày cuối có dữ liệu, theo đơn vị cơ bản."
+        },
+        {
+          "line": 89,
+          "text": "- **Bàn**: đơn ăn tại quán có đúng một bàn (**Phòng/Bàn**), kể cả đơn huỷ; đơn giao đi không có bàn. **Số khách** là số khách của đơn; một bàn có nhiều đơn trong ngày."
+        },
+        {
+          "line": 90,
+          "text": "- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng \"Phí phục vụ\": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền."
+        },
+        {
+          "line": 91,
+          "text": "- **Nhập hàng**: **Đơn giá** là giá nhập một đơn vị, theo đơn vị nhập của dòng; **Cần trả NCC** là tổng tiền của cả phiếu nhập."
+        },
+        {
+          "line": 92,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 93,
+          "text": "  - Bia Tiger lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 94,
+          "text": "  - Bia Sài Gòn Special lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 95,
+          "text": "  - Coca-Cola lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 96,
+          "text": "  - Bia Tiger Bạc lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 97,
+          "text": "  - Nước suối: 1 thùng = 24 chai"
+        },
+        {
+          "line": 98,
+          "text": "  - Bia Heineken lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 99,
+          "text": "  - Bia Sài Gòn Lager chai: 1 két = 20 chai"
+        },
+        {
+          "line": 100,
+          "text": "  - 7Up lon: 1 thùng = 24 lon"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_129",
+      "source": "train/data/biz_129/README.md",
+      "sha256": "7fcf56e75836f707a6041995158a4c309caa828f704cbc46c23685e873b7a348",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_129"
+        },
+        {
+          "line": 3,
+          "text": "Dữ liệu bán hàng của tiệm, gồm vài file nối với nhau qua mã."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `don_hang.csv` (csv)"
+        },
+        {
+          "line": 7,
+          "text": "- `chi_tiet_don.csv` (csv)"
+        },
+        {
+          "line": 8,
+          "text": "- `san_pham.csv` (csv)"
+        },
+        {
+          "line": 9,
+          "text": "- `khach_hang.csv` (csv)"
+        },
+        {
+          "line": 10,
+          "text": "- `thanh_toan.csv` (csv)"
+        },
+        {
+          "line": 12,
+          "text": "## Cột trong `don_hang.csv`"
+        },
+        {
+          "line": 13,
+          "text": "- **Hình thức thanh toán**: hình thức thanh toán của đơn: cash tiền mặt, transfer chuyển khoản, ewallet ví điện tử, cod giao hàng thu tiền, debt ghi nợ"
+        },
+        {
+          "line": 14,
+          "text": "- **Dư nợ**: còn nợ"
+        },
+        {
+          "line": 15,
+          "text": "- **Thanh toán**: đã thanh toán"
+        },
+        {
+          "line": 16,
+          "text": "- **Tình trạng đơn**: trạng thái đơn"
+        },
+        {
+          "line": 17,
+          "text": "- **Số phiếu**: mã đơn"
+        },
+        {
+          "line": 18,
+          "text": "- **Mã khách mua**: mã khách (trống nếu khách lẻ)"
+        },
+        {
+          "line": 19,
+          "text": "- **Phải thu**: tổng tiền đơn"
+        },
+        {
+          "line": 20,
+          "text": "- **Ngày bán**: ngày bán"
+        },
+        {
+          "line": 22,
+          "text": "## Cột trong `chi_tiet_don.csv`"
+        },
+        {
+          "line": 23,
+          "text": "- **Tiền bán**: thành tiền sau giảm"
+        },
+        {
+          "line": 24,
+          "text": "- **TT dòng**: số thứ tự dòng trong đơn"
+        },
+        {
+          "line": 25,
+          "text": "- **S.L**: số lượng"
+        },
+        {
+          "line": 26,
+          "text": "- **Mã hàng bán**: mã hàng"
+        },
+        {
+          "line": 27,
+          "text": "- **Quy ra ĐV lẻ**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 28,
+          "text": "- **Số CT**: mã đơn"
+        },
+        {
+          "line": 29,
+          "text": "- **Giảm giá**: giảm giá"
+        },
+        {
+          "line": 30,
+          "text": "- **Giá 1 đv**: đơn giá"
+        },
+        {
+          "line": 31,
+          "text": "- **ĐV tính**: đơn vị tính"
+        },
+        {
+          "line": 33,
+          "text": "## Cột trong `san_pham.csv`"
+        },
+        {
+          "line": 34,
+          "text": "- **Giá hiện tại**: giá bán hiện tại"
+        },
+        {
+          "line": 35,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 36,
+          "text": "- **Tên sản phẩm**: tên"
+        },
+        {
+          "line": 37,
+          "text": "- **Nhom hang**: nhóm hàng"
+        },
+        {
+          "line": 38,
+          "text": "- **Mã HH**: mã hàng"
+        },
+        {
+          "line": 40,
+          "text": "## Cột trong `khach_hang.csv`"
+        },
+        {
+          "line": 41,
+          "text": "- **Nhóm**: nhóm khách"
+        },
+        {
+          "line": 42,
+          "text": "- **KH**: tên"
+        },
+        {
+          "line": 43,
+          "text": "- **Số điện thoại**: số điện thoại"
+        },
+        {
+          "line": 44,
+          "text": "- **Mã khách lẻ/sỉ**: mã khách"
+        },
+        {
+          "line": 46,
+          "text": "## Cột trong `thanh_toan.csv`"
+        },
+        {
+          "line": 47,
+          "text": "- **Mã GD**: mã phiếu thu"
+        },
+        {
+          "line": 48,
+          "text": "- **PTTT**: hình thức thanh toán"
+        },
+        {
+          "line": 49,
+          "text": "- **Tiền**: số tiền"
+        },
+        {
+          "line": 50,
+          "text": "- **Mã giao dịch**: mã đơn"
+        },
+        {
+          "line": 51,
+          "text": "- **Thời điểm**: thời điểm thu"
+        },
+        {
+          "line": 53,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 54,
+          "text": "- Dữ liệu có đến hết 14/08/2026."
+        },
+        {
+          "line": 55,
+          "text": "- **Công nợ**: mỗi lần khách trả tiền cho một đơn là một dòng, **Tiền** là số tiền trả lần đó; **Phải thu** là số khách phải trả cho cả đơn."
+        },
+        {
+          "line": 56,
+          "text": "- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng \"Phí phục vụ\": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền."
+        },
+        {
+          "line": 57,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 58,
+          "text": "  - Bia Tiger lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 59,
+          "text": "  - Bia Sài Gòn Special lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 60,
+          "text": "  - Coca-Cola lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 61,
+          "text": "  - Bia Tiger Bạc lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 62,
+          "text": "  - Nước suối: 1 thùng = 24 chai"
+        },
+        {
+          "line": 63,
+          "text": "  - Bia Heineken lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 64,
+          "text": "  - Bia Sài Gòn Lager chai: 1 két = 20 chai"
+        },
+        {
+          "line": 65,
+          "text": "  - 7Up lon: 1 thùng = 24 lon"
+        }
+      ]
+    },
+    {
+      "business_id": "biz_130",
+      "source": "train/data/biz_130/README.md",
+      "sha256": "0793980b1f0ed2d6b7810ed340071d0b511b65c63610f23d7f8c3b1d0cb7cb42",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# Dữ liệu biz_130"
+        },
+        {
+          "line": 3,
+          "text": "File Excel xuất từ phần mềm bán hàng. Sổ chi tiết bán hàng: mỗi dòng một dòng hàng, thông tin đơn lặp lại ở mọi dòng."
+        },
+        {
+          "line": 5,
+          "text": "## File"
+        },
+        {
+          "line": 6,
+          "text": "- `So_chi_tiet_ban_hang_1.xlsx` (xlsx)"
+        },
+        {
+          "line": 7,
+          "text": "- `So_chi_tiet_ban_hang_2.xlsx` (xlsx)"
+        },
+        {
+          "line": 8,
+          "text": "- `Danh sách hàng hóa.xlsx` (xlsx)"
+        },
+        {
+          "line": 10,
+          "text": "## Cột trong `So_chi_tiet_ban_hang_1.xlsx`"
+        },
+        {
+          "line": 11,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 12,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 13,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 14,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 15,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 16,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 17,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 18,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 19,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 21,
+          "text": "## Cột trong `So_chi_tiet_ban_hang_2.xlsx`"
+        },
+        {
+          "line": 22,
+          "text": "- **Ngày**: ngày bán"
+        },
+        {
+          "line": 23,
+          "text": "- **Mã đơn hàng**: mã đơn"
+        },
+        {
+          "line": 24,
+          "text": "- **Tên hàng hóa**: tên hàng"
+        },
+        {
+          "line": 25,
+          "text": "- **Đơn vị tính**: đơn vị tính"
+        },
+        {
+          "line": 26,
+          "text": "- **Số lượng**: số lượng"
+        },
+        {
+          "line": 27,
+          "text": "- **Đơn giá**: đơn giá"
+        },
+        {
+          "line": 28,
+          "text": "- **Thành tiền**: thành tiền sau giảm"
+        },
+        {
+          "line": 29,
+          "text": "- **Trạng thái**: trạng thái đơn"
+        },
+        {
+          "line": 30,
+          "text": "- **Số lượng quy đổi**: số lượng đã đổi ra đơn vị cơ bản"
+        },
+        {
+          "line": 32,
+          "text": "## Cột trong `Danh sách hàng hóa.xlsx`"
+        },
+        {
+          "line": 33,
+          "text": "- **Mã hàng hóa**: mã hàng"
+        },
+        {
+          "line": 34,
+          "text": "- **Tên hàng hóa**: tên"
+        },
+        {
+          "line": 35,
+          "text": "- **Nhóm hàng hóa**: nhóm hàng"
+        },
+        {
+          "line": 36,
+          "text": "- **Đơn vị tính**: đơn vị cơ bản"
+        },
+        {
+          "line": 37,
+          "text": "- **Giá vốn**: giá vốn"
+        },
+        {
+          "line": 39,
+          "text": "## Quy ước"
+        },
+        {
+          "line": 40,
+          "text": "- Dữ liệu có đến hết 29/08/2026."
+        },
+        {
+          "line": 41,
+          "text": "- **Phí phục vụ**: đơn ngồi phòng lạnh (không huỷ, không ghi nợ) có thêm dòng hàng \"Phí phục vụ\": phí phục vụ phòng lạnh của đơn, tính theo tiền món, đã ghi sẵn thành tiền."
+        },
+        {
+          "line": 42,
+          "text": "- **Quy đổi đơn vị**: số lượng ghi theo đơn vị của dòng:"
+        },
+        {
+          "line": 43,
+          "text": "  - Bia Tiger lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 44,
+          "text": "  - Bia Sài Gòn Special lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 45,
+          "text": "  - Coca-Cola lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 46,
+          "text": "  - Bia Tiger Bạc lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 47,
+          "text": "  - Nước suối: 1 thùng = 24 chai"
+        },
+        {
+          "line": 48,
+          "text": "  - Bia Heineken lon: 1 thùng = 24 lon"
+        },
+        {
+          "line": 49,
+          "text": "  - Bia Sài Gòn Lager chai: 1 két = 20 chai"
+        },
+        {
+          "line": 50,
+          "text": "  - 7Up lon: 1 thùng = 24 lon"
+        }
+      ]
+    }
+  ]
+}
